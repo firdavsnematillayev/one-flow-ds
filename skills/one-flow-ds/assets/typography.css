@@ -1,0 +1,207 @@
+/* One Flow DS v2 — текстовые стили. СГЕНЕРИРОВАНО из references/tokens.json, руками не править.
+   Подключать после tokens.css. Каждый стиль — переменная --text-<группа>-<имя> (шорткат font)
+   + --tracking-… + класс .text-<группа>-<имя>. Группы: web (от 1024), web-m (мобильный веб), app (iOS/Android), mono (цифры, время, ID). */
+
+:root {
+  --text-web-display: 800 72px/76px var(--font-family-heading);
+  --tracking-web-display: -0.03em;
+  --text-web-large-title: 700 48px/56px var(--font-family-heading);
+  --tracking-web-large-title: -0.025em;
+  --text-web-title-1: 700 36px/44px var(--font-family-heading);
+  --tracking-web-title-1: -0.02em;
+  --text-web-title-2: 700 28px/36px var(--font-family-heading);
+  --tracking-web-title-2: -0.015em;
+  --text-web-title-3: 600 22px/28px var(--font-family-heading);
+  --tracking-web-title-3: -0.01em;
+  --text-web-headline: 600 18px/26px var(--font-family-heading);
+  --tracking-web-headline: 0em;
+  --text-web-body: 400 16px/24px var(--font-family-body);
+  --tracking-web-body: 0em;
+  --text-web-body-medium: 500 16px/24px var(--font-family-body);
+  --tracking-web-body-medium: 0em;
+  --text-web-body-semibold: 600 16px/24px var(--font-family-body);
+  --tracking-web-body-semibold: 0em;
+  --text-web-callout: 400 15px/22px var(--font-family-body);
+  --tracking-web-callout: 0em;
+  --text-web-subheadline: 400 14px/20px var(--font-family-body);
+  --tracking-web-subheadline: 0em;
+  --text-web-subheadline-medium: 500 14px/20px var(--font-family-body);
+  --tracking-web-subheadline-medium: 0em;
+  --text-web-subheadline-semibold: 600 14px/20px var(--font-family-body);
+  --tracking-web-subheadline-semibold: 0em;
+  --text-web-footnote: 400 13px/18px var(--font-family-body);
+  --tracking-web-footnote: 0em;
+  --text-web-caption-1: 500 12px/16px var(--font-family-body);
+  --tracking-web-caption-1: 0.01em;
+  --text-web-caption-1-semibold: 600 12px/16px var(--font-family-body);
+  --tracking-web-caption-1-semibold: 0.01em;
+  --text-web-caption-2: 500 11px/14px var(--font-family-body);
+  --tracking-web-caption-2: 0.02em;
+  --text-web-overline: 500 12px/16px var(--font-family-mono);
+  --tracking-web-overline: 0.08em;
+  --text-web-m-display: 800 44px/48px var(--font-family-heading);
+  --tracking-web-m-display: -0.03em;
+  --text-web-m-large-title: 700 34px/40px var(--font-family-heading);
+  --tracking-web-m-large-title: -0.025em;
+  --text-web-m-title-1: 700 28px/34px var(--font-family-heading);
+  --tracking-web-m-title-1: -0.02em;
+  --text-web-m-title-2: 700 24px/30px var(--font-family-heading);
+  --tracking-web-m-title-2: -0.015em;
+  --text-web-m-title-3: 600 20px/26px var(--font-family-heading);
+  --tracking-web-m-title-3: -0.01em;
+  --text-web-m-headline: 600 17px/24px var(--font-family-heading);
+  --tracking-web-m-headline: 0em;
+  --text-web-m-body: 400 16px/24px var(--font-family-body);
+  --tracking-web-m-body: 0em;
+  --text-web-m-callout: 400 15px/22px var(--font-family-body);
+  --tracking-web-m-callout: 0em;
+  --text-web-m-subheadline: 400 14px/20px var(--font-family-body);
+  --tracking-web-m-subheadline: 0em;
+  --text-web-m-footnote: 400 13px/18px var(--font-family-body);
+  --tracking-web-m-footnote: 0em;
+  --text-web-m-caption-1: 500 12px/16px var(--font-family-body);
+  --tracking-web-m-caption-1: 0.01em;
+  --text-web-m-caption-2: 500 11px/14px var(--font-family-body);
+  --tracking-web-m-caption-2: 0.02em;
+  --text-app-large-title: 700 34px/41px var(--font-family-heading);
+  --tracking-app-large-title: -0.02em;
+  --text-app-title-1: 700 28px/34px var(--font-family-heading);
+  --tracking-app-title-1: -0.015em;
+  --text-app-title-2: 700 22px/28px var(--font-family-heading);
+  --tracking-app-title-2: -0.01em;
+  --text-app-title-3: 600 20px/25px var(--font-family-heading);
+  --tracking-app-title-3: -0.005em;
+  --text-app-headline: 600 17px/22px var(--font-family-heading);
+  --tracking-app-headline: 0em;
+  --text-app-body: 400 17px/22px var(--font-family-body);
+  --tracking-app-body: 0em;
+  --text-app-callout: 400 16px/21px var(--font-family-body);
+  --tracking-app-callout: 0em;
+  --text-app-subheadline: 400 15px/20px var(--font-family-body);
+  --tracking-app-subheadline: 0em;
+  --text-app-footnote: 400 13px/18px var(--font-family-body);
+  --tracking-app-footnote: 0em;
+  --text-app-caption-1: 500 12px/16px var(--font-family-body);
+  --tracking-app-caption-1: 0.01em;
+  --text-app-caption-2: 500 11px/13px var(--font-family-body);
+  --tracking-app-caption-2: 0.02em;
+  --text-mono-title-2: 700 28px/36px var(--font-family-mono);
+  --tracking-mono-title-2: 0em;
+  --text-mono-title-3: 700 22px/28px var(--font-family-mono);
+  --tracking-mono-title-3: 0em;
+  --text-mono-body: 400 16px/24px var(--font-family-mono);
+  --tracking-mono-body: 0em;
+  --text-mono-body-medium: 500 16px/24px var(--font-family-mono);
+  --tracking-mono-body-medium: 0em;
+  --text-mono-subheadline: 400 14px/20px var(--font-family-mono);
+  --tracking-mono-subheadline: 0em;
+  --text-mono-subheadline-medium: 500 14px/20px var(--font-family-mono);
+  --tracking-mono-subheadline-medium: 0em;
+  --text-mono-caption-1: 400 12px/16px var(--font-family-mono);
+  --tracking-mono-caption-1: 0em;
+  --text-mono-caption-1-medium: 500 12px/16px var(--font-family-mono);
+  --tracking-mono-caption-1-medium: 0em;
+  --text-mono-caption-2: 500 11px/14px var(--font-family-mono);
+  --tracking-mono-caption-2: 0em;
+}
+
+/* web/display — Web, desktop from 1024 px. Marketing hero only, not for product screens. */
+.text-web-display { font: var(--text-web-display); letter-spacing: var(--tracking-web-display); }
+/* web/large-title — Web, desktop from 1024 px. Name of a wide page, greeting. */
+.text-web-large-title { font: var(--text-web-large-title); letter-spacing: var(--tracking-web-large-title); }
+/* web/title-1 — Web, desktop from 1024 px. Title of a page or a document. */
+.text-web-title-1 { font: var(--text-web-title-1); letter-spacing: var(--tracking-web-title-1); }
+/* web/title-2 — Web, desktop from 1024 px. Title of a section or a large block, big figure in a widget. */
+.text-web-title-2 { font: var(--text-web-title-2); letter-spacing: var(--tracking-web-title-2); }
+/* web/title-3 — Web, desktop from 1024 px. Title of a window, card or event. */
+.text-web-title-3 { font: var(--text-web-title-3); letter-spacing: var(--tracking-web-title-3); }
+/* web/headline — Web, desktop from 1024 px. Title of a list item or a small card, label of the largest button. */
+.text-web-headline { font: var(--text-web-headline); letter-spacing: var(--tracking-web-headline); }
+/* web/body — Web, desktop from 1024 px. Main text, value in a field. Paragraphs never go below 16 px. */
+.text-web-body { font: var(--text-web-body); letter-spacing: var(--tracking-web-body); }
+/* web/body-medium — Body with emphasis: filled values, names, selected items. */
+.text-web-body-medium { font: var(--text-web-body-medium); letter-spacing: var(--tracking-web-body-medium); }
+/* web/body-semibold — Body, strong: label of a button (brandbook: buttons 600). */
+.text-web-body-semibold { font: var(--text-web-body-semibold); letter-spacing: var(--tracking-web-body-semibold); }
+/* web/callout — Web, desktop from 1024 px. Explanatory text next to the main one, hint under a title. */
+.text-web-callout { font: var(--text-web-callout); letter-spacing: var(--tracking-web-callout); }
+/* web/subheadline — Web, desktop from 1024 px. Secondary line, metadata, text of controls. */
+.text-web-subheadline { font: var(--text-web-subheadline); letter-spacing: var(--tracking-web-subheadline); }
+/* web/subheadline-medium — Subheadline with emphasis: labels of fields, chips, tabs, table headers. */
+.text-web-subheadline-medium { font: var(--text-web-subheadline-medium); letter-spacing: var(--tracking-web-subheadline-medium); }
+/* web/subheadline-semibold — Subheadline, strong: label of a small button. */
+.text-web-subheadline-semibold { font: var(--text-web-subheadline-semibold); letter-spacing: var(--tracking-web-subheadline-semibold); }
+/* web/footnote — Web, desktop from 1024 px. Notes, helper and status lines. */
+.text-web-footnote { font: var(--text-web-footnote); letter-spacing: var(--tracking-web-footnote); }
+/* web/caption-1 — Web, desktop from 1024 px. Short labels, status pills, counters. */
+.text-web-caption-1 { font: var(--text-web-caption-1); letter-spacing: var(--tracking-web-caption-1); }
+/* web/caption-1-semibold — Caption 1, strong: key of a property, small label that must stand out. */
+.text-web-caption-1-semibold { font: var(--text-web-caption-1-semibold); letter-spacing: var(--tracking-web-caption-1-semibold); }
+/* web/caption-2 — Web, desktop from 1024 px. Labels and IDs only, never sentences. */
+.text-web-caption-2 { font: var(--text-web-caption-2); letter-spacing: var(--tracking-web-caption-2); }
+/* web/overline — Overline: JetBrains Mono 12/16, capitals, +8 %. Group titles and kickers above a heading. */
+.text-web-overline { font: var(--text-web-overline); letter-spacing: var(--tracking-web-overline); text-transform: uppercase; font-variant-numeric: tabular-nums; }
+/* web-m/display — Web, mobile below 640 px. Marketing hero only, not for product screens. */
+.text-web-m-display { font: var(--text-web-m-display); letter-spacing: var(--tracking-web-m-display); }
+/* web-m/large-title — Web, mobile below 640 px. Name of a wide page, greeting. */
+.text-web-m-large-title { font: var(--text-web-m-large-title); letter-spacing: var(--tracking-web-m-large-title); }
+/* web-m/title-1 — Web, mobile below 640 px. Title of a page or a document. */
+.text-web-m-title-1 { font: var(--text-web-m-title-1); letter-spacing: var(--tracking-web-m-title-1); }
+/* web-m/title-2 — Web, mobile below 640 px. Title of a section or a large block, big figure in a widget. */
+.text-web-m-title-2 { font: var(--text-web-m-title-2); letter-spacing: var(--tracking-web-m-title-2); }
+/* web-m/title-3 — Web, mobile below 640 px. Title of a window, card or event. */
+.text-web-m-title-3 { font: var(--text-web-m-title-3); letter-spacing: var(--tracking-web-m-title-3); }
+/* web-m/headline — Web, mobile below 640 px. Title of a list item or a small card, label of the largest button. */
+.text-web-m-headline { font: var(--text-web-m-headline); letter-spacing: var(--tracking-web-m-headline); }
+/* web-m/body — Web, mobile below 640 px. Main text, value in a field. Paragraphs never go below 16 px. */
+.text-web-m-body { font: var(--text-web-m-body); letter-spacing: var(--tracking-web-m-body); }
+/* web-m/callout — Web, mobile below 640 px. Explanatory text next to the main one, hint under a title. */
+.text-web-m-callout { font: var(--text-web-m-callout); letter-spacing: var(--tracking-web-m-callout); }
+/* web-m/subheadline — Web, mobile below 640 px. Secondary line, metadata, text of controls. */
+.text-web-m-subheadline { font: var(--text-web-m-subheadline); letter-spacing: var(--tracking-web-m-subheadline); }
+/* web-m/footnote — Web, mobile below 640 px. Notes, helper and status lines. */
+.text-web-m-footnote { font: var(--text-web-m-footnote); letter-spacing: var(--tracking-web-m-footnote); }
+/* web-m/caption-1 — Web, mobile below 640 px. Short labels, status pills, counters. */
+.text-web-m-caption-1 { font: var(--text-web-m-caption-1); letter-spacing: var(--tracking-web-m-caption-1); }
+/* web-m/caption-2 — Web, mobile below 640 px. Labels and IDs only, never sentences. */
+.text-web-m-caption-2 { font: var(--text-web-m-caption-2); letter-spacing: var(--tracking-web-m-caption-2); }
+/* app/large-title — App, iOS and Android. Name of a wide page, greeting. */
+.text-app-large-title { font: var(--text-app-large-title); letter-spacing: var(--tracking-app-large-title); }
+/* app/title-1 — App, iOS and Android. Title of a page or a document. */
+.text-app-title-1 { font: var(--text-app-title-1); letter-spacing: var(--tracking-app-title-1); }
+/* app/title-2 — App, iOS and Android. Title of a section or a large block, big figure in a widget. */
+.text-app-title-2 { font: var(--text-app-title-2); letter-spacing: var(--tracking-app-title-2); }
+/* app/title-3 — App, iOS and Android. Title of a window, card or event. */
+.text-app-title-3 { font: var(--text-app-title-3); letter-spacing: var(--tracking-app-title-3); }
+/* app/headline — App, iOS and Android. Title of a list item or a small card, label of the largest button. */
+.text-app-headline { font: var(--text-app-headline); letter-spacing: var(--tracking-app-headline); }
+/* app/body — App, iOS and Android. Main text, value in a field. Paragraphs never go below 16 px. */
+.text-app-body { font: var(--text-app-body); letter-spacing: var(--tracking-app-body); }
+/* app/callout — App, iOS and Android. Explanatory text next to the main one, hint under a title. */
+.text-app-callout { font: var(--text-app-callout); letter-spacing: var(--tracking-app-callout); }
+/* app/subheadline — App, iOS and Android. Secondary line, metadata, text of controls. */
+.text-app-subheadline { font: var(--text-app-subheadline); letter-spacing: var(--tracking-app-subheadline); }
+/* app/footnote — App, iOS and Android. Notes, helper and status lines. */
+.text-app-footnote { font: var(--text-app-footnote); letter-spacing: var(--tracking-app-footnote); }
+/* app/caption-1 — App, iOS and Android. Short labels, status pills, counters. */
+.text-app-caption-1 { font: var(--text-app-caption-1); letter-spacing: var(--tracking-app-caption-1); }
+/* app/caption-2 — App, iOS and Android. Labels and IDs only, never sentences. */
+.text-app-caption-2 { font: var(--text-app-caption-2); letter-spacing: var(--tracking-app-caption-2); }
+/* mono/title-2 — JetBrains Mono, size of title-2. Large time or figure in a widget. */
+.text-mono-title-2 { font: var(--text-mono-title-2); letter-spacing: var(--tracking-mono-title-2); font-variant-numeric: tabular-nums; }
+/* mono/title-3 — JetBrains Mono, size of title-3. Figure in a card, digit of a code. */
+.text-mono-title-3 { font: var(--text-mono-title-3); letter-spacing: var(--tracking-mono-title-3); font-variant-numeric: tabular-nums; }
+/* mono/body — JetBrains Mono, size of body. IDs, time, sums and figures that must line up. */
+.text-mono-body { font: var(--text-mono-body); letter-spacing: var(--tracking-mono-body); font-variant-numeric: tabular-nums; }
+/* mono/body-medium — JetBrains Mono, size of body. IDs, time, sums and figures that must line up. */
+.text-mono-body-medium { font: var(--text-mono-body-medium); letter-spacing: var(--tracking-mono-body-medium); font-variant-numeric: tabular-nums; }
+/* mono/subheadline — JetBrains Mono, size of subheadline. IDs, time, sums and figures that must line up. */
+.text-mono-subheadline { font: var(--text-mono-subheadline); letter-spacing: var(--tracking-mono-subheadline); font-variant-numeric: tabular-nums; }
+/* mono/subheadline-medium — JetBrains Mono, size of subheadline. IDs, time, sums and figures that must line up. */
+.text-mono-subheadline-medium { font: var(--text-mono-subheadline-medium); letter-spacing: var(--tracking-mono-subheadline-medium); font-variant-numeric: tabular-nums; }
+/* mono/caption-1 — JetBrains Mono, size of caption-1. IDs, time, sums and figures that must line up. */
+.text-mono-caption-1 { font: var(--text-mono-caption-1); letter-spacing: var(--tracking-mono-caption-1); font-variant-numeric: tabular-nums; }
+/* mono/caption-1-medium — JetBrains Mono, size of caption-1. IDs, time, sums and figures that must line up. */
+.text-mono-caption-1-medium { font: var(--text-mono-caption-1-medium); letter-spacing: var(--tracking-mono-caption-1-medium); font-variant-numeric: tabular-nums; }
+/* mono/caption-2 — JetBrains Mono, size of caption-2. Count in the smallest counter, short IDs. */
+.text-mono-caption-2 { font: var(--text-mono-caption-2); letter-spacing: var(--tracking-mono-caption-2); font-variant-numeric: tabular-nums; }

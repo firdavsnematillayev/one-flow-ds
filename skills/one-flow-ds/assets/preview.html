@@ -1,0 +1,1577 @@
+<meta charset="utf-8">
+<title>One Flow DS v2 · токены</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>
+/* One Flow DS v2 — токены. СГЕНЕРИРОВАНО из references/tokens.json (scripts/build-tokens.mjs), руками не править.
+   Источник: Figma tlHFo5v7I0fXFxtlAApApw «design systems v2», выгрузка 2026-11-17.
+   Тема: по системе; принудительно <html data-theme="light|dark">; повышенный контраст: data-contrast="more" или системная настройка.
+   Тёмный или светлый остров внутри страницы: data-theme на любом элементе.
+   Бренд клиента (white-label): <html data-brand="client-example"> — только на корне.
+   Шрифты: <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"> */
+
+:root {
+  /* palette — сырые шкалы, в макетах и коде не использовать напрямую */
+  --palette-blue-50: #eef8ff;
+  --palette-blue-100: #e6f5ff;
+  --palette-blue-200: #b3e3ff;
+  --palette-blue-300: #78cefe;
+  --palette-blue-400: #3baffc;
+  --palette-blue-500: #0d8af7;
+  --palette-blue-600: #0a6ee0;
+  --palette-blue-700: #0a55c9;
+  --palette-blue-800: #0a3ec2;
+  --palette-blue-900: #0c2d78;
+  --palette-blue-950: #0a1b47;
+  --palette-orange-50: #fff5ee;
+  --palette-orange-100: #ffe6d4;
+  --palette-orange-200: #ffc9a3;
+  --palette-orange-300: #ffa56b;
+  --palette-orange-400: #ff8840;
+  --palette-orange-500: #ff6b1a;
+  --palette-orange-600: #eb560a;
+  --palette-orange-700: #c2440a;
+  --palette-orange-800: #99360e;
+  --palette-orange-900: #7a2d10;
+  --palette-neutral-0: #ffffff;
+  --palette-neutral-25: #f5f8fc;
+  --palette-neutral-50: #eff3f8;
+  --palette-neutral-100: #e3e9f1;
+  --palette-neutral-200: #cdd6e2;
+  --palette-neutral-300: #aebacb;
+  --palette-neutral-400: #8794a9;
+  --palette-neutral-500: #66738a;
+  --palette-neutral-600: #4b576c;
+  --palette-neutral-700: #343f52;
+  --palette-neutral-800: #212a3b;
+  --palette-neutral-900: #141b2b;
+  --palette-neutral-950: #0a1020;
+  --palette-light-line: #dfe5ee;
+  --palette-light-surface-3: #eef2f8;
+  --palette-dark-base: #060a14;
+  --palette-dark-surface: #0c1324;
+  --palette-dark-raised: #111a2e;
+  --palette-dark-surface-3: #18233a;
+  --palette-dark-fill: #1b2640;
+  --palette-dark-line-2: #26334f;
+  --palette-dark-tint: #0e2445;
+  --palette-dark-tint-line: #1d4a80;
+  --palette-dark-text: #eef2f8;
+  --palette-dark-link-strong: #8fd3ff;
+  --palette-success-base: #0e9f5b;
+  --palette-success-strong: #087443;
+  --palette-success-text: #065f3b;
+  --palette-success-soft: #e7f6ee;
+  --palette-success-dark: #30d07a;
+  --palette-success-dark-soft: #0f2a1e;
+  --palette-warning-base: #b57a00;
+  --palette-warning-fill: #f5b400;
+  --palette-warning-strong: #8a5a00;
+  --palette-warning-text: #7a5200;
+  --palette-warning-soft: #fff6db;
+  --palette-warning-dark-soft: #2a2208;
+  --palette-danger-base: #e5364b;
+  --palette-danger-strong: #b8172c;
+  --palette-danger-text: #a3162a;
+  --palette-danger-soft: #fdecee;
+  --palette-danger-dark: #ff5c6f;
+  --palette-danger-dark-soft: #2e0f16;
+  --palette-info-text: #0a4fa8;
+  --palette-signal-soft: #fff1e8;
+  --palette-contrast-black: #000000;
+  --palette-contrast-text-2: #2a3446;
+  --palette-contrast-blue: #0a4fb8;
+  --palette-contrast-dark-text-2: #d3dbe6;
+  --palette-contrast-dark-raised: #0a0d14;
+  --palette-contrast-dark-success: #5fe29a;
+  --palette-contrast-dark-danger: #ff8a97;
+  --palette-contrast-dark-warning: #ffd54a;
+  --palette-app-blue: #2f6bff;
+  --palette-app-violet: #8b5cf6;
+  --palette-app-pink: #ec4899;
+  --palette-app-teal: #14b8a6;
+  --palette-app-orange: #f97316;
+  --palette-app-sky: #38bdf8;
+  --palette-app-green: #22c55e;
+  --palette-app-red: #ef4444;
+  --palette-app-amber: #f59e0b;
+  --palette-app-indigo: #6366f1;
+  --palette-danger-fill: #dc3045;
+  --palette-neutral-550: #626f86;
+  /* brand — шкала бренда (режим One Flow); клиент: <html data-brand="client-example"> */
+  --brand-50: var(--palette-blue-50);
+  --brand-100: var(--palette-blue-100);
+  --brand-200: var(--palette-blue-200);
+  --brand-300: var(--palette-blue-300);
+  --brand-400: var(--palette-blue-400);
+  --brand-500: var(--palette-blue-500);
+  --brand-600: var(--palette-blue-600);
+  --brand-700: var(--palette-blue-700);
+  --brand-800: var(--palette-blue-800);
+  --brand-900: var(--palette-blue-900);
+  --brand-950: var(--palette-blue-950);
+  /* size */
+  --control-xs: 24px;
+  --control-s: 32px;
+  --control-m: 36px;
+  --control-l: 44px;
+  --control-xl: 52px;
+  --icon-s: 16px;
+  --icon-m: 20px;
+  --icon-l: 24px;
+  /* space */
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  /* radius */
+  --radius-xs: 4px;
+  --radius-s: 8px;
+  --radius-m: 12px;
+  --radius-l: 16px;
+  --radius-xl: 24px;
+  --radius-full: 999px;
+  /* motion */
+  --duration-instant: 100ms;
+  --duration-quick: 200ms;
+  --duration-base: 320ms;
+  --duration-slow: 560ms;
+  --duration-brand: 4000ms;
+  --easing-flow: cubic-bezier(0.22, 1, 0.36, 1);
+  --easing-exit: cubic-bezier(0.55, 0, 1, 0.45);
+  --easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  /* layer (z-index) */
+  --layer-base: 0;
+  --layer-raised: 10;
+  --layer-sticky: 100;
+  --layer-dropdown: 200;
+  --layer-panel: 300;
+  --layer-scrim: 400;
+  --layer-modal: 500;
+  --layer-toast: 600;
+  --layer-tooltip: 700;
+  /* layout — Desktop; Tablet и Mobile ниже в @media */
+  --breakpoint-min-width: 1024px;
+  --grid-columns: 12;
+  --grid-gutter: 16px;
+  --grid-margin: 24px;
+  --content-max-width: 1104px;
+  --content-rail: 304px;
+  --shell-nav-bar-height: 82px;
+  --shell-side-bar-expanded: 284px;
+  --shell-side-bar-collapsed: 72px;
+  /* typography — семейства и размеры (составные стили — typography.css) */
+  --font-family-heading: "Onest", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-family-body: "Onest", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-family-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-size-web-display: 72px;
+  --font-line-height-web-display: 76px;
+  --font-size-web-large-title: 48px;
+  --font-line-height-web-large-title: 56px;
+  --font-size-web-title-1: 36px;
+  --font-line-height-web-title-1: 44px;
+  --font-size-web-title-2: 28px;
+  --font-line-height-web-title-2: 36px;
+  --font-size-web-title-3: 22px;
+  --font-line-height-web-title-3: 28px;
+  --font-size-web-headline: 18px;
+  --font-line-height-web-headline: 26px;
+  --font-size-web-body: 16px;
+  --font-line-height-web-body: 24px;
+  --font-size-web-callout: 15px;
+  --font-line-height-web-callout: 22px;
+  --font-size-web-subheadline: 14px;
+  --font-line-height-web-subheadline: 20px;
+  --font-size-web-footnote: 13px;
+  --font-line-height-web-footnote: 18px;
+  --font-size-web-caption-1: 12px;
+  --font-line-height-web-caption-1: 16px;
+  --font-size-web-caption-2: 11px;
+  --font-line-height-web-caption-2: 14px;
+  --font-size-web-m-display: 44px;
+  --font-line-height-web-m-display: 48px;
+  --font-size-web-m-large-title: 34px;
+  --font-line-height-web-m-large-title: 40px;
+  --font-size-web-m-title-1: 28px;
+  --font-line-height-web-m-title-1: 34px;
+  --font-size-web-m-title-2: 24px;
+  --font-line-height-web-m-title-2: 30px;
+  --font-size-web-m-title-3: 20px;
+  --font-line-height-web-m-title-3: 26px;
+  --font-size-web-m-headline: 17px;
+  --font-line-height-web-m-headline: 24px;
+  --font-size-web-m-body: 16px;
+  --font-line-height-web-m-body: 24px;
+  --font-size-web-m-callout: 15px;
+  --font-line-height-web-m-callout: 22px;
+  --font-size-web-m-subheadline: 14px;
+  --font-line-height-web-m-subheadline: 20px;
+  --font-size-web-m-footnote: 13px;
+  --font-line-height-web-m-footnote: 18px;
+  --font-size-web-m-caption-1: 12px;
+  --font-line-height-web-m-caption-1: 16px;
+  --font-size-web-m-caption-2: 11px;
+  --font-line-height-web-m-caption-2: 14px;
+  --font-size-app-large-title: 34px;
+  --font-line-height-app-large-title: 41px;
+  --font-size-app-title-1: 28px;
+  --font-line-height-app-title-1: 34px;
+  --font-size-app-title-2: 22px;
+  --font-line-height-app-title-2: 28px;
+  --font-size-app-title-3: 20px;
+  --font-line-height-app-title-3: 25px;
+  --font-size-app-headline: 17px;
+  --font-line-height-app-headline: 22px;
+  --font-size-app-body: 17px;
+  --font-line-height-app-body: 22px;
+  --font-size-app-callout: 16px;
+  --font-line-height-app-callout: 21px;
+  --font-size-app-subheadline: 15px;
+  --font-line-height-app-subheadline: 20px;
+  --font-size-app-footnote: 13px;
+  --font-line-height-app-footnote: 18px;
+  --font-size-app-caption-1: 12px;
+  --font-line-height-app-caption-1: 16px;
+  --font-size-app-caption-2: 11px;
+  --font-line-height-app-caption-2: 13px;
+  /* root/brand — роли шкалы бренда */
+  --root-brand-100: var(--brand-100);
+  --root-brand-200: var(--brand-200);
+  --root-brand-300: var(--brand-300);
+  --root-brand-400: var(--brand-400);
+  --root-brand-50: var(--brand-50);
+  --root-brand-500: var(--brand-500);
+  --root-brand-600: var(--brand-600);
+  --root-brand-700: var(--brand-700);
+  --root-brand-800: var(--brand-800);
+  --root-brand-900: var(--brand-900);
+  --root-brand-950: var(--brand-950);
+}
+
+[data-brand="client-example"] {
+  --brand-50: #e7fbf5;
+  --brand-100: #dcf9f0;
+  --brand-200: #97edd3;
+  --brand-300: #45dcae;
+  --brand-400: #27bd90;
+  --brand-500: #139b73;
+  --brand-600: #0d815e;
+  --brand-700: #0c694d;
+  --brand-800: #0d5841;
+  --brand-900: #0c3a2c;
+  --brand-950: #08231b;
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --breakpoint-min-width: 640px;
+    --grid-columns: 8;
+    --grid-margin: 24px;
+}
+}
+@media (max-width: 639px) {
+  :root {
+    --breakpoint-min-width: 0px;
+    --grid-columns: 4;
+    --grid-margin: 20px;
+}
+}
+
+/* ---- Light ---- */
+:root,
+[data-theme="light"] {
+  --chart-1: var(--brand-600);
+  --chart-2: var(--brand-300);
+  --chart-3: var(--brand-900);
+  --chart-4: var(--palette-neutral-400);
+  --chart-highlight: var(--palette-orange-500);
+  --chart-other: var(--palette-neutral-200);
+  --label-brand-brand: var(--root-brand-600);
+  --label-brand-disabled: var(--root-brand-300);
+  --label-brand-on-subtle: var(--root-brand-800);
+  --label-brand-strong: var(--root-brand-700);
+  --label-danger: var(--palette-danger-text);
+  --label-disabled: var(--palette-neutral-300);
+  --label-info: var(--palette-info-text);
+  --label-inverse: var(--palette-neutral-0);
+  --label-on-signal: var(--palette-neutral-950);
+  --label-primary: var(--palette-neutral-950);
+  --label-secondary: var(--palette-neutral-600);
+  --label-signal: var(--palette-orange-700);
+  --label-success: var(--palette-success-text);
+  --label-tertiary: var(--palette-neutral-550);
+  --label-warning: var(--palette-warning-text);
+  --opacity-illustration: 1;
+  --outline-brand: var(--root-brand-600);
+  --outline-control: var(--palette-neutral-400);
+  --outline-danger: var(--palette-danger-base);
+  --outline-default: var(--palette-neutral-200);
+  --outline-disabled: var(--palette-neutral-200);
+  --outline-elevated: #00000000;
+  --outline-focus: var(--root-brand-600);
+  --outline-glass: #ffffff59;
+  --outline-hover: var(--palette-neutral-500);
+  --outline-subtle: var(--palette-light-line);
+  --shadow-ambient: #0a10200f;
+  --shadow-focus: #0a6ee059;
+  --shadow-key: #0a102024;
+  --surface-brand-subtle-default: var(--root-brand-100);
+  --surface-brand-subtle-hover: var(--root-brand-200);
+  --surface-brand-subtle-pressed: var(--root-brand-300);
+  --surface-brand-brand: var(--root-brand-600);
+  --surface-brand-disabled: var(--root-brand-200);
+  --surface-brand-hover: var(--root-brand-700);
+  --surface-brand-pressed: var(--root-brand-800);
+  --surface-danger-subtle: var(--palette-danger-soft);
+  --surface-danger-default: var(--palette-danger-fill);
+  --surface-danger-hover: var(--palette-danger-strong);
+  --surface-danger-pressed: var(--palette-danger-text);
+  --surface-default: var(--palette-neutral-0);
+  --surface-disabled: var(--palette-neutral-100);
+  --surface-elevated: var(--palette-neutral-0);
+  --surface-elevated-hover: var(--palette-neutral-50);
+  --surface-elevated-pressed: var(--palette-neutral-100);
+  --surface-ghost-hover: var(--root-brand-50);
+  --surface-ghost-pressed: var(--root-brand-100);
+  --surface-glass-brand: #0d8af729;
+  --surface-glass-dark: #0a102073;
+  --surface-glass-neutral: #ffffff29;
+  --surface-info: var(--palette-blue-600);
+  --surface-info-strong: var(--palette-blue-700);
+  --surface-info-subtle: var(--palette-blue-50);
+  --surface-inverse: var(--palette-neutral-950);
+  --surface-neutral-strong-default: var(--palette-neutral-100);
+  --surface-neutral-strong-hover: var(--palette-neutral-200);
+  --surface-neutral-strong-pressed: var(--palette-neutral-300);
+  --surface-neutral-default: var(--palette-neutral-50);
+  --surface-neutral-hover: var(--palette-neutral-100);
+  --surface-neutral-pressed: var(--palette-neutral-200);
+  --surface-page: var(--palette-neutral-25);
+  --surface-scrim: #0a102073;
+  --surface-segmented-thumb: var(--palette-neutral-0);
+  --surface-signal: var(--palette-orange-500);
+  --surface-signal-subtle: var(--palette-signal-soft);
+  --surface-skeleton-base: var(--palette-neutral-100);
+  --surface-skeleton-highlight: var(--palette-neutral-25);
+  --surface-success: var(--palette-success-base);
+  --surface-success-strong: var(--palette-success-strong);
+  --surface-success-subtle: var(--palette-success-soft);
+  --surface-warning: var(--palette-warning-fill);
+  --surface-warning-strong: var(--palette-warning-strong);
+  --surface-warning-subtle: var(--palette-warning-soft);
+  /* effects */
+  --effect-glass: blur(20px);
+  --focus-ring: 0px 0px 4px 2px var(--shadow-focus);
+  --shadow-lg: 0px 12px 32px -6px var(--shadow-key), 0px 4px 12px 0px var(--shadow-ambient);
+  --shadow-md: 0px 6px 16px -4px var(--shadow-key), 0px 2px 6px 0px var(--shadow-ambient);
+  --shadow-sm: 0px 1px 3px 0px var(--shadow-key), 0px 1px 2px 0px var(--shadow-ambient);
+  --shadow-xl: 0px 24px 64px -12px var(--shadow-key), 0px 8px 24px 0px var(--shadow-ambient);
+  --shadow-xs: 0px 1px 2px 0px var(--shadow-ambient);
+  color-scheme: light;
+}
+
+/* ---- Dark ---- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --chart-1: var(--brand-600);
+    --chart-2: var(--brand-200);
+    --chart-3: var(--palette-neutral-400);
+    --chart-4: var(--palette-neutral-600);
+    --chart-highlight: var(--palette-blue-400);
+    --chart-other: var(--palette-dark-line-2);
+    --label-brand-brand: var(--root-brand-400);
+    --label-brand-disabled: var(--root-brand-800);
+    --label-brand-on-subtle: var(--root-brand-200);
+    --label-brand-strong: var(--root-brand-300);
+    --label-danger: var(--palette-danger-dark);
+    --label-disabled: var(--palette-neutral-600);
+    --label-info: var(--palette-blue-400);
+    --label-inverse: var(--palette-neutral-0);
+    --label-on-signal: var(--palette-neutral-950);
+    --label-primary: var(--palette-dark-text);
+    --label-secondary: var(--palette-neutral-300);
+    --label-signal: var(--palette-blue-400);
+    --label-success: var(--palette-success-dark);
+    --label-tertiary: var(--palette-neutral-400);
+    --label-warning: var(--palette-warning-fill);
+    --opacity-illustration: 0.72;
+    --outline-brand: var(--root-brand-400);
+    --outline-control: var(--palette-neutral-500);
+    --outline-danger: var(--palette-danger-dark);
+    --outline-default: var(--palette-neutral-600);
+    --outline-disabled: var(--palette-dark-line-2);
+    --outline-elevated: var(--palette-neutral-700);
+    --outline-focus: var(--root-brand-400);
+    --outline-glass: #ffffff3d;
+    --outline-hover: var(--palette-neutral-400);
+    --outline-subtle: var(--palette-dark-line-2);
+    --shadow-ambient: #00000052;
+    --shadow-focus: #3baffc73;
+    --shadow-key: #00000080;
+    --surface-brand-subtle-default: var(--root-brand-950);
+    --surface-brand-subtle-hover: var(--root-brand-900);
+    --surface-brand-subtle-pressed: var(--root-brand-800);
+    --surface-brand-brand: var(--root-brand-600);
+    --surface-brand-disabled: var(--root-brand-900);
+    --surface-brand-hover: var(--root-brand-700);
+    --surface-brand-pressed: var(--root-brand-800);
+    --surface-danger-subtle: var(--palette-danger-dark-soft);
+    --surface-danger-default: var(--palette-danger-fill);
+    --surface-danger-hover: var(--palette-danger-strong);
+    --surface-danger-pressed: var(--palette-danger-text);
+    --surface-default: var(--palette-dark-surface);
+    --surface-disabled: var(--palette-dark-fill);
+    --surface-elevated: var(--palette-dark-raised);
+    --surface-elevated-hover: #ffffff0f;
+    --surface-elevated-pressed: #ffffff1f;
+    --surface-ghost-hover: var(--root-brand-950);
+    --surface-ghost-pressed: var(--root-brand-900);
+    --surface-glass-brand: #3baffc38;
+    --surface-glass-dark: #0a102073;
+    --surface-glass-neutral: #ffffff1f;
+    --surface-info: var(--palette-blue-600);
+    --surface-info-strong: var(--palette-blue-700);
+    --surface-info-subtle: var(--palette-dark-tint);
+    --surface-inverse: var(--palette-neutral-700);
+    --surface-neutral-strong-default: var(--palette-dark-line-2);
+    --surface-neutral-strong-hover: var(--palette-neutral-700);
+    --surface-neutral-strong-pressed: var(--palette-neutral-600);
+    --surface-neutral-default: var(--palette-dark-surface-3);
+    --surface-neutral-hover: var(--palette-dark-line-2);
+    --surface-neutral-pressed: var(--palette-neutral-700);
+    --surface-page: var(--palette-dark-base);
+    --surface-scrim: #00000099;
+    --surface-segmented-thumb: var(--palette-neutral-700);
+    --surface-signal: var(--palette-blue-400);
+    --surface-signal-subtle: var(--palette-dark-tint);
+    --surface-skeleton-base: var(--palette-neutral-700);
+    --surface-skeleton-highlight: var(--palette-neutral-600);
+    --surface-success: var(--palette-success-base);
+    --surface-success-strong: var(--palette-success-strong);
+    --surface-success-subtle: var(--palette-success-dark-soft);
+    --surface-warning: var(--palette-warning-fill);
+    --surface-warning-strong: var(--palette-warning-strong);
+    --surface-warning-subtle: var(--palette-warning-dark-soft);
+    /* effects */
+    --effect-glass: blur(20px);
+    --focus-ring: 0px 0px 4px 2px var(--shadow-focus);
+    --shadow-lg: 0px 12px 32px -6px var(--shadow-key), 0px 4px 12px 0px var(--shadow-ambient);
+    --shadow-md: 0px 6px 16px -4px var(--shadow-key), 0px 2px 6px 0px var(--shadow-ambient);
+    --shadow-sm: 0px 1px 3px 0px var(--shadow-key), 0px 1px 2px 0px var(--shadow-ambient);
+    --shadow-xl: 0px 24px 64px -12px var(--shadow-key), 0px 8px 24px 0px var(--shadow-ambient);
+    --shadow-xs: 0px 1px 2px 0px var(--shadow-ambient);
+    color-scheme: dark;
+  }
+}
+[data-theme="dark"] {
+  --chart-1: var(--brand-600);
+  --chart-2: var(--brand-200);
+  --chart-3: var(--palette-neutral-400);
+  --chart-4: var(--palette-neutral-600);
+  --chart-highlight: var(--palette-blue-400);
+  --chart-other: var(--palette-dark-line-2);
+  --label-brand-brand: var(--root-brand-400);
+  --label-brand-disabled: var(--root-brand-800);
+  --label-brand-on-subtle: var(--root-brand-200);
+  --label-brand-strong: var(--root-brand-300);
+  --label-danger: var(--palette-danger-dark);
+  --label-disabled: var(--palette-neutral-600);
+  --label-info: var(--palette-blue-400);
+  --label-inverse: var(--palette-neutral-0);
+  --label-on-signal: var(--palette-neutral-950);
+  --label-primary: var(--palette-dark-text);
+  --label-secondary: var(--palette-neutral-300);
+  --label-signal: var(--palette-blue-400);
+  --label-success: var(--palette-success-dark);
+  --label-tertiary: var(--palette-neutral-400);
+  --label-warning: var(--palette-warning-fill);
+  --opacity-illustration: 0.72;
+  --outline-brand: var(--root-brand-400);
+  --outline-control: var(--palette-neutral-500);
+  --outline-danger: var(--palette-danger-dark);
+  --outline-default: var(--palette-neutral-600);
+  --outline-disabled: var(--palette-dark-line-2);
+  --outline-elevated: var(--palette-neutral-700);
+  --outline-focus: var(--root-brand-400);
+  --outline-glass: #ffffff3d;
+  --outline-hover: var(--palette-neutral-400);
+  --outline-subtle: var(--palette-dark-line-2);
+  --shadow-ambient: #00000052;
+  --shadow-focus: #3baffc73;
+  --shadow-key: #00000080;
+  --surface-brand-subtle-default: var(--root-brand-950);
+  --surface-brand-subtle-hover: var(--root-brand-900);
+  --surface-brand-subtle-pressed: var(--root-brand-800);
+  --surface-brand-brand: var(--root-brand-600);
+  --surface-brand-disabled: var(--root-brand-900);
+  --surface-brand-hover: var(--root-brand-700);
+  --surface-brand-pressed: var(--root-brand-800);
+  --surface-danger-subtle: var(--palette-danger-dark-soft);
+  --surface-danger-default: var(--palette-danger-fill);
+  --surface-danger-hover: var(--palette-danger-strong);
+  --surface-danger-pressed: var(--palette-danger-text);
+  --surface-default: var(--palette-dark-surface);
+  --surface-disabled: var(--palette-dark-fill);
+  --surface-elevated: var(--palette-dark-raised);
+  --surface-elevated-hover: #ffffff0f;
+  --surface-elevated-pressed: #ffffff1f;
+  --surface-ghost-hover: var(--root-brand-950);
+  --surface-ghost-pressed: var(--root-brand-900);
+  --surface-glass-brand: #3baffc38;
+  --surface-glass-dark: #0a102073;
+  --surface-glass-neutral: #ffffff1f;
+  --surface-info: var(--palette-blue-600);
+  --surface-info-strong: var(--palette-blue-700);
+  --surface-info-subtle: var(--palette-dark-tint);
+  --surface-inverse: var(--palette-neutral-700);
+  --surface-neutral-strong-default: var(--palette-dark-line-2);
+  --surface-neutral-strong-hover: var(--palette-neutral-700);
+  --surface-neutral-strong-pressed: var(--palette-neutral-600);
+  --surface-neutral-default: var(--palette-dark-surface-3);
+  --surface-neutral-hover: var(--palette-dark-line-2);
+  --surface-neutral-pressed: var(--palette-neutral-700);
+  --surface-page: var(--palette-dark-base);
+  --surface-scrim: #00000099;
+  --surface-segmented-thumb: var(--palette-neutral-700);
+  --surface-signal: var(--palette-blue-400);
+  --surface-signal-subtle: var(--palette-dark-tint);
+  --surface-skeleton-base: var(--palette-neutral-700);
+  --surface-skeleton-highlight: var(--palette-neutral-600);
+  --surface-success: var(--palette-success-base);
+  --surface-success-strong: var(--palette-success-strong);
+  --surface-success-subtle: var(--palette-success-dark-soft);
+  --surface-warning: var(--palette-warning-fill);
+  --surface-warning-strong: var(--palette-warning-strong);
+  --surface-warning-subtle: var(--palette-warning-dark-soft);
+  /* effects */
+  --effect-glass: blur(20px);
+  --focus-ring: 0px 0px 4px 2px var(--shadow-focus);
+  --shadow-lg: 0px 12px 32px -6px var(--shadow-key), 0px 4px 12px 0px var(--shadow-ambient);
+  --shadow-md: 0px 6px 16px -4px var(--shadow-key), 0px 2px 6px 0px var(--shadow-ambient);
+  --shadow-sm: 0px 1px 3px 0px var(--shadow-key), 0px 1px 2px 0px var(--shadow-ambient);
+  --shadow-xl: 0px 24px 64px -12px var(--shadow-key), 0px 8px 24px 0px var(--shadow-ambient);
+  --shadow-xs: 0px 1px 2px 0px var(--shadow-ambient);
+  color-scheme: dark;
+}
+
+/* ---- Light · contrast ---- */
+@media (prefers-contrast: more) {
+  :root:not([data-theme="dark"]) {
+    --chart-1: var(--brand-600);
+    --chart-2: var(--brand-300);
+    --chart-3: var(--brand-900);
+    --chart-4: var(--palette-neutral-400);
+    --chart-highlight: var(--palette-orange-500);
+    --chart-other: var(--palette-neutral-200);
+    --label-brand-brand: var(--palette-contrast-blue);
+    --label-brand-disabled: var(--root-brand-300);
+    --label-brand-on-subtle: var(--root-brand-800);
+    --label-brand-strong: var(--brand-800);
+    --label-danger: var(--palette-danger-strong);
+    --label-disabled: var(--palette-neutral-400);
+    --label-info: var(--palette-info-text);
+    --label-inverse: var(--palette-neutral-0);
+    --label-on-signal: var(--palette-neutral-950);
+    --label-primary: var(--palette-contrast-black);
+    --label-secondary: var(--palette-contrast-text-2);
+    --label-signal: var(--palette-orange-700);
+    --label-success: var(--palette-success-strong);
+    --label-tertiary: var(--palette-neutral-600);
+    --label-warning: var(--palette-warning-strong);
+    --opacity-illustration: 1;
+    --outline-brand: var(--palette-contrast-blue);
+    --outline-control: var(--palette-neutral-500);
+    --outline-danger: var(--palette-danger-strong);
+    --outline-default: var(--palette-neutral-400);
+    --outline-disabled: var(--palette-neutral-200);
+    --outline-elevated: #00000000;
+    --outline-focus: var(--palette-contrast-blue);
+    --outline-glass: #ffffff59;
+    --outline-hover: var(--palette-neutral-600);
+    --outline-subtle: var(--palette-neutral-300);
+    --shadow-ambient: #0a10200f;
+    --shadow-focus: #0a6ee059;
+    --shadow-key: #0a102024;
+    --surface-brand-subtle-default: var(--root-brand-100);
+    --surface-brand-subtle-hover: var(--root-brand-200);
+    --surface-brand-subtle-pressed: var(--root-brand-300);
+    --surface-brand-brand: var(--palette-contrast-blue);
+    --surface-brand-disabled: var(--root-brand-200);
+    --surface-brand-hover: var(--brand-800);
+    --surface-brand-pressed: var(--root-brand-800);
+    --surface-danger-subtle: var(--palette-danger-soft);
+    --surface-danger-default: var(--palette-danger-fill);
+    --surface-danger-hover: var(--palette-danger-strong);
+    --surface-danger-pressed: var(--palette-danger-text);
+    --surface-default: var(--palette-neutral-0);
+    --surface-disabled: var(--palette-neutral-100);
+    --surface-elevated: var(--palette-neutral-0);
+    --surface-elevated-hover: var(--palette-neutral-50);
+    --surface-elevated-pressed: var(--palette-neutral-100);
+    --surface-ghost-hover: var(--root-brand-50);
+    --surface-ghost-pressed: var(--root-brand-100);
+    --surface-glass-brand: #0d8af729;
+    --surface-glass-dark: #0a102073;
+    --surface-glass-neutral: #ffffff29;
+    --surface-info: var(--palette-blue-600);
+    --surface-info-strong: var(--palette-blue-700);
+    --surface-info-subtle: var(--palette-blue-50);
+    --surface-inverse: var(--palette-neutral-950);
+    --surface-neutral-strong-default: var(--palette-neutral-100);
+    --surface-neutral-strong-hover: var(--palette-neutral-200);
+    --surface-neutral-strong-pressed: var(--palette-neutral-300);
+    --surface-neutral-default: var(--palette-neutral-50);
+    --surface-neutral-hover: var(--palette-neutral-100);
+    --surface-neutral-pressed: var(--palette-neutral-200);
+    --surface-page: var(--palette-neutral-25);
+    --surface-scrim: #0a102073;
+    --surface-segmented-thumb: var(--palette-neutral-0);
+    --surface-signal: var(--palette-orange-700);
+    --surface-signal-subtle: var(--palette-orange-100);
+    --surface-skeleton-base: var(--palette-neutral-100);
+    --surface-skeleton-highlight: var(--palette-neutral-25);
+    --surface-success: var(--palette-success-base);
+    --surface-success-strong: var(--palette-success-strong);
+    --surface-success-subtle: var(--palette-success-soft);
+    --surface-warning: var(--palette-warning-fill);
+    --surface-warning-strong: var(--palette-warning-strong);
+    --surface-warning-subtle: var(--palette-warning-soft);
+    /* effects */
+    --effect-glass: blur(20px);
+    --focus-ring: 0px 0px 4px 2px var(--shadow-focus);
+    --shadow-lg: 0px 12px 32px -6px var(--shadow-key), 0px 4px 12px 0px var(--shadow-ambient);
+    --shadow-md: 0px 6px 16px -4px var(--shadow-key), 0px 2px 6px 0px var(--shadow-ambient);
+    --shadow-sm: 0px 1px 3px 0px var(--shadow-key), 0px 1px 2px 0px var(--shadow-ambient);
+    --shadow-xl: 0px 24px 64px -12px var(--shadow-key), 0px 8px 24px 0px var(--shadow-ambient);
+    --shadow-xs: 0px 1px 2px 0px var(--shadow-ambient);
+    color-scheme: light;
+  }
+}
+[data-theme="light"][data-contrast="more"],
+:root[data-contrast="more"]:not([data-theme="dark"]) {
+  --chart-1: var(--brand-600);
+  --chart-2: var(--brand-300);
+  --chart-3: var(--brand-900);
+  --chart-4: var(--palette-neutral-400);
+  --chart-highlight: var(--palette-orange-500);
+  --chart-other: var(--palette-neutral-200);
+  --label-brand-brand: var(--palette-contrast-blue);
+  --label-brand-disabled: var(--root-brand-300);
+  --label-brand-on-subtle: var(--root-brand-800);
+  --label-brand-strong: var(--brand-800);
+  --label-danger: var(--palette-danger-strong);
+  --label-disabled: var(--palette-neutral-400);
+  --label-info: var(--palette-info-text);
+  --label-inverse: var(--palette-neutral-0);
+  --label-on-signal: var(--palette-neutral-950);
+  --label-primary: var(--palette-contrast-black);
+  --label-secondary: var(--palette-contrast-text-2);
+  --label-signal: var(--palette-orange-700);
+  --label-success: var(--palette-success-strong);
+  --label-tertiary: var(--palette-neutral-600);
+  --label-warning: var(--palette-warning-strong);
+  --opacity-illustration: 1;
+  --outline-brand: var(--palette-contrast-blue);
+  --outline-control: var(--palette-neutral-500);
+  --outline-danger: var(--palette-danger-strong);
+  --outline-default: var(--palette-neutral-400);
+  --outline-disabled: var(--palette-neutral-200);
+  --outline-elevated: #00000000;
+  --outline-focus: var(--palette-contrast-blue);
+  --outline-glass: #ffffff59;
+  --outline-hover: var(--palette-neutral-600);
+  --outline-subtle: var(--palette-neutral-300);
+  --shadow-ambient: #0a10200f;
+  --shadow-focus: #0a6ee059;
+  --shadow-key: #0a102024;
+  --surface-brand-subtle-default: var(--root-brand-100);
+  --surface-brand-subtle-hover: var(--root-brand-200);
+  --surface-brand-subtle-pressed: var(--root-brand-300);
+  --surface-brand-brand: var(--palette-contrast-blue);
+  --surface-brand-disabled: var(--root-brand-200);
+  --surface-brand-hover: var(--brand-800);
+  --surface-brand-pressed: var(--root-brand-800);
+  --surface-danger-subtle: var(--palette-danger-soft);
+  --surface-danger-default: var(--palette-danger-fill);
+  --surface-danger-hover: var(--palette-danger-strong);
+  --surface-danger-pressed: var(--palette-danger-text);
+  --surface-default: var(--palette-neutral-0);
+  --surface-disabled: var(--palette-neutral-100);
+  --surface-elevated: var(--palette-neutral-0);
+  --surface-elevated-hover: var(--palette-neutral-50);
+  --surface-elevated-pressed: var(--palette-neutral-100);
+  --surface-ghost-hover: var(--root-brand-50);
+  --surface-ghost-pressed: var(--root-brand-100);
+  --surface-glass-brand: #0d8af729;
+  --surface-glass-dark: #0a102073;
+  --surface-glass-neutral: #ffffff29;
+  --surface-info: var(--palette-blue-600);
+  --surface-info-strong: var(--palette-blue-700);
+  --surface-info-subtle: var(--palette-blue-50);
+  --surface-inverse: var(--palette-neutral-950);
+  --surface-neutral-strong-default: var(--palette-neutral-100);
+  --surface-neutral-strong-hover: var(--palette-neutral-200);
+  --surface-neutral-strong-pressed: var(--palette-neutral-300);
+  --surface-neutral-default: var(--palette-neutral-50);
+  --surface-neutral-hover: var(--palette-neutral-100);
+  --surface-neutral-pressed: var(--palette-neutral-200);
+  --surface-page: var(--palette-neutral-25);
+  --surface-scrim: #0a102073;
+  --surface-segmented-thumb: var(--palette-neutral-0);
+  --surface-signal: var(--palette-orange-700);
+  --surface-signal-subtle: var(--palette-orange-100);
+  --surface-skeleton-base: var(--palette-neutral-100);
+  --surface-skeleton-highlight: var(--palette-neutral-25);
+  --surface-success: var(--palette-success-base);
+  --surface-success-strong: var(--palette-success-strong);
+  --surface-success-subtle: var(--palette-success-soft);
+  --surface-warning: var(--palette-warning-fill);
+  --surface-warning-strong: var(--palette-warning-strong);
+  --surface-warning-subtle: var(--palette-warning-soft);
+  /* effects */
+  --effect-glass: blur(20px);
+  --focus-ring: 0px 0px 4px 2px var(--shadow-focus);
+  --shadow-lg: 0px 12px 32px -6px var(--shadow-key), 0px 4px 12px 0px var(--shadow-ambient);
+  --shadow-md: 0px 6px 16px -4px var(--shadow-key), 0px 2px 6px 0px var(--shadow-ambient);
+  --shadow-sm: 0px 1px 3px 0px var(--shadow-key), 0px 1px 2px 0px var(--shadow-ambient);
+  --shadow-xl: 0px 24px 64px -12px var(--shadow-key), 0px 8px 24px 0px var(--shadow-ambient);
+  --shadow-xs: 0px 1px 2px 0px var(--shadow-ambient);
+  color-scheme: light;
+}
+
+/* ---- Dark · contrast ---- */
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --chart-1: var(--brand-600);
+    --chart-2: var(--brand-200);
+    --chart-3: var(--palette-neutral-400);
+    --chart-4: var(--palette-neutral-600);
+    --chart-highlight: var(--palette-blue-400);
+    --chart-other: var(--palette-dark-line-2);
+    --label-brand-brand: var(--palette-dark-link-strong);
+    --label-brand-disabled: var(--root-brand-800);
+    --label-brand-on-subtle: var(--root-brand-200);
+    --label-brand-strong: var(--palette-neutral-0);
+    --label-danger: var(--palette-contrast-dark-danger);
+    --label-disabled: var(--palette-neutral-500);
+    --label-info: var(--palette-blue-400);
+    --label-inverse: var(--palette-neutral-0);
+    --label-on-signal: var(--palette-neutral-950);
+    --label-primary: var(--palette-neutral-0);
+    --label-secondary: var(--palette-contrast-dark-text-2);
+    --label-signal: var(--palette-dark-link-strong);
+    --label-success: var(--palette-contrast-dark-success);
+    --label-tertiary: var(--palette-neutral-300);
+    --label-warning: var(--palette-contrast-dark-warning);
+    --opacity-illustration: 0.72;
+    --outline-brand: var(--palette-dark-link-strong);
+    --outline-control: var(--palette-neutral-400);
+    --outline-danger: var(--palette-contrast-dark-danger);
+    --outline-default: var(--palette-neutral-500);
+    --outline-disabled: var(--palette-dark-line-2);
+    --outline-elevated: var(--palette-neutral-700);
+    --outline-focus: var(--palette-dark-link-strong);
+    --outline-glass: #ffffff3d;
+    --outline-hover: var(--palette-neutral-300);
+    --outline-subtle: var(--palette-neutral-600);
+    --shadow-ambient: #00000052;
+    --shadow-focus: #3baffc73;
+    --shadow-key: #00000080;
+    --surface-brand-subtle-default: var(--root-brand-950);
+    --surface-brand-subtle-hover: var(--root-brand-900);
+    --surface-brand-subtle-pressed: var(--root-brand-800);
+    --surface-brand-brand: var(--root-brand-600);
+    --surface-brand-disabled: var(--root-brand-900);
+    --surface-brand-hover: var(--root-brand-700);
+    --surface-brand-pressed: var(--root-brand-800);
+    --surface-danger-subtle: var(--palette-danger-dark-soft);
+    --surface-danger-default: var(--palette-danger-fill);
+    --surface-danger-hover: var(--palette-danger-strong);
+    --surface-danger-pressed: var(--palette-danger-text);
+    --surface-default: var(--palette-contrast-black);
+    --surface-disabled: var(--palette-dark-fill);
+    --surface-elevated: var(--palette-contrast-dark-raised);
+    --surface-elevated-hover: #ffffff0f;
+    --surface-elevated-pressed: #ffffff1f;
+    --surface-ghost-hover: var(--root-brand-950);
+    --surface-ghost-pressed: var(--root-brand-900);
+    --surface-glass-brand: #3baffc38;
+    --surface-glass-dark: #0a102073;
+    --surface-glass-neutral: #ffffff1f;
+    --surface-info: var(--palette-blue-600);
+    --surface-info-strong: var(--palette-blue-700);
+    --surface-info-subtle: var(--palette-dark-tint);
+    --surface-inverse: var(--palette-neutral-700);
+    --surface-neutral-strong-default: var(--palette-dark-line-2);
+    --surface-neutral-strong-hover: var(--palette-neutral-700);
+    --surface-neutral-strong-pressed: var(--palette-neutral-600);
+    --surface-neutral-default: var(--palette-dark-surface-3);
+    --surface-neutral-hover: var(--palette-dark-line-2);
+    --surface-neutral-pressed: var(--palette-neutral-700);
+    --surface-page: var(--palette-contrast-black);
+    --surface-scrim: #00000099;
+    --surface-segmented-thumb: var(--palette-neutral-700);
+    --surface-signal: var(--palette-dark-link-strong);
+    --surface-signal-subtle: var(--palette-dark-tint);
+    --surface-skeleton-base: var(--palette-neutral-700);
+    --surface-skeleton-highlight: var(--palette-neutral-600);
+    --surface-success: var(--palette-success-base);
+    --surface-success-strong: var(--palette-success-strong);
+    --surface-success-subtle: var(--palette-success-dark-soft);
+    --surface-warning: var(--palette-warning-fill);
+    --surface-warning-strong: var(--palette-warning-strong);
+    --surface-warning-subtle: var(--palette-warning-dark-soft);
+    /* effects */
+    --effect-glass: blur(20px);
+    --focus-ring: 0px 0px 4px 2px var(--shadow-focus);
+    --shadow-lg: 0px 12px 32px -6px var(--shadow-key), 0px 4px 12px 0px var(--shadow-ambient);
+    --shadow-md: 0px 6px 16px -4px var(--shadow-key), 0px 2px 6px 0px var(--shadow-ambient);
+    --shadow-sm: 0px 1px 3px 0px var(--shadow-key), 0px 1px 2px 0px var(--shadow-ambient);
+    --shadow-xl: 0px 24px 64px -12px var(--shadow-key), 0px 8px 24px 0px var(--shadow-ambient);
+    --shadow-xs: 0px 1px 2px 0px var(--shadow-ambient);
+    color-scheme: dark;
+  }
+}
+@media (prefers-contrast: more) {
+  :root[data-theme="dark"] {
+    --chart-1: var(--brand-600);
+    --chart-2: var(--brand-200);
+    --chart-3: var(--palette-neutral-400);
+    --chart-4: var(--palette-neutral-600);
+    --chart-highlight: var(--palette-blue-400);
+    --chart-other: var(--palette-dark-line-2);
+    --label-brand-brand: var(--palette-dark-link-strong);
+    --label-brand-disabled: var(--root-brand-800);
+    --label-brand-on-subtle: var(--root-brand-200);
+    --label-brand-strong: var(--palette-neutral-0);
+    --label-danger: var(--palette-contrast-dark-danger);
+    --label-disabled: var(--palette-neutral-500);
+    --label-info: var(--palette-blue-400);
+    --label-inverse: var(--palette-neutral-0);
+    --label-on-signal: var(--palette-neutral-950);
+    --label-primary: var(--palette-neutral-0);
+    --label-secondary: var(--palette-contrast-dark-text-2);
+    --label-signal: var(--palette-dark-link-strong);
+    --label-success: var(--palette-contrast-dark-success);
+    --label-tertiary: var(--palette-neutral-300);
+    --label-warning: var(--palette-contrast-dark-warning);
+    --opacity-illustration: 0.72;
+    --outline-brand: var(--palette-dark-link-strong);
+    --outline-control: var(--palette-neutral-400);
+    --outline-danger: var(--palette-contrast-dark-danger);
+    --outline-default: var(--palette-neutral-500);
+    --outline-disabled: var(--palette-dark-line-2);
+    --outline-elevated: var(--palette-neutral-700);
+    --outline-focus: var(--palette-dark-link-strong);
+    --outline-glass: #ffffff3d;
+    --outline-hover: var(--palette-neutral-300);
+    --outline-subtle: var(--palette-neutral-600);
+    --shadow-ambient: #00000052;
+    --shadow-focus: #3baffc73;
+    --shadow-key: #00000080;
+    --surface-brand-subtle-default: var(--root-brand-950);
+    --surface-brand-subtle-hover: var(--root-brand-900);
+    --surface-brand-subtle-pressed: var(--root-brand-800);
+    --surface-brand-brand: var(--root-brand-600);
+    --surface-brand-disabled: var(--root-brand-900);
+    --surface-brand-hover: var(--root-brand-700);
+    --surface-brand-pressed: var(--root-brand-800);
+    --surface-danger-subtle: var(--palette-danger-dark-soft);
+    --surface-danger-default: var(--palette-danger-fill);
+    --surface-danger-hover: var(--palette-danger-strong);
+    --surface-danger-pressed: var(--palette-danger-text);
+    --surface-default: var(--palette-contrast-black);
+    --surface-disabled: var(--palette-dark-fill);
+    --surface-elevated: var(--palette-contrast-dark-raised);
+    --surface-elevated-hover: #ffffff0f;
+    --surface-elevated-pressed: #ffffff1f;
+    --surface-ghost-hover: var(--root-brand-950);
+    --surface-ghost-pressed: var(--root-brand-900);
+    --surface-glass-brand: #3baffc38;
+    --surface-glass-dark: #0a102073;
+    --surface-glass-neutral: #ffffff1f;
+    --surface-info: var(--palette-blue-600);
+    --surface-info-strong: var(--palette-blue-700);
+    --surface-info-subtle: var(--palette-dark-tint);
+    --surface-inverse: var(--palette-neutral-700);
+    --surface-neutral-strong-default: var(--palette-dark-line-2);
+    --surface-neutral-strong-hover: var(--palette-neutral-700);
+    --surface-neutral-strong-pressed: var(--palette-neutral-600);
+    --surface-neutral-default: var(--palette-dark-surface-3);
+    --surface-neutral-hover: var(--palette-dark-line-2);
+    --surface-neutral-pressed: var(--palette-neutral-700);
+    --surface-page: var(--palette-contrast-black);
+    --surface-scrim: #00000099;
+    --surface-segmented-thumb: var(--palette-neutral-700);
+    --surface-signal: var(--palette-dark-link-strong);
+    --surface-signal-subtle: var(--palette-dark-tint);
+    --surface-skeleton-base: var(--palette-neutral-700);
+    --surface-skeleton-highlight: var(--palette-neutral-600);
+    --surface-success: var(--palette-success-base);
+    --surface-success-strong: var(--palette-success-strong);
+    --surface-success-subtle: var(--palette-success-dark-soft);
+    --surface-warning: var(--palette-warning-fill);
+    --surface-warning-strong: var(--palette-warning-strong);
+    --surface-warning-subtle: var(--palette-warning-dark-soft);
+    /* effects */
+    --effect-glass: blur(20px);
+    --focus-ring: 0px 0px 4px 2px var(--shadow-focus);
+    --shadow-lg: 0px 12px 32px -6px var(--shadow-key), 0px 4px 12px 0px var(--shadow-ambient);
+    --shadow-md: 0px 6px 16px -4px var(--shadow-key), 0px 2px 6px 0px var(--shadow-ambient);
+    --shadow-sm: 0px 1px 3px 0px var(--shadow-key), 0px 1px 2px 0px var(--shadow-ambient);
+    --shadow-xl: 0px 24px 64px -12px var(--shadow-key), 0px 8px 24px 0px var(--shadow-ambient);
+    --shadow-xs: 0px 1px 2px 0px var(--shadow-ambient);
+    color-scheme: dark;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-contrast="more"]:not([data-theme="light"]) {
+    --chart-1: var(--brand-600);
+    --chart-2: var(--brand-200);
+    --chart-3: var(--palette-neutral-400);
+    --chart-4: var(--palette-neutral-600);
+    --chart-highlight: var(--palette-blue-400);
+    --chart-other: var(--palette-dark-line-2);
+    --label-brand-brand: var(--palette-dark-link-strong);
+    --label-brand-disabled: var(--root-brand-800);
+    --label-brand-on-subtle: var(--root-brand-200);
+    --label-brand-strong: var(--palette-neutral-0);
+    --label-danger: var(--palette-contrast-dark-danger);
+    --label-disabled: var(--palette-neutral-500);
+    --label-info: var(--palette-blue-400);
+    --label-inverse: var(--palette-neutral-0);
+    --label-on-signal: var(--palette-neutral-950);
+    --label-primary: var(--palette-neutral-0);
+    --label-secondary: var(--palette-contrast-dark-text-2);
+    --label-signal: var(--palette-dark-link-strong);
+    --label-success: var(--palette-contrast-dark-success);
+    --label-tertiary: var(--palette-neutral-300);
+    --label-warning: var(--palette-contrast-dark-warning);
+    --opacity-illustration: 0.72;
+    --outline-brand: var(--palette-dark-link-strong);
+    --outline-control: var(--palette-neutral-400);
+    --outline-danger: var(--palette-contrast-dark-danger);
+    --outline-default: var(--palette-neutral-500);
+    --outline-disabled: var(--palette-dark-line-2);
+    --outline-elevated: var(--palette-neutral-700);
+    --outline-focus: var(--palette-dark-link-strong);
+    --outline-glass: #ffffff3d;
+    --outline-hover: var(--palette-neutral-300);
+    --outline-subtle: var(--palette-neutral-600);
+    --shadow-ambient: #00000052;
+    --shadow-focus: #3baffc73;
+    --shadow-key: #00000080;
+    --surface-brand-subtle-default: var(--root-brand-950);
+    --surface-brand-subtle-hover: var(--root-brand-900);
+    --surface-brand-subtle-pressed: var(--root-brand-800);
+    --surface-brand-brand: var(--root-brand-600);
+    --surface-brand-disabled: var(--root-brand-900);
+    --surface-brand-hover: var(--root-brand-700);
+    --surface-brand-pressed: var(--root-brand-800);
+    --surface-danger-subtle: var(--palette-danger-dark-soft);
+    --surface-danger-default: var(--palette-danger-fill);
+    --surface-danger-hover: var(--palette-danger-strong);
+    --surface-danger-pressed: var(--palette-danger-text);
+    --surface-default: var(--palette-contrast-black);
+    --surface-disabled: var(--palette-dark-fill);
+    --surface-elevated: var(--palette-contrast-dark-raised);
+    --surface-elevated-hover: #ffffff0f;
+    --surface-elevated-pressed: #ffffff1f;
+    --surface-ghost-hover: var(--root-brand-950);
+    --surface-ghost-pressed: var(--root-brand-900);
+    --surface-glass-brand: #3baffc38;
+    --surface-glass-dark: #0a102073;
+    --surface-glass-neutral: #ffffff1f;
+    --surface-info: var(--palette-blue-600);
+    --surface-info-strong: var(--palette-blue-700);
+    --surface-info-subtle: var(--palette-dark-tint);
+    --surface-inverse: var(--palette-neutral-700);
+    --surface-neutral-strong-default: var(--palette-dark-line-2);
+    --surface-neutral-strong-hover: var(--palette-neutral-700);
+    --surface-neutral-strong-pressed: var(--palette-neutral-600);
+    --surface-neutral-default: var(--palette-dark-surface-3);
+    --surface-neutral-hover: var(--palette-dark-line-2);
+    --surface-neutral-pressed: var(--palette-neutral-700);
+    --surface-page: var(--palette-contrast-black);
+    --surface-scrim: #00000099;
+    --surface-segmented-thumb: var(--palette-neutral-700);
+    --surface-signal: var(--palette-dark-link-strong);
+    --surface-signal-subtle: var(--palette-dark-tint);
+    --surface-skeleton-base: var(--palette-neutral-700);
+    --surface-skeleton-highlight: var(--palette-neutral-600);
+    --surface-success: var(--palette-success-base);
+    --surface-success-strong: var(--palette-success-strong);
+    --surface-success-subtle: var(--palette-success-dark-soft);
+    --surface-warning: var(--palette-warning-fill);
+    --surface-warning-strong: var(--palette-warning-strong);
+    --surface-warning-subtle: var(--palette-warning-dark-soft);
+    /* effects */
+    --effect-glass: blur(20px);
+    --focus-ring: 0px 0px 4px 2px var(--shadow-focus);
+    --shadow-lg: 0px 12px 32px -6px var(--shadow-key), 0px 4px 12px 0px var(--shadow-ambient);
+    --shadow-md: 0px 6px 16px -4px var(--shadow-key), 0px 2px 6px 0px var(--shadow-ambient);
+    --shadow-sm: 0px 1px 3px 0px var(--shadow-key), 0px 1px 2px 0px var(--shadow-ambient);
+    --shadow-xl: 0px 24px 64px -12px var(--shadow-key), 0px 8px 24px 0px var(--shadow-ambient);
+    --shadow-xs: 0px 1px 2px 0px var(--shadow-ambient);
+    color-scheme: dark;
+  }
+}
+[data-theme="dark"][data-contrast="more"] {
+  --chart-1: var(--brand-600);
+  --chart-2: var(--brand-200);
+  --chart-3: var(--palette-neutral-400);
+  --chart-4: var(--palette-neutral-600);
+  --chart-highlight: var(--palette-blue-400);
+  --chart-other: var(--palette-dark-line-2);
+  --label-brand-brand: var(--palette-dark-link-strong);
+  --label-brand-disabled: var(--root-brand-800);
+  --label-brand-on-subtle: var(--root-brand-200);
+  --label-brand-strong: var(--palette-neutral-0);
+  --label-danger: var(--palette-contrast-dark-danger);
+  --label-disabled: var(--palette-neutral-500);
+  --label-info: var(--palette-blue-400);
+  --label-inverse: var(--palette-neutral-0);
+  --label-on-signal: var(--palette-neutral-950);
+  --label-primary: var(--palette-neutral-0);
+  --label-secondary: var(--palette-contrast-dark-text-2);
+  --label-signal: var(--palette-dark-link-strong);
+  --label-success: var(--palette-contrast-dark-success);
+  --label-tertiary: var(--palette-neutral-300);
+  --label-warning: var(--palette-contrast-dark-warning);
+  --opacity-illustration: 0.72;
+  --outline-brand: var(--palette-dark-link-strong);
+  --outline-control: var(--palette-neutral-400);
+  --outline-danger: var(--palette-contrast-dark-danger);
+  --outline-default: var(--palette-neutral-500);
+  --outline-disabled: var(--palette-dark-line-2);
+  --outline-elevated: var(--palette-neutral-700);
+  --outline-focus: var(--palette-dark-link-strong);
+  --outline-glass: #ffffff3d;
+  --outline-hover: var(--palette-neutral-300);
+  --outline-subtle: var(--palette-neutral-600);
+  --shadow-ambient: #00000052;
+  --shadow-focus: #3baffc73;
+  --shadow-key: #00000080;
+  --surface-brand-subtle-default: var(--root-brand-950);
+  --surface-brand-subtle-hover: var(--root-brand-900);
+  --surface-brand-subtle-pressed: var(--root-brand-800);
+  --surface-brand-brand: var(--root-brand-600);
+  --surface-brand-disabled: var(--root-brand-900);
+  --surface-brand-hover: var(--root-brand-700);
+  --surface-brand-pressed: var(--root-brand-800);
+  --surface-danger-subtle: var(--palette-danger-dark-soft);
+  --surface-danger-default: var(--palette-danger-fill);
+  --surface-danger-hover: var(--palette-danger-strong);
+  --surface-danger-pressed: var(--palette-danger-text);
+  --surface-default: var(--palette-contrast-black);
+  --surface-disabled: var(--palette-dark-fill);
+  --surface-elevated: var(--palette-contrast-dark-raised);
+  --surface-elevated-hover: #ffffff0f;
+  --surface-elevated-pressed: #ffffff1f;
+  --surface-ghost-hover: var(--root-brand-950);
+  --surface-ghost-pressed: var(--root-brand-900);
+  --surface-glass-brand: #3baffc38;
+  --surface-glass-dark: #0a102073;
+  --surface-glass-neutral: #ffffff1f;
+  --surface-info: var(--palette-blue-600);
+  --surface-info-strong: var(--palette-blue-700);
+  --surface-info-subtle: var(--palette-dark-tint);
+  --surface-inverse: var(--palette-neutral-700);
+  --surface-neutral-strong-default: var(--palette-dark-line-2);
+  --surface-neutral-strong-hover: var(--palette-neutral-700);
+  --surface-neutral-strong-pressed: var(--palette-neutral-600);
+  --surface-neutral-default: var(--palette-dark-surface-3);
+  --surface-neutral-hover: var(--palette-dark-line-2);
+  --surface-neutral-pressed: var(--palette-neutral-700);
+  --surface-page: var(--palette-contrast-black);
+  --surface-scrim: #00000099;
+  --surface-segmented-thumb: var(--palette-neutral-700);
+  --surface-signal: var(--palette-dark-link-strong);
+  --surface-signal-subtle: var(--palette-dark-tint);
+  --surface-skeleton-base: var(--palette-neutral-700);
+  --surface-skeleton-highlight: var(--palette-neutral-600);
+  --surface-success: var(--palette-success-base);
+  --surface-success-strong: var(--palette-success-strong);
+  --surface-success-subtle: var(--palette-success-dark-soft);
+  --surface-warning: var(--palette-warning-fill);
+  --surface-warning-strong: var(--palette-warning-strong);
+  --surface-warning-subtle: var(--palette-warning-dark-soft);
+  /* effects */
+  --effect-glass: blur(20px);
+  --focus-ring: 0px 0px 4px 2px var(--shadow-focus);
+  --shadow-lg: 0px 12px 32px -6px var(--shadow-key), 0px 4px 12px 0px var(--shadow-ambient);
+  --shadow-md: 0px 6px 16px -4px var(--shadow-key), 0px 2px 6px 0px var(--shadow-ambient);
+  --shadow-sm: 0px 1px 3px 0px var(--shadow-key), 0px 1px 2px 0px var(--shadow-ambient);
+  --shadow-xl: 0px 24px 64px -12px var(--shadow-key), 0px 8px 24px 0px var(--shadow-ambient);
+  --shadow-xs: 0px 1px 2px 0px var(--shadow-ambient);
+  color-scheme: dark;
+}
+
+/* One Flow DS v2 — текстовые стили. СГЕНЕРИРОВАНО из references/tokens.json, руками не править.
+   Подключать после tokens.css. Каждый стиль — переменная --text-<группа>-<имя> (шорткат font)
+   + --tracking-… + класс .text-<группа>-<имя>. Группы: web (от 1024), web-m (мобильный веб), app (iOS/Android), mono (цифры, время, ID). */
+
+:root {
+  --text-web-display: 800 72px/76px var(--font-family-heading);
+  --tracking-web-display: -0.03em;
+  --text-web-large-title: 700 48px/56px var(--font-family-heading);
+  --tracking-web-large-title: -0.025em;
+  --text-web-title-1: 700 36px/44px var(--font-family-heading);
+  --tracking-web-title-1: -0.02em;
+  --text-web-title-2: 700 28px/36px var(--font-family-heading);
+  --tracking-web-title-2: -0.015em;
+  --text-web-title-3: 600 22px/28px var(--font-family-heading);
+  --tracking-web-title-3: -0.01em;
+  --text-web-headline: 600 18px/26px var(--font-family-heading);
+  --tracking-web-headline: 0em;
+  --text-web-body: 400 16px/24px var(--font-family-body);
+  --tracking-web-body: 0em;
+  --text-web-body-medium: 500 16px/24px var(--font-family-body);
+  --tracking-web-body-medium: 0em;
+  --text-web-body-semibold: 600 16px/24px var(--font-family-body);
+  --tracking-web-body-semibold: 0em;
+  --text-web-callout: 400 15px/22px var(--font-family-body);
+  --tracking-web-callout: 0em;
+  --text-web-subheadline: 400 14px/20px var(--font-family-body);
+  --tracking-web-subheadline: 0em;
+  --text-web-subheadline-medium: 500 14px/20px var(--font-family-body);
+  --tracking-web-subheadline-medium: 0em;
+  --text-web-subheadline-semibold: 600 14px/20px var(--font-family-body);
+  --tracking-web-subheadline-semibold: 0em;
+  --text-web-footnote: 400 13px/18px var(--font-family-body);
+  --tracking-web-footnote: 0em;
+  --text-web-caption-1: 500 12px/16px var(--font-family-body);
+  --tracking-web-caption-1: 0.01em;
+  --text-web-caption-1-semibold: 600 12px/16px var(--font-family-body);
+  --tracking-web-caption-1-semibold: 0.01em;
+  --text-web-caption-2: 500 11px/14px var(--font-family-body);
+  --tracking-web-caption-2: 0.02em;
+  --text-web-overline: 500 12px/16px var(--font-family-mono);
+  --tracking-web-overline: 0.08em;
+  --text-web-m-display: 800 44px/48px var(--font-family-heading);
+  --tracking-web-m-display: -0.03em;
+  --text-web-m-large-title: 700 34px/40px var(--font-family-heading);
+  --tracking-web-m-large-title: -0.025em;
+  --text-web-m-title-1: 700 28px/34px var(--font-family-heading);
+  --tracking-web-m-title-1: -0.02em;
+  --text-web-m-title-2: 700 24px/30px var(--font-family-heading);
+  --tracking-web-m-title-2: -0.015em;
+  --text-web-m-title-3: 600 20px/26px var(--font-family-heading);
+  --tracking-web-m-title-3: -0.01em;
+  --text-web-m-headline: 600 17px/24px var(--font-family-heading);
+  --tracking-web-m-headline: 0em;
+  --text-web-m-body: 400 16px/24px var(--font-family-body);
+  --tracking-web-m-body: 0em;
+  --text-web-m-callout: 400 15px/22px var(--font-family-body);
+  --tracking-web-m-callout: 0em;
+  --text-web-m-subheadline: 400 14px/20px var(--font-family-body);
+  --tracking-web-m-subheadline: 0em;
+  --text-web-m-footnote: 400 13px/18px var(--font-family-body);
+  --tracking-web-m-footnote: 0em;
+  --text-web-m-caption-1: 500 12px/16px var(--font-family-body);
+  --tracking-web-m-caption-1: 0.01em;
+  --text-web-m-caption-2: 500 11px/14px var(--font-family-body);
+  --tracking-web-m-caption-2: 0.02em;
+  --text-app-large-title: 700 34px/41px var(--font-family-heading);
+  --tracking-app-large-title: -0.02em;
+  --text-app-title-1: 700 28px/34px var(--font-family-heading);
+  --tracking-app-title-1: -0.015em;
+  --text-app-title-2: 700 22px/28px var(--font-family-heading);
+  --tracking-app-title-2: -0.01em;
+  --text-app-title-3: 600 20px/25px var(--font-family-heading);
+  --tracking-app-title-3: -0.005em;
+  --text-app-headline: 600 17px/22px var(--font-family-heading);
+  --tracking-app-headline: 0em;
+  --text-app-body: 400 17px/22px var(--font-family-body);
+  --tracking-app-body: 0em;
+  --text-app-callout: 400 16px/21px var(--font-family-body);
+  --tracking-app-callout: 0em;
+  --text-app-subheadline: 400 15px/20px var(--font-family-body);
+  --tracking-app-subheadline: 0em;
+  --text-app-footnote: 400 13px/18px var(--font-family-body);
+  --tracking-app-footnote: 0em;
+  --text-app-caption-1: 500 12px/16px var(--font-family-body);
+  --tracking-app-caption-1: 0.01em;
+  --text-app-caption-2: 500 11px/13px var(--font-family-body);
+  --tracking-app-caption-2: 0.02em;
+  --text-mono-title-2: 700 28px/36px var(--font-family-mono);
+  --tracking-mono-title-2: 0em;
+  --text-mono-title-3: 700 22px/28px var(--font-family-mono);
+  --tracking-mono-title-3: 0em;
+  --text-mono-body: 400 16px/24px var(--font-family-mono);
+  --tracking-mono-body: 0em;
+  --text-mono-body-medium: 500 16px/24px var(--font-family-mono);
+  --tracking-mono-body-medium: 0em;
+  --text-mono-subheadline: 400 14px/20px var(--font-family-mono);
+  --tracking-mono-subheadline: 0em;
+  --text-mono-subheadline-medium: 500 14px/20px var(--font-family-mono);
+  --tracking-mono-subheadline-medium: 0em;
+  --text-mono-caption-1: 400 12px/16px var(--font-family-mono);
+  --tracking-mono-caption-1: 0em;
+  --text-mono-caption-1-medium: 500 12px/16px var(--font-family-mono);
+  --tracking-mono-caption-1-medium: 0em;
+  --text-mono-caption-2: 500 11px/14px var(--font-family-mono);
+  --tracking-mono-caption-2: 0em;
+}
+
+/* web/display — Web, desktop from 1024 px. Marketing hero only, not for product screens. */
+.text-web-display { font: var(--text-web-display); letter-spacing: var(--tracking-web-display); }
+/* web/large-title — Web, desktop from 1024 px. Name of a wide page, greeting. */
+.text-web-large-title { font: var(--text-web-large-title); letter-spacing: var(--tracking-web-large-title); }
+/* web/title-1 — Web, desktop from 1024 px. Title of a page or a document. */
+.text-web-title-1 { font: var(--text-web-title-1); letter-spacing: var(--tracking-web-title-1); }
+/* web/title-2 — Web, desktop from 1024 px. Title of a section or a large block, big figure in a widget. */
+.text-web-title-2 { font: var(--text-web-title-2); letter-spacing: var(--tracking-web-title-2); }
+/* web/title-3 — Web, desktop from 1024 px. Title of a window, card or event. */
+.text-web-title-3 { font: var(--text-web-title-3); letter-spacing: var(--tracking-web-title-3); }
+/* web/headline — Web, desktop from 1024 px. Title of a list item or a small card, label of the largest button. */
+.text-web-headline { font: var(--text-web-headline); letter-spacing: var(--tracking-web-headline); }
+/* web/body — Web, desktop from 1024 px. Main text, value in a field. Paragraphs never go below 16 px. */
+.text-web-body { font: var(--text-web-body); letter-spacing: var(--tracking-web-body); }
+/* web/body-medium — Body with emphasis: filled values, names, selected items. */
+.text-web-body-medium { font: var(--text-web-body-medium); letter-spacing: var(--tracking-web-body-medium); }
+/* web/body-semibold — Body, strong: label of a button (brandbook: buttons 600). */
+.text-web-body-semibold { font: var(--text-web-body-semibold); letter-spacing: var(--tracking-web-body-semibold); }
+/* web/callout — Web, desktop from 1024 px. Explanatory text next to the main one, hint under a title. */
+.text-web-callout { font: var(--text-web-callout); letter-spacing: var(--tracking-web-callout); }
+/* web/subheadline — Web, desktop from 1024 px. Secondary line, metadata, text of controls. */
+.text-web-subheadline { font: var(--text-web-subheadline); letter-spacing: var(--tracking-web-subheadline); }
+/* web/subheadline-medium — Subheadline with emphasis: labels of fields, chips, tabs, table headers. */
+.text-web-subheadline-medium { font: var(--text-web-subheadline-medium); letter-spacing: var(--tracking-web-subheadline-medium); }
+/* web/subheadline-semibold — Subheadline, strong: label of a small button. */
+.text-web-subheadline-semibold { font: var(--text-web-subheadline-semibold); letter-spacing: var(--tracking-web-subheadline-semibold); }
+/* web/footnote — Web, desktop from 1024 px. Notes, helper and status lines. */
+.text-web-footnote { font: var(--text-web-footnote); letter-spacing: var(--tracking-web-footnote); }
+/* web/caption-1 — Web, desktop from 1024 px. Short labels, status pills, counters. */
+.text-web-caption-1 { font: var(--text-web-caption-1); letter-spacing: var(--tracking-web-caption-1); }
+/* web/caption-1-semibold — Caption 1, strong: key of a property, small label that must stand out. */
+.text-web-caption-1-semibold { font: var(--text-web-caption-1-semibold); letter-spacing: var(--tracking-web-caption-1-semibold); }
+/* web/caption-2 — Web, desktop from 1024 px. Labels and IDs only, never sentences. */
+.text-web-caption-2 { font: var(--text-web-caption-2); letter-spacing: var(--tracking-web-caption-2); }
+/* web/overline — Overline: JetBrains Mono 12/16, capitals, +8 %. Group titles and kickers above a heading. */
+.text-web-overline { font: var(--text-web-overline); letter-spacing: var(--tracking-web-overline); text-transform: uppercase; font-variant-numeric: tabular-nums; }
+/* web-m/display — Web, mobile below 640 px. Marketing hero only, not for product screens. */
+.text-web-m-display { font: var(--text-web-m-display); letter-spacing: var(--tracking-web-m-display); }
+/* web-m/large-title — Web, mobile below 640 px. Name of a wide page, greeting. */
+.text-web-m-large-title { font: var(--text-web-m-large-title); letter-spacing: var(--tracking-web-m-large-title); }
+/* web-m/title-1 — Web, mobile below 640 px. Title of a page or a document. */
+.text-web-m-title-1 { font: var(--text-web-m-title-1); letter-spacing: var(--tracking-web-m-title-1); }
+/* web-m/title-2 — Web, mobile below 640 px. Title of a section or a large block, big figure in a widget. */
+.text-web-m-title-2 { font: var(--text-web-m-title-2); letter-spacing: var(--tracking-web-m-title-2); }
+/* web-m/title-3 — Web, mobile below 640 px. Title of a window, card or event. */
+.text-web-m-title-3 { font: var(--text-web-m-title-3); letter-spacing: var(--tracking-web-m-title-3); }
+/* web-m/headline — Web, mobile below 640 px. Title of a list item or a small card, label of the largest button. */
+.text-web-m-headline { font: var(--text-web-m-headline); letter-spacing: var(--tracking-web-m-headline); }
+/* web-m/body — Web, mobile below 640 px. Main text, value in a field. Paragraphs never go below 16 px. */
+.text-web-m-body { font: var(--text-web-m-body); letter-spacing: var(--tracking-web-m-body); }
+/* web-m/callout — Web, mobile below 640 px. Explanatory text next to the main one, hint under a title. */
+.text-web-m-callout { font: var(--text-web-m-callout); letter-spacing: var(--tracking-web-m-callout); }
+/* web-m/subheadline — Web, mobile below 640 px. Secondary line, metadata, text of controls. */
+.text-web-m-subheadline { font: var(--text-web-m-subheadline); letter-spacing: var(--tracking-web-m-subheadline); }
+/* web-m/footnote — Web, mobile below 640 px. Notes, helper and status lines. */
+.text-web-m-footnote { font: var(--text-web-m-footnote); letter-spacing: var(--tracking-web-m-footnote); }
+/* web-m/caption-1 — Web, mobile below 640 px. Short labels, status pills, counters. */
+.text-web-m-caption-1 { font: var(--text-web-m-caption-1); letter-spacing: var(--tracking-web-m-caption-1); }
+/* web-m/caption-2 — Web, mobile below 640 px. Labels and IDs only, never sentences. */
+.text-web-m-caption-2 { font: var(--text-web-m-caption-2); letter-spacing: var(--tracking-web-m-caption-2); }
+/* app/large-title — App, iOS and Android. Name of a wide page, greeting. */
+.text-app-large-title { font: var(--text-app-large-title); letter-spacing: var(--tracking-app-large-title); }
+/* app/title-1 — App, iOS and Android. Title of a page or a document. */
+.text-app-title-1 { font: var(--text-app-title-1); letter-spacing: var(--tracking-app-title-1); }
+/* app/title-2 — App, iOS and Android. Title of a section or a large block, big figure in a widget. */
+.text-app-title-2 { font: var(--text-app-title-2); letter-spacing: var(--tracking-app-title-2); }
+/* app/title-3 — App, iOS and Android. Title of a window, card or event. */
+.text-app-title-3 { font: var(--text-app-title-3); letter-spacing: var(--tracking-app-title-3); }
+/* app/headline — App, iOS and Android. Title of a list item or a small card, label of the largest button. */
+.text-app-headline { font: var(--text-app-headline); letter-spacing: var(--tracking-app-headline); }
+/* app/body — App, iOS and Android. Main text, value in a field. Paragraphs never go below 16 px. */
+.text-app-body { font: var(--text-app-body); letter-spacing: var(--tracking-app-body); }
+/* app/callout — App, iOS and Android. Explanatory text next to the main one, hint under a title. */
+.text-app-callout { font: var(--text-app-callout); letter-spacing: var(--tracking-app-callout); }
+/* app/subheadline — App, iOS and Android. Secondary line, metadata, text of controls. */
+.text-app-subheadline { font: var(--text-app-subheadline); letter-spacing: var(--tracking-app-subheadline); }
+/* app/footnote — App, iOS and Android. Notes, helper and status lines. */
+.text-app-footnote { font: var(--text-app-footnote); letter-spacing: var(--tracking-app-footnote); }
+/* app/caption-1 — App, iOS and Android. Short labels, status pills, counters. */
+.text-app-caption-1 { font: var(--text-app-caption-1); letter-spacing: var(--tracking-app-caption-1); }
+/* app/caption-2 — App, iOS and Android. Labels and IDs only, never sentences. */
+.text-app-caption-2 { font: var(--text-app-caption-2); letter-spacing: var(--tracking-app-caption-2); }
+/* mono/title-2 — JetBrains Mono, size of title-2. Large time or figure in a widget. */
+.text-mono-title-2 { font: var(--text-mono-title-2); letter-spacing: var(--tracking-mono-title-2); font-variant-numeric: tabular-nums; }
+/* mono/title-3 — JetBrains Mono, size of title-3. Figure in a card, digit of a code. */
+.text-mono-title-3 { font: var(--text-mono-title-3); letter-spacing: var(--tracking-mono-title-3); font-variant-numeric: tabular-nums; }
+/* mono/body — JetBrains Mono, size of body. IDs, time, sums and figures that must line up. */
+.text-mono-body { font: var(--text-mono-body); letter-spacing: var(--tracking-mono-body); font-variant-numeric: tabular-nums; }
+/* mono/body-medium — JetBrains Mono, size of body. IDs, time, sums and figures that must line up. */
+.text-mono-body-medium { font: var(--text-mono-body-medium); letter-spacing: var(--tracking-mono-body-medium); font-variant-numeric: tabular-nums; }
+/* mono/subheadline — JetBrains Mono, size of subheadline. IDs, time, sums and figures that must line up. */
+.text-mono-subheadline { font: var(--text-mono-subheadline); letter-spacing: var(--tracking-mono-subheadline); font-variant-numeric: tabular-nums; }
+/* mono/subheadline-medium — JetBrains Mono, size of subheadline. IDs, time, sums and figures that must line up. */
+.text-mono-subheadline-medium { font: var(--text-mono-subheadline-medium); letter-spacing: var(--tracking-mono-subheadline-medium); font-variant-numeric: tabular-nums; }
+/* mono/caption-1 — JetBrains Mono, size of caption-1. IDs, time, sums and figures that must line up. */
+.text-mono-caption-1 { font: var(--text-mono-caption-1); letter-spacing: var(--tracking-mono-caption-1); font-variant-numeric: tabular-nums; }
+/* mono/caption-1-medium — JetBrains Mono, size of caption-1. IDs, time, sums and figures that must line up. */
+.text-mono-caption-1-medium { font: var(--text-mono-caption-1-medium); letter-spacing: var(--tracking-mono-caption-1-medium); font-variant-numeric: tabular-nums; }
+/* mono/caption-2 — JetBrains Mono, size of caption-2. Count in the smallest counter, short IDs. */
+.text-mono-caption-2 { font: var(--text-mono-caption-2); letter-spacing: var(--tracking-mono-caption-2); font-variant-numeric: tabular-nums; }
+
+/* доска: только токены DS */
+html { scrollbar-gutter: stable; }
+body { margin: 0; background: var(--surface-page); color: var(--label-primary); font: var(--text-web-body); }
+.page { max-width: var(--content-max-width); margin: 0 auto; padding-block: var(--space-40) var(--space-64);
+  padding-left: max(var(--space-16), env(safe-area-inset-left, 0px)); padding-right: max(var(--space-16), env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; gap: var(--space-24); }
+header.top { display: flex; flex-wrap: wrap; gap: var(--space-16); align-items: flex-end; justify-content: space-between; }
+header.top p { margin: var(--space-4) 0 0; color: var(--label-secondary); }
+.test { display: inline-flex; align-items: center; gap: var(--space-8); padding: var(--space-6) var(--space-12); border-radius: var(--radius-full); font: var(--text-web-subheadline-medium); }
+.test.ok { background: var(--surface-success-subtle); color: var(--label-success); }
+.test.bad { background: var(--surface-danger-subtle); color: var(--label-danger); }
+.test svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.theme { display: inline-flex; gap: var(--space-2); padding: var(--space-2); border-radius: var(--radius-full); background: var(--surface-neutral-default); }
+.theme button { border: 0; background: none; color: var(--label-secondary); font: var(--text-web-subheadline-medium); height: var(--control-s); padding: 0 var(--space-12); border-radius: var(--radius-full); cursor: pointer; transition: background var(--duration-quick) var(--easing-standard); }
+.theme button[aria-pressed="true"] { background: var(--surface-segmented-thumb); color: var(--label-primary); box-shadow: var(--shadow-xs); }
+section.card { background: var(--surface-default); border-radius: var(--radius-xl); padding: var(--space-24); min-width: 0; }
+section.card > h2 { margin: 0 0 var(--space-4); }
+section.card > p { margin: 0 0 var(--space-16); color: var(--label-secondary); font: var(--text-web-callout); }
+h3 { margin: var(--space-24) 0 var(--space-8); }
+code { font: var(--text-mono-caption-1); color: var(--label-primary); }
+small { display: block; font: var(--text-web-footnote); color: var(--label-tertiary); }
+.scroll { overflow-x: auto; }
+.ctable { display: grid; min-width: 760px; border: 1px solid var(--outline-subtle); border-radius: var(--radius-l); overflow: hidden; }
+.crow { display: grid; grid-template-columns: minmax(220px, 1.4fr) repeat(4, minmax(120px, 1fr)); }
+.crow + .crow { border-top: 1px solid var(--outline-subtle); }
+.crow.head span { font: var(--text-web-caption-1); color: var(--label-secondary); padding: var(--space-8) var(--space-12); background: var(--surface-neutral-default); }
+.cname { padding: var(--space-10) var(--space-12); min-width: 0; }
+.cname small { margin-top: var(--space-2); }
+.cell { display: flex; align-items: center; gap: var(--space-8); padding: var(--space-10) var(--space-12); background: var(--surface-default); color: var(--label-primary); }
+.sw { width: 28px; height: 28px; flex: none; border-radius: var(--radius-s); box-shadow: inset 0 0 0 1px var(--outline-subtle); background-clip: padding-box; }
+.cell .hex { color: var(--label-secondary); }
+.trow { display: grid; grid-template-columns: minmax(200px, 260px) minmax(0, 1fr); gap: var(--space-16); align-items: baseline; padding: var(--space-12) 0; border-top: 1px solid var(--outline-subtle); }
+.tsample { min-width: 0; overflow-wrap: anywhere; }
+.srow { display: grid; grid-template-columns: 110px 1fr 40px; gap: var(--space-12); align-items: center; padding: var(--space-4) 0; }
+.srow i { display: block; height: var(--space-12); background: var(--surface-brand-brand); border-radius: var(--radius-xs); }
+.grid { display: flex; flex-wrap: wrap; gap: var(--space-16); }
+.rbox { display: flex; flex-direction: column; gap: var(--space-6); align-items: flex-start; min-width: 96px; }
+.rbox i { display: block; width: 72px; height: 72px; background: var(--surface-brand-subtle-default); box-shadow: inset 0 0 0 1.5px var(--outline-brand); }
+.shbox { flex: 1 1 180px; display: flex; flex-direction: column; gap: var(--space-8); padding: var(--space-16); border-radius: var(--radius-l); background: var(--surface-page); }
+.shbox i { display: block; height: 64px; border-radius: var(--radius-l); background: var(--surface-elevated); margin-bottom: var(--space-8); }
+.mrow { display: grid; grid-template-columns: minmax(180px, 220px) 120px minmax(0, 1fr); gap: var(--space-12); align-items: baseline; padding: var(--space-8) 0; border-top: 1px solid var(--outline-subtle); }
+.mrow small { margin: 0; }
+.cols2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-16); }
+@media (max-width: 639px) {
+  .trow, .mrow { grid-template-columns: 1fr; gap: var(--space-4); }
+  section.card { padding: var(--space-16); border-radius: var(--radius-l); }
+}
+@media (prefers-reduced-motion: reduce) { * { transition-duration: 0ms !important; } }
+</style>
+
+<div class="page">
+  <header class="top">
+    <div>
+      <div class="text-web-overline" style="color:var(--label-brand-brand)">One Flow · DS v2</div>
+      <h1 class="text-web-title-1" style="margin:var(--space-4) 0 0">Токены и шрифты</h1>
+      <p class="text-web-callout">Выгрузка из Figma «design systems v2», 2026-11-17. Всё на этой странице нарисовано только этими токенами.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:var(--space-8);align-items:flex-end">
+      <span class="test" id="test">Проверка…</span>
+      <div class="theme" role="group" aria-label="Тема">
+        <button data-t="system" aria-pressed="true">Как в системе</button><button data-t="light" aria-pressed="false">Светлая</button><button data-t="dark" aria-pressed="false">Тёмная</button><button data-t="contrast" aria-pressed="false">Контраст</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="card">
+    <h2 class="text-web-title-3">Цвета — роли коллекции colors</h2>
+    <p>Четыре режима рядом: каждая колонка — остров с data-theme, значения посчитаны из tokens.json. В макетах и коде — только роли, шкалы palette напрямую не используются.</p>
+    <div class="scroll">
+  <h3 class="text-web-headline">Поверхности · surface</h3>
+  <div class="ctable" role="table">
+    <div class="crow head" role="row"><span role="columnheader">Роль</span><span role="columnheader">Light</span><span role="columnheader">Dark</span><span role="columnheader">Light · contrast</span><span role="columnheader">Dark · contrast</span></div>
+    <div class="crow" role="row"><span class="cname"><code>--surface-brand-subtle-default</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-brand-subtle-default)"></i><code class="hex">#e6f5ff</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-brand-subtle-default)"></i><code class="hex">#0a1b47</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-brand-subtle-default)"></i><code class="hex">#e6f5ff</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-brand-subtle-default)"></i><code class="hex">#0a1b47</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-brand-subtle-hover</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-brand-subtle-hover)"></i><code class="hex">#b3e3ff</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-brand-subtle-hover)"></i><code class="hex">#0c2d78</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-brand-subtle-hover)"></i><code class="hex">#b3e3ff</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-brand-subtle-hover)"></i><code class="hex">#0c2d78</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-brand-subtle-pressed</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-brand-subtle-pressed)"></i><code class="hex">#78cefe</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-brand-subtle-pressed)"></i><code class="hex">#0a3ec2</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-brand-subtle-pressed)"></i><code class="hex">#78cefe</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-brand-subtle-pressed)"></i><code class="hex">#0a3ec2</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-brand-brand</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-brand-brand)"></i><code class="hex">#0a6ee0</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-brand-brand)"></i><code class="hex">#0a6ee0</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-brand-brand)"></i><code class="hex">#0a4fb8</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-brand-brand)"></i><code class="hex">#0a6ee0</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-brand-disabled</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-brand-disabled)"></i><code class="hex">#b3e3ff</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-brand-disabled)"></i><code class="hex">#0c2d78</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-brand-disabled)"></i><code class="hex">#b3e3ff</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-brand-disabled)"></i><code class="hex">#0c2d78</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-brand-hover</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-brand-hover)"></i><code class="hex">#0a55c9</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-brand-hover)"></i><code class="hex">#0a55c9</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-brand-hover)"></i><code class="hex">#0a3ec2</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-brand-hover)"></i><code class="hex">#0a55c9</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-brand-pressed</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-brand-pressed)"></i><code class="hex">#0a3ec2</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-brand-pressed)"></i><code class="hex">#0a3ec2</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-brand-pressed)"></i><code class="hex">#0a3ec2</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-brand-pressed)"></i><code class="hex">#0a3ec2</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-danger-subtle</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-danger-subtle)"></i><code class="hex">#fdecee</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-danger-subtle)"></i><code class="hex">#2e0f16</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-danger-subtle)"></i><code class="hex">#fdecee</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-danger-subtle)"></i><code class="hex">#2e0f16</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-danger-default</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-danger-default)"></i><code class="hex">#dc3045</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-danger-default)"></i><code class="hex">#dc3045</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-danger-default)"></i><code class="hex">#dc3045</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-danger-default)"></i><code class="hex">#dc3045</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-danger-hover</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-danger-hover)"></i><code class="hex">#b8172c</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-danger-hover)"></i><code class="hex">#b8172c</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-danger-hover)"></i><code class="hex">#b8172c</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-danger-hover)"></i><code class="hex">#b8172c</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-danger-pressed</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-danger-pressed)"></i><code class="hex">#a3162a</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-danger-pressed)"></i><code class="hex">#a3162a</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-danger-pressed)"></i><code class="hex">#a3162a</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-danger-pressed)"></i><code class="hex">#a3162a</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-default</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-default)"></i><code class="hex">#ffffff</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-default)"></i><code class="hex">#0c1324</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-default)"></i><code class="hex">#ffffff</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-default)"></i><code class="hex">#000000</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-disabled</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-disabled)"></i><code class="hex">#e3e9f1</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-disabled)"></i><code class="hex">#1b2640</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-disabled)"></i><code class="hex">#e3e9f1</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-disabled)"></i><code class="hex">#1b2640</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-elevated</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-elevated)"></i><code class="hex">#ffffff</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-elevated)"></i><code class="hex">#111a2e</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-elevated)"></i><code class="hex">#ffffff</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-elevated)"></i><code class="hex">#0a0d14</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-elevated-hover</code><small>Hover/pressed fill for rows on elevated surfaces (menu, dropdown, popover). In dark, surface/neutral equals surface/elevated, so rows there need this token.</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-elevated-hover)"></i><code class="hex">#eff3f8</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-elevated-hover)"></i><code class="hex">#ffffff0f</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-elevated-hover)"></i><code class="hex">#eff3f8</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-elevated-hover)"></i><code class="hex">#ffffff0f</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-elevated-pressed</code><small>Hover/pressed fill for rows on elevated surfaces (menu, dropdown, popover). In dark, surface/neutral equals surface/elevated, so rows there need this token.</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-elevated-pressed)"></i><code class="hex">#e3e9f1</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-elevated-pressed)"></i><code class="hex">#ffffff1f</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-elevated-pressed)"></i><code class="hex">#e3e9f1</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-elevated-pressed)"></i><code class="hex">#ffffff1f</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-ghost-hover</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-ghost-hover)"></i><code class="hex">#eef8ff</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-ghost-hover)"></i><code class="hex">#0a1b47</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-ghost-hover)"></i><code class="hex">#eef8ff</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-ghost-hover)"></i><code class="hex">#0a1b47</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-ghost-pressed</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-ghost-pressed)"></i><code class="hex">#e6f5ff</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-ghost-pressed)"></i><code class="hex">#0c2d78</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-ghost-pressed)"></i><code class="hex">#e6f5ff</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-ghost-pressed)"></i><code class="hex">#0c2d78</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-glass-brand</code><small>Glass fill tinted with the brand blue. Use together with the effect style «effect/glass», over photos or pictures only.</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-glass-brand)"></i><code class="hex">#0d8af729</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-glass-brand)"></i><code class="hex">#3baffc38</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-glass-brand)"></i><code class="hex">#0d8af729</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-glass-brand)"></i><code class="hex">#3baffc38</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-glass-dark</code><small>Dark glass for small chips with white text over photos and video (length, counters). Use with the effect style «effect/glass» and outline/glass.</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-glass-dark)"></i><code class="hex">#0a102073</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-glass-dark)"></i><code class="hex">#0a102073</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-glass-dark)"></i><code class="hex">#0a102073</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-glass-dark)"></i><code class="hex">#0a102073</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-glass-neutral</code><small>Neutral glass fill (brandbook 5.2: white 16 %). Over photos, covers and gradients only, never under long text.</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-glass-neutral)"></i><code class="hex">#ffffff29</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-glass-neutral)"></i><code class="hex">#ffffff1f</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-glass-neutral)"></i><code class="hex">#ffffff29</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-glass-neutral)"></i><code class="hex">#ffffff1f</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-info</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-info)"></i><code class="hex">#0a6ee0</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-info)"></i><code class="hex">#0a6ee0</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-info)"></i><code class="hex">#0a6ee0</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-info)"></i><code class="hex">#0a6ee0</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-info-strong</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-info-strong)"></i><code class="hex">#0a55c9</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-info-strong)"></i><code class="hex">#0a55c9</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-info-strong)"></i><code class="hex">#0a55c9</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-info-strong)"></i><code class="hex">#0a55c9</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-info-subtle</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-info-subtle)"></i><code class="hex">#eef8ff</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-info-subtle)"></i><code class="hex">#0e2445</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-info-subtle)"></i><code class="hex">#eef8ff</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-info-subtle)"></i><code class="hex">#0e2445</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-inverse</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-inverse)"></i><code class="hex">#0a1020</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-inverse)"></i><code class="hex">#343f52</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-inverse)"></i><code class="hex">#0a1020</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-inverse)"></i><code class="hex">#343f52</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-neutral-strong-default</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-neutral-strong-default)"></i><code class="hex">#e3e9f1</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-neutral-strong-default)"></i><code class="hex">#26334f</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-neutral-strong-default)"></i><code class="hex">#e3e9f1</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-neutral-strong-default)"></i><code class="hex">#26334f</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-neutral-strong-hover</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-neutral-strong-hover)"></i><code class="hex">#cdd6e2</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-neutral-strong-hover)"></i><code class="hex">#343f52</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-neutral-strong-hover)"></i><code class="hex">#cdd6e2</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-neutral-strong-hover)"></i><code class="hex">#343f52</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-neutral-strong-pressed</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-neutral-strong-pressed)"></i><code class="hex">#aebacb</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-neutral-strong-pressed)"></i><code class="hex">#4b576c</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-neutral-strong-pressed)"></i><code class="hex">#aebacb</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-neutral-strong-pressed)"></i><code class="hex">#4b576c</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-neutral-default</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-neutral-default)"></i><code class="hex">#eff3f8</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-neutral-default)"></i><code class="hex">#18233a</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-neutral-default)"></i><code class="hex">#eff3f8</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-neutral-default)"></i><code class="hex">#18233a</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-neutral-hover</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-neutral-hover)"></i><code class="hex">#e3e9f1</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-neutral-hover)"></i><code class="hex">#26334f</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-neutral-hover)"></i><code class="hex">#e3e9f1</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-neutral-hover)"></i><code class="hex">#26334f</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-neutral-pressed</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-neutral-pressed)"></i><code class="hex">#cdd6e2</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-neutral-pressed)"></i><code class="hex">#343f52</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-neutral-pressed)"></i><code class="hex">#cdd6e2</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-neutral-pressed)"></i><code class="hex">#343f52</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-page</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-page)"></i><code class="hex">#f5f8fc</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-page)"></i><code class="hex">#060a14</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-page)"></i><code class="hex">#f5f8fc</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-page)"></i><code class="hex">#000000</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-scrim</code><small>Dimmed layer behind a modal, dialog or drawer.</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-scrim)"></i><code class="hex">#0a102073</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-scrim)"></i><code class="hex">#00000099</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-scrim)"></i><code class="hex">#0a102073</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-scrim)"></i><code class="hex">#00000099</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-segmented-thumb</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-segmented-thumb)"></i><code class="hex">#ffffff</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-segmented-thumb)"></i><code class="hex">#343f52</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-segmented-thumb)"></i><code class="hex">#ffffff</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-segmented-thumb)"></i><code class="hex">#343f52</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-signal</code><small>Spark: счётчик, точка «новое». Не больше 24 px, только на светлом; на тёмном роль сама переходит в Sky.</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-signal)"></i><code class="hex">#ff6b1a</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-signal)"></i><code class="hex">#3baffc</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-signal)"></i><code class="hex">#c2440a</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-signal)"></i><code class="hex">#8fd3ff</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-signal-subtle</code><small>Spark: фон метки «Скоро» / «Новое».</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-signal-subtle)"></i><code class="hex">#fff1e8</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-signal-subtle)"></i><code class="hex">#0e2445</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-signal-subtle)"></i><code class="hex">#ffe6d4</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-signal-subtle)"></i><code class="hex">#0e2445</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-skeleton-base</code><small>Fill of skeleton loaders. Dark value is two steps lighter than the card so the loader stays visible.</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-skeleton-base)"></i><code class="hex">#e3e9f1</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-skeleton-base)"></i><code class="hex">#343f52</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-skeleton-base)"></i><code class="hex">#e3e9f1</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-skeleton-base)"></i><code class="hex">#343f52</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-skeleton-highlight</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-skeleton-highlight)"></i><code class="hex">#f5f8fc</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-skeleton-highlight)"></i><code class="hex">#4b576c</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-skeleton-highlight)"></i><code class="hex">#f5f8fc</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-skeleton-highlight)"></i><code class="hex">#4b576c</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-success</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-success)"></i><code class="hex">#0e9f5b</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-success)"></i><code class="hex">#0e9f5b</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-success)"></i><code class="hex">#0e9f5b</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-success)"></i><code class="hex">#0e9f5b</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-success-strong</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-success-strong)"></i><code class="hex">#087443</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-success-strong)"></i><code class="hex">#087443</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-success-strong)"></i><code class="hex">#087443</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-success-strong)"></i><code class="hex">#087443</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-success-subtle</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-success-subtle)"></i><code class="hex">#e7f6ee</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-success-subtle)"></i><code class="hex">#0f2a1e</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-success-subtle)"></i><code class="hex">#e7f6ee</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-success-subtle)"></i><code class="hex">#0f2a1e</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-warning</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-warning)"></i><code class="hex">#f5b400</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-warning)"></i><code class="hex">#f5b400</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-warning)"></i><code class="hex">#f5b400</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-warning)"></i><code class="hex">#f5b400</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-warning-strong</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-warning-strong)"></i><code class="hex">#8a5a00</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-warning-strong)"></i><code class="hex">#8a5a00</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-warning-strong)"></i><code class="hex">#8a5a00</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-warning-strong)"></i><code class="hex">#8a5a00</code></span></div><div class="crow" role="row"><span class="cname"><code>--surface-warning-subtle</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--surface-warning-subtle)"></i><code class="hex">#fff6db</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--surface-warning-subtle)"></i><code class="hex">#2a2208</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--surface-warning-subtle)"></i><code class="hex">#fff6db</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--surface-warning-subtle)"></i><code class="hex">#2a2208</code></span></div>
+  </div>
+  <h3 class="text-web-headline">Текст и иконки · label</h3>
+  <div class="ctable" role="table">
+    <div class="crow head" role="row"><span role="columnheader">Роль</span><span role="columnheader">Light</span><span role="columnheader">Dark</span><span role="columnheader">Light · contrast</span><span role="columnheader">Dark · contrast</span></div>
+    <div class="crow" role="row"><span class="cname"><code>--label-brand-brand</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--label-brand-brand)"></i><code class="hex">#0a6ee0</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--label-brand-brand)"></i><code class="hex">#3baffc</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--label-brand-brand)"></i><code class="hex">#0a4fb8</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--label-brand-brand)"></i><code class="hex">#8fd3ff</code></span></div><div class="crow" role="row"><span class="cname"><code>--label-brand-disabled</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--label-brand-disabled)"></i><code class="hex">#78cefe</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--label-brand-disabled)"></i><code class="hex">#0a3ec2</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--label-brand-disabled)"></i><code class="hex">#78cefe</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--label-brand-disabled)"></i><code class="hex">#0a3ec2</code></span></div><div class="crow" role="row"><span class="cname"><code>--label-brand-on-subtle</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--label-brand-on-subtle)"></i><code class="hex">#0a3ec2</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--label-brand-on-subtle)"></i><code class="hex">#b3e3ff</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--label-brand-on-subtle)"></i><code class="hex">#0a3ec2</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--label-brand-on-subtle)"></i><code class="hex">#b3e3ff</code></span></div><div class="crow" role="row"><span class="cname"><code>--label-brand-strong</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--label-brand-strong)"></i><code class="hex">#0a55c9</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--label-brand-strong)"></i><code class="hex">#78cefe</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--label-brand-strong)"></i><code class="hex">#0a3ec2</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--label-brand-strong)"></i><code class="hex">#ffffff</code></span></div><div class="crow" role="row"><span class="cname"><code>--label-danger</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--label-danger)"></i><code class="hex">#a3162a</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--label-danger)"></i><code class="hex">#ff5c6f</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--label-danger)"></i><code class="hex">#b8172c</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--label-danger)"></i><code class="hex">#ff8a97</code></span></div><div class="crow" role="row"><span class="cname"><code>--label-disabled</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--label-disabled)"></i><code class="hex">#aebacb</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--label-disabled)"></i><code class="hex">#4b576c</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--label-disabled)"></i><code class="hex">#8794a9</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--label-disabled)"></i><code class="hex">#66738a</code></span></div><div class="crow" role="row"><span class="cname"><code>--label-info</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--label-info)"></i><code class="hex">#0a4fa8</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--label-info)"></i><code class="hex">#3baffc</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--label-info)"></i><code class="hex">#0a4fa8</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--label-info)"></i><code class="hex">#3baffc</code></span></div><div class="crow" role="row"><span class="cname"><code>--label-inverse</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--label-inverse)"></i><code class="hex">#ffffff</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--label-inverse)"></i><code class="hex">#ffffff</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--label-inverse)"></i><code class="hex">#ffffff</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--label-inverse)"></i><code class="hex">#ffffff</code></span></div><div class="crow" role="row"><span class="cname"><code>--label-on-signal</code><small>Текст и цифра на surface/signal.</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--label-on-signal)"></i><code class="hex">#0a1020</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--label-on-signal)"></i><code class="hex">#0a1020</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--label-on-signal)"></i><code class="hex">#0a1020</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--label-on-signal)"></i><code class="hex">#0a1020</code></span></div><div class="crow" role="row"><span class="cname"><code>--label-primary</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--label-primary)"></i><code class="hex">#0a1020</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--label-primary)"></i><code class="hex">#eef2f8</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--label-primary)"></i><code class="hex">#000000</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--label-primary)"></i><code class="hex">#ffffff</code></span></div><div class="crow" role="row"><span class="cname"><code>--label-secondary</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--label-secondary)"></i><code class="hex">#4b576c</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--label-secondary)"></i><code class="hex">#aebacb</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--label-secondary)"></i><code class="hex">#2a3446</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--label-secondary)"></i><code class="hex">#d3dbe6</code></span></div><div class="crow" role="row"><span class="cname"><code>--label-signal</code><small>Spark: текст метки «Скоро» / «Новое» на surface/signal-subtle.</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--label-signal)"></i><code class="hex">#c2440a</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--label-signal)"></i><code class="hex">#3baffc</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--label-signal)"></i><code class="hex">#c2440a</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--label-signal)"></i><code class="hex">#8fd3ff</code></span></div><div class="crow" role="row"><span class="cname"><code>--label-success</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--label-success)"></i><code class="hex">#065f3b</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--label-success)"></i><code class="hex">#30d07a</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--label-success)"></i><code class="hex">#087443</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--label-success)"></i><code class="hex">#5fe29a</code></span></div><div class="crow" role="row"><span class="cname"><code>--label-tertiary</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--label-tertiary)"></i><code class="hex">#626f86</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--label-tertiary)"></i><code class="hex">#8794a9</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--label-tertiary)"></i><code class="hex">#4b576c</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--label-tertiary)"></i><code class="hex">#aebacb</code></span></div><div class="crow" role="row"><span class="cname"><code>--label-warning</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--label-warning)"></i><code class="hex">#7a5200</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--label-warning)"></i><code class="hex">#f5b400</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--label-warning)"></i><code class="hex">#8a5a00</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--label-warning)"></i><code class="hex">#ffd54a</code></span></div>
+  </div>
+  <h3 class="text-web-headline">Границы · outline</h3>
+  <div class="ctable" role="table">
+    <div class="crow head" role="row"><span role="columnheader">Роль</span><span role="columnheader">Light</span><span role="columnheader">Dark</span><span role="columnheader">Light · contrast</span><span role="columnheader">Dark · contrast</span></div>
+    <div class="crow" role="row"><span class="cname"><code>--outline-brand</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--outline-brand)"></i><code class="hex">#0a6ee0</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--outline-brand)"></i><code class="hex">#3baffc</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--outline-brand)"></i><code class="hex">#0a4fb8</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--outline-brand)"></i><code class="hex">#8fd3ff</code></span></div><div class="crow" role="row"><span class="cname"><code>--outline-control</code><small>Resting border of fields and controls (inputs, checkbox, radio). Brandbook 3.6 control edge: at least 3:1 against the surface.</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--outline-control)"></i><code class="hex">#8794a9</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--outline-control)"></i><code class="hex">#66738a</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--outline-control)"></i><code class="hex">#66738a</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--outline-control)"></i><code class="hex">#8794a9</code></span></div><div class="crow" role="row"><span class="cname"><code>--outline-danger</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--outline-danger)"></i><code class="hex">#e5364b</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--outline-danger)"></i><code class="hex">#ff5c6f</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--outline-danger)"></i><code class="hex">#b8172c</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--outline-danger)"></i><code class="hex">#ff8a97</code></span></div><div class="crow" role="row"><span class="cname"><code>--outline-default</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--outline-default)"></i><code class="hex">#cdd6e2</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--outline-default)"></i><code class="hex">#4b576c</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--outline-default)"></i><code class="hex">#8794a9</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--outline-default)"></i><code class="hex">#66738a</code></span></div><div class="crow" role="row"><span class="cname"><code>--outline-disabled</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--outline-disabled)"></i><code class="hex">#cdd6e2</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--outline-disabled)"></i><code class="hex">#26334f</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--outline-disabled)"></i><code class="hex">#cdd6e2</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--outline-disabled)"></i><code class="hex">#26334f</code></span></div><div class="crow" role="row"><span class="cname"><code>--outline-elevated</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--outline-elevated)"></i><code class="hex">#00000000</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--outline-elevated)"></i><code class="hex">#343f52</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--outline-elevated)"></i><code class="hex">#00000000</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--outline-elevated)"></i><code class="hex">#343f52</code></span></div><div class="crow" role="row"><span class="cname"><code>--outline-focus</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--outline-focus)"></i><code class="hex">#0a6ee0</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--outline-focus)"></i><code class="hex">#3baffc</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--outline-focus)"></i><code class="hex">#0a4fb8</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--outline-focus)"></i><code class="hex">#8fd3ff</code></span></div><div class="crow" role="row"><span class="cname"><code>--outline-glass</code><small>Edge of glass surfaces (brandbook 5.2: white 35 %).</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--outline-glass)"></i><code class="hex">#ffffff59</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--outline-glass)"></i><code class="hex">#ffffff3d</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--outline-glass)"></i><code class="hex">#ffffff59</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--outline-glass)"></i><code class="hex">#ffffff3d</code></span></div><div class="crow" role="row"><span class="cname"><code>--outline-hover</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--outline-hover)"></i><code class="hex">#66738a</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--outline-hover)"></i><code class="hex">#8794a9</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--outline-hover)"></i><code class="hex">#4b576c</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--outline-hover)"></i><code class="hex">#aebacb</code></span></div><div class="crow" role="row"><span class="cname"><code>--outline-subtle</code></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--outline-subtle)"></i><code class="hex">#dfe5ee</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--outline-subtle)"></i><code class="hex">#26334f</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--outline-subtle)"></i><code class="hex">#aebacb</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--outline-subtle)"></i><code class="hex">#4b576c</code></span></div>
+  </div>
+  <h3 class="text-web-headline">Графики · chart</h3>
+  <div class="ctable" role="table">
+    <div class="crow head" role="row"><span role="columnheader">Роль</span><span role="columnheader">Light</span><span role="columnheader">Dark</span><span role="columnheader">Light · contrast</span><span role="columnheader">Dark · contrast</span></div>
+    <div class="crow" role="row"><span class="cname"><code>--chart-1</code><small>График: первая серия.</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--chart-1)"></i><code class="hex">#0a6ee0</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--chart-1)"></i><code class="hex">#0a6ee0</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--chart-1)"></i><code class="hex">#0a6ee0</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--chart-1)"></i><code class="hex">#0a6ee0</code></span></div><div class="crow" role="row"><span class="cname"><code>--chart-2</code><small>График: вторая серия.</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--chart-2)"></i><code class="hex">#78cefe</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--chart-2)"></i><code class="hex">#b3e3ff</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--chart-2)"></i><code class="hex">#78cefe</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--chart-2)"></i><code class="hex">#b3e3ff</code></span></div><div class="crow" role="row"><span class="cname"><code>--chart-3</code><small>График: третья серия.</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--chart-3)"></i><code class="hex">#0c2d78</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--chart-3)"></i><code class="hex">#8794a9</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--chart-3)"></i><code class="hex">#0c2d78</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--chart-3)"></i><code class="hex">#8794a9</code></span></div><div class="crow" role="row"><span class="cname"><code>--chart-4</code><small>График: четвёртая серия.</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--chart-4)"></i><code class="hex">#8794a9</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--chart-4)"></i><code class="hex">#4b576c</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--chart-4)"></i><code class="hex">#8794a9</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--chart-4)"></i><code class="hex">#4b576c</code></span></div><div class="crow" role="row"><span class="cname"><code>--chart-highlight</code><small>График: одна точка — цель или выброс. Не серия.</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--chart-highlight)"></i><code class="hex">#ff6b1a</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--chart-highlight)"></i><code class="hex">#3baffc</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--chart-highlight)"></i><code class="hex">#ff6b1a</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--chart-highlight)"></i><code class="hex">#3baffc</code></span></div><div class="crow" role="row"><span class="cname"><code>--chart-other</code><small>График: «остальное», фон шкалы.</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--chart-other)"></i><code class="hex">#cdd6e2</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--chart-other)"></i><code class="hex">#26334f</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--chart-other)"></i><code class="hex">#cdd6e2</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--chart-other)"></i><code class="hex">#26334f</code></span></div>
+  </div>
+  <h3 class="text-web-headline">Цвета теней · shadow</h3>
+  <div class="ctable" role="table">
+    <div class="crow head" role="row"><span role="columnheader">Роль</span><span role="columnheader">Light</span><span role="columnheader">Dark</span><span role="columnheader">Light · contrast</span><span role="columnheader">Dark · contrast</span></div>
+    <div class="crow" role="row"><span class="cname"><code>--shadow-ambient</code><small>Soft close part of a shadow that keeps the edge readable.</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--shadow-ambient)"></i><code class="hex">#0a10200f</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--shadow-ambient)"></i><code class="hex">#00000052</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--shadow-ambient)"></i><code class="hex">#0a10200f</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--shadow-ambient)"></i><code class="hex">#00000052</code></span></div><div class="crow" role="row"><span class="cname"><code>--shadow-focus</code><small>Colour of the focus ring glow around a control.</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--shadow-focus)"></i><code class="hex">#0a6ee059</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--shadow-focus)"></i><code class="hex">#3baffc73</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--shadow-focus)"></i><code class="hex">#0a6ee059</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--shadow-focus)"></i><code class="hex">#3baffc73</code></span></div><div class="crow" role="row"><span class="cname"><code>--shadow-key</code><small>Main, directional part of a shadow. Ink in Light, black in Dark.</small></span><span class="cell" data-theme="light"><i class="sw" style="background:var(--shadow-key)"></i><code class="hex">#0a102024</code></span><span class="cell" data-theme="dark"><i class="sw" style="background:var(--shadow-key)"></i><code class="hex">#00000080</code></span><span class="cell" data-theme="light" data-contrast="more"><i class="sw" style="background:var(--shadow-key)"></i><code class="hex">#0a102024</code></span><span class="cell" data-theme="dark" data-contrast="more"><i class="sw" style="background:var(--shadow-key)"></i><code class="hex">#00000080</code></span></div>
+  </div></div>
+  </section>
+
+  <section class="card">
+    <h2 class="text-web-title-3">Текстовые стили</h2>
+    <p>Onest — всё, что читают; JetBrains Mono — цифры, время, ID. Абзац не меньше 16 px.</p>
+    
+  <div class="trow"><div class="tmeta"><code>.text-web-display</code><small>Onest ExtraBold · 72/76 · -3%</small></div>
+  <div class="text-web-display tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-large-title</code><small>Onest Bold · 48/56 · -2.5%</small></div>
+  <div class="text-web-large-title tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-title-1</code><small>Onest Bold · 36/44 · -2%</small></div>
+  <div class="text-web-title-1 tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-title-2</code><small>Onest Bold · 28/36 · -1.5%</small></div>
+  <div class="text-web-title-2 tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-title-3</code><small>Onest SemiBold · 22/28 · -1%</small></div>
+  <div class="text-web-title-3 tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-headline</code><small>Onest SemiBold · 18/26 · 0%</small></div>
+  <div class="text-web-headline tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-body</code><small>Onest Regular · 16/24 · 0%</small></div>
+  <div class="text-web-body tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-body-medium</code><small>Onest Medium · 16/24 · 0%</small></div>
+  <div class="text-web-body-medium tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-body-semibold</code><small>Onest SemiBold · 16/24 · 0%</small></div>
+  <div class="text-web-body-semibold tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-callout</code><small>Onest Regular · 15/22 · 0%</small></div>
+  <div class="text-web-callout tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-subheadline</code><small>Onest Regular · 14/20 · 0%</small></div>
+  <div class="text-web-subheadline tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-subheadline-medium</code><small>Onest Medium · 14/20 · 0%</small></div>
+  <div class="text-web-subheadline-medium tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-subheadline-semibold</code><small>Onest SemiBold · 14/20 · 0%</small></div>
+  <div class="text-web-subheadline-semibold tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-footnote</code><small>Onest Regular · 13/18 · 0%</small></div>
+  <div class="text-web-footnote tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-caption-1</code><small>Onest Medium · 12/16 · 1%</small></div>
+  <div class="text-web-caption-1 tsample">Опоздание 40 мин</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-caption-1-semibold</code><small>Onest SemiBold · 12/16 · 1%</small></div>
+  <div class="text-web-caption-1-semibold tsample">Опоздание 40 мин</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-caption-2</code><small>Onest Medium · 11/14 · 2%</small></div>
+  <div class="text-web-caption-2 tsample">Опоздание 40 мин</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-overline</code><small>JetBrains Mono Medium · 12/16 · 8% · UPPER</small></div>
+  <div class="text-web-overline tsample">Опоздание 40 мин</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-m-display</code><small>Onest ExtraBold · 44/48 · -3%</small></div>
+  <div class="text-web-m-display tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-m-large-title</code><small>Onest Bold · 34/40 · -2.5%</small></div>
+  <div class="text-web-m-large-title tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-m-title-1</code><small>Onest Bold · 28/34 · -2%</small></div>
+  <div class="text-web-m-title-1 tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-m-title-2</code><small>Onest Bold · 24/30 · -1.5%</small></div>
+  <div class="text-web-m-title-2 tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-m-title-3</code><small>Onest SemiBold · 20/26 · -1%</small></div>
+  <div class="text-web-m-title-3 tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-m-headline</code><small>Onest SemiBold · 17/24 · 0%</small></div>
+  <div class="text-web-m-headline tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-m-body</code><small>Onest Regular · 16/24 · 0%</small></div>
+  <div class="text-web-m-body tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-m-callout</code><small>Onest Regular · 15/22 · 0%</small></div>
+  <div class="text-web-m-callout tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-m-subheadline</code><small>Onest Regular · 14/20 · 0%</small></div>
+  <div class="text-web-m-subheadline tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-m-footnote</code><small>Onest Regular · 13/18 · 0%</small></div>
+  <div class="text-web-m-footnote tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-m-caption-1</code><small>Onest Medium · 12/16 · 1%</small></div>
+  <div class="text-web-m-caption-1 tsample">Опоздание 40 мин</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-web-m-caption-2</code><small>Onest Medium · 11/14 · 2%</small></div>
+  <div class="text-web-m-caption-2 tsample">Опоздание 40 мин</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-app-large-title</code><small>Onest Bold · 34/41 · -2%</small></div>
+  <div class="text-app-large-title tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-app-title-1</code><small>Onest Bold · 28/34 · -1.5%</small></div>
+  <div class="text-app-title-1 tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-app-title-2</code><small>Onest Bold · 22/28 · -1%</small></div>
+  <div class="text-app-title-2 tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-app-title-3</code><small>Onest SemiBold · 20/25 · -0.5%</small></div>
+  <div class="text-app-title-3 tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-app-headline</code><small>Onest SemiBold · 17/22 · 0%</small></div>
+  <div class="text-app-headline tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-app-body</code><small>Onest Regular · 17/22 · 0%</small></div>
+  <div class="text-app-body tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-app-callout</code><small>Onest Regular · 16/21 · 0%</small></div>
+  <div class="text-app-callout tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-app-subheadline</code><small>Onest Regular · 15/20 · 0%</small></div>
+  <div class="text-app-subheadline tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-app-footnote</code><small>Onest Regular · 13/18 · 0%</small></div>
+  <div class="text-app-footnote tsample">Объяснительная за опоздание</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-app-caption-1</code><small>Onest Medium · 12/16 · 1%</small></div>
+  <div class="text-app-caption-1 tsample">Опоздание 40 мин</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-app-caption-2</code><small>Onest Medium · 11/13 · 2%</small></div>
+  <div class="text-app-caption-2 tsample">Опоздание 40 мин</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-mono-title-2</code><small>JetBrains Mono Bold · 28/36 · 0%</small></div>
+  <div class="text-mono-title-2 tsample">09:40 · 1 104 · ID 48213</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-mono-title-3</code><small>JetBrains Mono Bold · 22/28 · 0%</small></div>
+  <div class="text-mono-title-3 tsample">09:40 · 1 104 · ID 48213</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-mono-body</code><small>JetBrains Mono Regular · 16/24 · 0%</small></div>
+  <div class="text-mono-body tsample">09:40 · 1 104 · ID 48213</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-mono-body-medium</code><small>JetBrains Mono Medium · 16/24 · 0%</small></div>
+  <div class="text-mono-body-medium tsample">09:40 · 1 104 · ID 48213</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-mono-subheadline</code><small>JetBrains Mono Regular · 14/20 · 0%</small></div>
+  <div class="text-mono-subheadline tsample">09:40 · 1 104 · ID 48213</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-mono-subheadline-medium</code><small>JetBrains Mono Medium · 14/20 · 0%</small></div>
+  <div class="text-mono-subheadline-medium tsample">09:40 · 1 104 · ID 48213</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-mono-caption-1</code><small>JetBrains Mono Regular · 12/16 · 0%</small></div>
+  <div class="text-mono-caption-1 tsample">09:40 · 1 104 · ID 48213</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-mono-caption-1-medium</code><small>JetBrains Mono Medium · 12/16 · 0%</small></div>
+  <div class="text-mono-caption-1-medium tsample">09:40 · 1 104 · ID 48213</div></div>
+  <div class="trow"><div class="tmeta"><code>.text-mono-caption-2</code><small>JetBrains Mono Medium · 11/14 · 0%</small></div>
+  <div class="text-mono-caption-2 tsample">09:40 · 1 104 · ID 48213</div></div>
+  </section>
+
+  <div class="cols2">
+    <section class="card"><h2 class="text-web-title-3">Отступы · space</h2><p>Сетка 8 px; 2, 4, 6, 10 — только внутри компонентов.</p><div class="srow"><code>--space-2</code><i style="width:var(--space-2)"></i><span class="text-mono-caption-1">2</span></div><div class="srow"><code>--space-4</code><i style="width:var(--space-4)"></i><span class="text-mono-caption-1">4</span></div><div class="srow"><code>--space-6</code><i style="width:var(--space-6)"></i><span class="text-mono-caption-1">6</span></div><div class="srow"><code>--space-8</code><i style="width:var(--space-8)"></i><span class="text-mono-caption-1">8</span></div><div class="srow"><code>--space-10</code><i style="width:var(--space-10)"></i><span class="text-mono-caption-1">10</span></div><div class="srow"><code>--space-12</code><i style="width:var(--space-12)"></i><span class="text-mono-caption-1">12</span></div><div class="srow"><code>--space-16</code><i style="width:var(--space-16)"></i><span class="text-mono-caption-1">16</span></div><div class="srow"><code>--space-20</code><i style="width:var(--space-20)"></i><span class="text-mono-caption-1">20</span></div><div class="srow"><code>--space-24</code><i style="width:var(--space-24)"></i><span class="text-mono-caption-1">24</span></div><div class="srow"><code>--space-32</code><i style="width:var(--space-32)"></i><span class="text-mono-caption-1">32</span></div><div class="srow"><code>--space-40</code><i style="width:var(--space-40)"></i><span class="text-mono-caption-1">40</span></div><div class="srow"><code>--space-48</code><i style="width:var(--space-48)"></i><span class="text-mono-caption-1">48</span></div><div class="srow"><code>--space-64</code><i style="width:var(--space-64)"></i><span class="text-mono-caption-1">64</span></div></section>
+    <section class="card"><h2 class="text-web-title-3">Радиусы и размеры</h2><p>Радиусы 4 · 8 · 12 · 16 · 24 · полный. Контролы 24–52, иконки 16 / 20 / 24.</p><div class="grid"><div class="rbox"><i style="border-radius:var(--radius-xs)"></i><code>--radius-xs</code><span class="text-mono-caption-1">4</span></div><div class="rbox"><i style="border-radius:var(--radius-s)"></i><code>--radius-s</code><span class="text-mono-caption-1">8</span></div><div class="rbox"><i style="border-radius:var(--radius-m)"></i><code>--radius-m</code><span class="text-mono-caption-1">12</span></div><div class="rbox"><i style="border-radius:var(--radius-l)"></i><code>--radius-l</code><span class="text-mono-caption-1">16</span></div><div class="rbox"><i style="border-radius:var(--radius-xl)"></i><code>--radius-xl</code><span class="text-mono-caption-1">24</span></div><div class="rbox"><i style="border-radius:var(--radius-full)"></i><code>--radius-full</code><span class="text-mono-caption-1">999</span></div></div><h3 class="text-web-headline">size</h3><div class="grid"><div class="rbox"><i style="width:var(--control-xs);height:var(--control-xs);border-radius:var(--radius-s)"></i><code>--control-xs</code><span class="text-mono-caption-1">24</span></div><div class="rbox"><i style="width:var(--control-s);height:var(--control-s);border-radius:var(--radius-s)"></i><code>--control-s</code><span class="text-mono-caption-1">32</span></div><div class="rbox"><i style="width:var(--control-m);height:var(--control-m);border-radius:var(--radius-s)"></i><code>--control-m</code><span class="text-mono-caption-1">36</span></div><div class="rbox"><i style="width:var(--control-l);height:var(--control-l);border-radius:var(--radius-s)"></i><code>--control-l</code><span class="text-mono-caption-1">44</span></div><div class="rbox"><i style="width:var(--control-xl);height:var(--control-xl);border-radius:var(--radius-s)"></i><code>--control-xl</code><span class="text-mono-caption-1">52</span></div><div class="rbox"><i style="width:var(--icon-s);height:var(--icon-s);border-radius:var(--radius-s)"></i><code>--icon-s</code><span class="text-mono-caption-1">16</span></div><div class="rbox"><i style="width:var(--icon-m);height:var(--icon-m);border-radius:var(--radius-s)"></i><code>--icon-m</code><span class="text-mono-caption-1">20</span></div><div class="rbox"><i style="width:var(--icon-l);height:var(--icon-l);border-radius:var(--radius-s)"></i><code>--icon-l</code><span class="text-mono-caption-1">24</span></div></div></section>
+  </div>
+
+  <section class="card"><h2 class="text-web-title-3">Тени и фокус</h2><p>Цвет теней — роли shadow/key и shadow/ambient, в тёмной теме они темнее.</p><div class="grid"><div class="shbox"><i style="box-shadow:var(--focus-ring)"></i><code>--focus-ring</code><small>Soft glow of a focused control. It sits on the focus ring (2 px, outline/focus, with a gap) or on the focused border of a field.</small></div><div class="shbox"><i style="box-shadow:var(--shadow-lg)"></i><code>--shadow-lg</code><small>Floating layers: menus, popovers, pickers, toasts, panels.</small></div><div class="shbox"><i style="box-shadow:var(--shadow-md)"></i><code>--shadow-md</code><small>Hover of cards, tooltips.</small></div><div class="shbox"><i style="box-shadow:var(--shadow-sm)"></i><code>--shadow-sm</code><small>Small raised parts: a pill on a photo, a logo tile, a resting raised card.</small></div><div class="shbox"><i style="box-shadow:var(--shadow-xl)"></i><code>--shadow-xl</code><small>Windows over the page: modal, dialog, drawer.</small></div><div class="shbox"><i style="box-shadow:var(--shadow-xs)"></i><code>--shadow-xs</code><small>Knobs and thumbs: toggle, slider, segmented.</small></div></div></section>
+
+  <div class="cols2">
+    <section class="card"><h2 class="text-web-title-3">Движение · motion</h2><div class="mrow"><code>--duration-instant</code><span class="text-mono-caption-1">100 ms</span><small>Наведение, нажатие. Миллисекунды.</small></div><div class="mrow"><code>--duration-quick</code><span class="text-mono-caption-1">200 ms</span><small>Переключатели, меню. Миллисекунды.</small></div><div class="mrow"><code>--duration-base</code><span class="text-mono-caption-1">320 ms</span><small>Панели, окна, шторки. Миллисекунды.</small></div><div class="mrow"><code>--duration-slow</code><span class="text-mono-caption-1">560 ms</span><small>Переходы, контент вместо скелетона. Миллисекунды.</small></div><div class="mrow"><code>--duration-brand</code><span class="text-mono-caption-1">4000 ms</span><small>Только появление логотипа. Миллисекунды.</small></div><div class="mrow"><code>--easing-flow</code><span class="text-mono-caption-1">cubic-bezier(0.22, 1, 0.36, 1)</span><small>Появление и перемещение — по умолчанию. Мягкая посадка, без отскока.</small></div><div class="mrow"><code>--easing-exit</code><span class="text-mono-caption-1">cubic-bezier(0.55, 0, 1, 0.45)</span><small>Уход с экрана: ускоряется.</small></div><div class="mrow"><code>--easing-standard</code><span class="text-mono-caption-1">cubic-bezier(0.4, 0, 0.2, 1)</span><small>Мелкие смены состояния на месте.</small></div></section>
+    <section class="card"><h2 class="text-web-title-3">Слои · layer</h2><div class="mrow"><code>--layer-base</code><span class="text-mono-caption-1">0</span><small>Страница: карточки, таблицы, текст.</small></div><div class="mrow"><code>--layer-raised</code><span class="text-mono-caption-1">10</span><small>Карточка под курсором; закреплённые шапка и первая колонка таблицы.</small></div><div class="mrow"><code>--layer-sticky</code><span class="text-mono-caption-1">100</span><small>Навбар, сайдбар, панель массовых действий таблицы.</small></div><div class="mrow"><code>--layer-dropdown</code><span class="text-mono-caption-1">200</span><small>Меню, список выбора, поповер, подтверждение, календари, результаты поиска, выбор реакции.</small></div><div class="mrow"><code>--layer-panel</code><span class="text-mono-caption-1">300</span><small>Панель фильтров: без затемнения, страница остаётся рабочей.</small></div><div class="mrow"><code>--layer-scrim</code><span class="text-mono-caption-1">400</span><small>Затемнение под окном: всё, что ниже, недоступно.</small></div><div class="mrow"><code>--layer-modal</code><span class="text-mono-caption-1">500</span><small>Окно, диалог подтверждения, шторка.</small></div><div class="mrow"><code>--layer-toast</code><span class="text-mono-caption-1">600</span><small>Тост и тост «Отменить»: видны даже поверх окна.</small></div><div class="mrow"><code>--layer-tooltip</code><span class="text-mono-caption-1">700</span><small>Подсказка: всегда выше всего.</small></div></section>
+  </div>
+  <section class="card"><h2 class="text-web-title-3">Каркас · layout</h2><p>Desktop / Tablet / Mobile.</p><div class="mrow"><code>--breakpoint-min-width</code><span class="text-mono-caption-1">1024 / 640 / 0</span><small>Width from which the mode applies: desktop from 1024 px, tablet 640–1023, mobile below 640 (brandbook 4.2).</small></div><div class="mrow"><code>--grid-columns</code><span class="text-mono-caption-1">12 / 8 / 4</span><small>Number of columns (brandbook 5.4): 12 desktop, 8 tablet, 4 mobile.</small></div><div class="mrow"><code>--grid-gutter</code><span class="text-mono-caption-1">16</span><small>Gap between columns and between cards.</small></div><div class="mrow"><code>--grid-margin</code><span class="text-mono-caption-1">24 / 24 / 20</span><small>Smallest side margin of the content: 24 desktop and tablet, 20 mobile.</small></div><div class="mrow"><code>--content-max-width</code><span class="text-mono-caption-1">1104</span><small>Largest width of the content container; wider screens get side margins.</small></div><div class="mrow"><code>--content-rail</code><span class="text-mono-caption-1">304</span><small>Fixed side column of a page (widgets on the home page). Desktop only so far.</small></div><div class="mrow"><code>--shell-nav-bar-height</code><span class="text-mono-caption-1">82</span><small>Height of the top bar. Desktop; tablet and mobile shell are not designed yet.</small></div><div class="mrow"><code>--shell-side-bar-expanded</code><span class="text-mono-caption-1">284</span><small>Width of the open side-bar. Desktop.</small></div><div class="mrow"><code>--shell-side-bar-collapsed</code><span class="text-mono-caption-1">72</span><small>Width of the collapsed side-bar. Desktop.</small></div></section>
+</div>
+
+<script>
+const EXPECTED = {"0":{"--chart-1":"#0a6ee0","--chart-2":"#78cefe","--chart-3":"#0c2d78","--chart-4":"#8794a9","--chart-highlight":"#ff6b1a","--chart-other":"#cdd6e2","--label-brand-brand":"#0a6ee0","--label-brand-disabled":"#78cefe","--label-brand-on-subtle":"#0a3ec2","--label-brand-strong":"#0a55c9","--label-danger":"#a3162a","--label-disabled":"#aebacb","--label-info":"#0a4fa8","--label-inverse":"#ffffff","--label-on-signal":"#0a1020","--label-primary":"#0a1020","--label-secondary":"#4b576c","--label-signal":"#c2440a","--label-success":"#065f3b","--label-tertiary":"#626f86","--label-warning":"#7a5200","--outline-brand":"#0a6ee0","--outline-control":"#8794a9","--outline-danger":"#e5364b","--outline-default":"#cdd6e2","--outline-disabled":"#cdd6e2","--outline-elevated":"#00000000","--outline-focus":"#0a6ee0","--outline-glass":"#ffffff59","--outline-hover":"#66738a","--outline-subtle":"#dfe5ee","--root-brand-100":"#e6f5ff","--root-brand-200":"#b3e3ff","--root-brand-300":"#78cefe","--root-brand-400":"#3baffc","--root-brand-50":"#eef8ff","--root-brand-500":"#0d8af7","--root-brand-600":"#0a6ee0","--root-brand-700":"#0a55c9","--root-brand-800":"#0a3ec2","--root-brand-900":"#0c2d78","--root-brand-950":"#0a1b47","--shadow-ambient":"#0a10200f","--shadow-focus":"#0a6ee059","--shadow-key":"#0a102024","--surface-brand-subtle-default":"#e6f5ff","--surface-brand-subtle-hover":"#b3e3ff","--surface-brand-subtle-pressed":"#78cefe","--surface-brand-brand":"#0a6ee0","--surface-brand-disabled":"#b3e3ff","--surface-brand-hover":"#0a55c9","--surface-brand-pressed":"#0a3ec2","--surface-danger-subtle":"#fdecee","--surface-danger-default":"#dc3045","--surface-danger-hover":"#b8172c","--surface-danger-pressed":"#a3162a","--surface-default":"#ffffff","--surface-disabled":"#e3e9f1","--surface-elevated":"#ffffff","--surface-elevated-hover":"#eff3f8","--surface-elevated-pressed":"#e3e9f1","--surface-ghost-hover":"#eef8ff","--surface-ghost-pressed":"#e6f5ff","--surface-glass-brand":"#0d8af729","--surface-glass-dark":"#0a102073","--surface-glass-neutral":"#ffffff29","--surface-info":"#0a6ee0","--surface-info-strong":"#0a55c9","--surface-info-subtle":"#eef8ff","--surface-inverse":"#0a1020","--surface-neutral-strong-default":"#e3e9f1","--surface-neutral-strong-hover":"#cdd6e2","--surface-neutral-strong-pressed":"#aebacb","--surface-neutral-default":"#eff3f8","--surface-neutral-hover":"#e3e9f1","--surface-neutral-pressed":"#cdd6e2","--surface-page":"#f5f8fc","--surface-scrim":"#0a102073","--surface-segmented-thumb":"#ffffff","--surface-signal":"#ff6b1a","--surface-signal-subtle":"#fff1e8","--surface-skeleton-base":"#e3e9f1","--surface-skeleton-highlight":"#f5f8fc","--surface-success":"#0e9f5b","--surface-success-strong":"#087443","--surface-success-subtle":"#e7f6ee","--surface-warning":"#f5b400","--surface-warning-strong":"#8a5a00","--surface-warning-subtle":"#fff6db"},"1":{"--chart-1":"#0a6ee0","--chart-2":"#b3e3ff","--chart-3":"#8794a9","--chart-4":"#4b576c","--chart-highlight":"#3baffc","--chart-other":"#26334f","--label-brand-brand":"#3baffc","--label-brand-disabled":"#0a3ec2","--label-brand-on-subtle":"#b3e3ff","--label-brand-strong":"#78cefe","--label-danger":"#ff5c6f","--label-disabled":"#4b576c","--label-info":"#3baffc","--label-inverse":"#ffffff","--label-on-signal":"#0a1020","--label-primary":"#eef2f8","--label-secondary":"#aebacb","--label-signal":"#3baffc","--label-success":"#30d07a","--label-tertiary":"#8794a9","--label-warning":"#f5b400","--outline-brand":"#3baffc","--outline-control":"#66738a","--outline-danger":"#ff5c6f","--outline-default":"#4b576c","--outline-disabled":"#26334f","--outline-elevated":"#343f52","--outline-focus":"#3baffc","--outline-glass":"#ffffff3d","--outline-hover":"#8794a9","--outline-subtle":"#26334f","--root-brand-100":"#e6f5ff","--root-brand-200":"#b3e3ff","--root-brand-300":"#78cefe","--root-brand-400":"#3baffc","--root-brand-50":"#eef8ff","--root-brand-500":"#0d8af7","--root-brand-600":"#0a6ee0","--root-brand-700":"#0a55c9","--root-brand-800":"#0a3ec2","--root-brand-900":"#0c2d78","--root-brand-950":"#0a1b47","--shadow-ambient":"#00000052","--shadow-focus":"#3baffc73","--shadow-key":"#00000080","--surface-brand-subtle-default":"#0a1b47","--surface-brand-subtle-hover":"#0c2d78","--surface-brand-subtle-pressed":"#0a3ec2","--surface-brand-brand":"#0a6ee0","--surface-brand-disabled":"#0c2d78","--surface-brand-hover":"#0a55c9","--surface-brand-pressed":"#0a3ec2","--surface-danger-subtle":"#2e0f16","--surface-danger-default":"#dc3045","--surface-danger-hover":"#b8172c","--surface-danger-pressed":"#a3162a","--surface-default":"#0c1324","--surface-disabled":"#1b2640","--surface-elevated":"#111a2e","--surface-elevated-hover":"#ffffff0f","--surface-elevated-pressed":"#ffffff1f","--surface-ghost-hover":"#0a1b47","--surface-ghost-pressed":"#0c2d78","--surface-glass-brand":"#3baffc38","--surface-glass-dark":"#0a102073","--surface-glass-neutral":"#ffffff1f","--surface-info":"#0a6ee0","--surface-info-strong":"#0a55c9","--surface-info-subtle":"#0e2445","--surface-inverse":"#343f52","--surface-neutral-strong-default":"#26334f","--surface-neutral-strong-hover":"#343f52","--surface-neutral-strong-pressed":"#4b576c","--surface-neutral-default":"#18233a","--surface-neutral-hover":"#26334f","--surface-neutral-pressed":"#343f52","--surface-page":"#060a14","--surface-scrim":"#00000099","--surface-segmented-thumb":"#343f52","--surface-signal":"#3baffc","--surface-signal-subtle":"#0e2445","--surface-skeleton-base":"#343f52","--surface-skeleton-highlight":"#4b576c","--surface-success":"#0e9f5b","--surface-success-strong":"#087443","--surface-success-subtle":"#0f2a1e","--surface-warning":"#f5b400","--surface-warning-strong":"#8a5a00","--surface-warning-subtle":"#2a2208"},"2":{"--chart-1":"#0a6ee0","--chart-2":"#78cefe","--chart-3":"#0c2d78","--chart-4":"#8794a9","--chart-highlight":"#ff6b1a","--chart-other":"#cdd6e2","--label-brand-brand":"#0a4fb8","--label-brand-disabled":"#78cefe","--label-brand-on-subtle":"#0a3ec2","--label-brand-strong":"#0a3ec2","--label-danger":"#b8172c","--label-disabled":"#8794a9","--label-info":"#0a4fa8","--label-inverse":"#ffffff","--label-on-signal":"#0a1020","--label-primary":"#000000","--label-secondary":"#2a3446","--label-signal":"#c2440a","--label-success":"#087443","--label-tertiary":"#4b576c","--label-warning":"#8a5a00","--outline-brand":"#0a4fb8","--outline-control":"#66738a","--outline-danger":"#b8172c","--outline-default":"#8794a9","--outline-disabled":"#cdd6e2","--outline-elevated":"#00000000","--outline-focus":"#0a4fb8","--outline-glass":"#ffffff59","--outline-hover":"#4b576c","--outline-subtle":"#aebacb","--root-brand-100":"#e6f5ff","--root-brand-200":"#b3e3ff","--root-brand-300":"#78cefe","--root-brand-400":"#3baffc","--root-brand-50":"#eef8ff","--root-brand-500":"#0d8af7","--root-brand-600":"#0a6ee0","--root-brand-700":"#0a55c9","--root-brand-800":"#0a3ec2","--root-brand-900":"#0c2d78","--root-brand-950":"#0a1b47","--shadow-ambient":"#0a10200f","--shadow-focus":"#0a6ee059","--shadow-key":"#0a102024","--surface-brand-subtle-default":"#e6f5ff","--surface-brand-subtle-hover":"#b3e3ff","--surface-brand-subtle-pressed":"#78cefe","--surface-brand-brand":"#0a4fb8","--surface-brand-disabled":"#b3e3ff","--surface-brand-hover":"#0a3ec2","--surface-brand-pressed":"#0a3ec2","--surface-danger-subtle":"#fdecee","--surface-danger-default":"#dc3045","--surface-danger-hover":"#b8172c","--surface-danger-pressed":"#a3162a","--surface-default":"#ffffff","--surface-disabled":"#e3e9f1","--surface-elevated":"#ffffff","--surface-elevated-hover":"#eff3f8","--surface-elevated-pressed":"#e3e9f1","--surface-ghost-hover":"#eef8ff","--surface-ghost-pressed":"#e6f5ff","--surface-glass-brand":"#0d8af729","--surface-glass-dark":"#0a102073","--surface-glass-neutral":"#ffffff29","--surface-info":"#0a6ee0","--surface-info-strong":"#0a55c9","--surface-info-subtle":"#eef8ff","--surface-inverse":"#0a1020","--surface-neutral-strong-default":"#e3e9f1","--surface-neutral-strong-hover":"#cdd6e2","--surface-neutral-strong-pressed":"#aebacb","--surface-neutral-default":"#eff3f8","--surface-neutral-hover":"#e3e9f1","--surface-neutral-pressed":"#cdd6e2","--surface-page":"#f5f8fc","--surface-scrim":"#0a102073","--surface-segmented-thumb":"#ffffff","--surface-signal":"#c2440a","--surface-signal-subtle":"#ffe6d4","--surface-skeleton-base":"#e3e9f1","--surface-skeleton-highlight":"#f5f8fc","--surface-success":"#0e9f5b","--surface-success-strong":"#087443","--surface-success-subtle":"#e7f6ee","--surface-warning":"#f5b400","--surface-warning-strong":"#8a5a00","--surface-warning-subtle":"#fff6db"},"3":{"--chart-1":"#0a6ee0","--chart-2":"#b3e3ff","--chart-3":"#8794a9","--chart-4":"#4b576c","--chart-highlight":"#3baffc","--chart-other":"#26334f","--label-brand-brand":"#8fd3ff","--label-brand-disabled":"#0a3ec2","--label-brand-on-subtle":"#b3e3ff","--label-brand-strong":"#ffffff","--label-danger":"#ff8a97","--label-disabled":"#66738a","--label-info":"#3baffc","--label-inverse":"#ffffff","--label-on-signal":"#0a1020","--label-primary":"#ffffff","--label-secondary":"#d3dbe6","--label-signal":"#8fd3ff","--label-success":"#5fe29a","--label-tertiary":"#aebacb","--label-warning":"#ffd54a","--outline-brand":"#8fd3ff","--outline-control":"#8794a9","--outline-danger":"#ff8a97","--outline-default":"#66738a","--outline-disabled":"#26334f","--outline-elevated":"#343f52","--outline-focus":"#8fd3ff","--outline-glass":"#ffffff3d","--outline-hover":"#aebacb","--outline-subtle":"#4b576c","--root-brand-100":"#e6f5ff","--root-brand-200":"#b3e3ff","--root-brand-300":"#78cefe","--root-brand-400":"#3baffc","--root-brand-50":"#eef8ff","--root-brand-500":"#0d8af7","--root-brand-600":"#0a6ee0","--root-brand-700":"#0a55c9","--root-brand-800":"#0a3ec2","--root-brand-900":"#0c2d78","--root-brand-950":"#0a1b47","--shadow-ambient":"#00000052","--shadow-focus":"#3baffc73","--shadow-key":"#00000080","--surface-brand-subtle-default":"#0a1b47","--surface-brand-subtle-hover":"#0c2d78","--surface-brand-subtle-pressed":"#0a3ec2","--surface-brand-brand":"#0a6ee0","--surface-brand-disabled":"#0c2d78","--surface-brand-hover":"#0a55c9","--surface-brand-pressed":"#0a3ec2","--surface-danger-subtle":"#2e0f16","--surface-danger-default":"#dc3045","--surface-danger-hover":"#b8172c","--surface-danger-pressed":"#a3162a","--surface-default":"#000000","--surface-disabled":"#1b2640","--surface-elevated":"#0a0d14","--surface-elevated-hover":"#ffffff0f","--surface-elevated-pressed":"#ffffff1f","--surface-ghost-hover":"#0a1b47","--surface-ghost-pressed":"#0c2d78","--surface-glass-brand":"#3baffc38","--surface-glass-dark":"#0a102073","--surface-glass-neutral":"#ffffff1f","--surface-info":"#0a6ee0","--surface-info-strong":"#0a55c9","--surface-info-subtle":"#0e2445","--surface-inverse":"#343f52","--surface-neutral-strong-default":"#26334f","--surface-neutral-strong-hover":"#343f52","--surface-neutral-strong-pressed":"#4b576c","--surface-neutral-default":"#18233a","--surface-neutral-hover":"#26334f","--surface-neutral-pressed":"#343f52","--surface-page":"#000000","--surface-scrim":"#00000099","--surface-segmented-thumb":"#343f52","--surface-signal":"#8fd3ff","--surface-signal-subtle":"#0e2445","--surface-skeleton-base":"#343f52","--surface-skeleton-highlight":"#4b576c","--surface-success":"#0e9f5b","--surface-success-strong":"#087443","--surface-success-subtle":"#0f2a1e","--surface-warning":"#f5b400","--surface-warning-strong":"#8a5a00","--surface-warning-subtle":"#2a2208"},"brand":{"--chart-1":"#0d815e","--chart-2":"#45dcae","--chart-3":"#0c3a2c","--chart-4":"#8794a9","--chart-highlight":"#ff6b1a","--chart-other":"#cdd6e2","--label-brand-brand":"#0d815e","--label-brand-disabled":"#45dcae","--label-brand-on-subtle":"#0d5841","--label-brand-strong":"#0c694d","--label-danger":"#a3162a","--label-disabled":"#aebacb","--label-info":"#0a4fa8","--label-inverse":"#ffffff","--label-on-signal":"#0a1020","--label-primary":"#0a1020","--label-secondary":"#4b576c","--label-signal":"#c2440a","--label-success":"#065f3b","--label-tertiary":"#626f86","--label-warning":"#7a5200","--outline-brand":"#0d815e","--outline-control":"#8794a9","--outline-danger":"#e5364b","--outline-default":"#cdd6e2","--outline-disabled":"#cdd6e2","--outline-elevated":"#00000000","--outline-focus":"#0d815e","--outline-glass":"#ffffff59","--outline-hover":"#66738a","--outline-subtle":"#dfe5ee","--root-brand-100":"#dcf9f0","--root-brand-200":"#97edd3","--root-brand-300":"#45dcae","--root-brand-400":"#27bd90","--root-brand-50":"#e7fbf5","--root-brand-500":"#139b73","--root-brand-600":"#0d815e","--root-brand-700":"#0c694d","--root-brand-800":"#0d5841","--root-brand-900":"#0c3a2c","--root-brand-950":"#08231b","--shadow-ambient":"#0a10200f","--shadow-focus":"#0a6ee059","--shadow-key":"#0a102024","--surface-brand-subtle-default":"#dcf9f0","--surface-brand-subtle-hover":"#97edd3","--surface-brand-subtle-pressed":"#45dcae","--surface-brand-brand":"#0d815e","--surface-brand-disabled":"#97edd3","--surface-brand-hover":"#0c694d","--surface-brand-pressed":"#0d5841","--surface-danger-subtle":"#fdecee","--surface-danger-default":"#dc3045","--surface-danger-hover":"#b8172c","--surface-danger-pressed":"#a3162a","--surface-default":"#ffffff","--surface-disabled":"#e3e9f1","--surface-elevated":"#ffffff","--surface-elevated-hover":"#eff3f8","--surface-elevated-pressed":"#e3e9f1","--surface-ghost-hover":"#e7fbf5","--surface-ghost-pressed":"#dcf9f0","--surface-glass-brand":"#0d8af729","--surface-glass-dark":"#0a102073","--surface-glass-neutral":"#ffffff29","--surface-info":"#0a6ee0","--surface-info-strong":"#0a55c9","--surface-info-subtle":"#eef8ff","--surface-inverse":"#0a1020","--surface-neutral-strong-default":"#e3e9f1","--surface-neutral-strong-hover":"#cdd6e2","--surface-neutral-strong-pressed":"#aebacb","--surface-neutral-default":"#eff3f8","--surface-neutral-hover":"#e3e9f1","--surface-neutral-pressed":"#cdd6e2","--surface-page":"#f5f8fc","--surface-scrim":"#0a102073","--surface-segmented-thumb":"#ffffff","--surface-signal":"#ff6b1a","--surface-signal-subtle":"#fff1e8","--surface-skeleton-base":"#e3e9f1","--surface-skeleton-highlight":"#f5f8fc","--surface-success":"#0e9f5b","--surface-success-strong":"#087443","--surface-success-subtle":"#e7f6ee","--surface-warning":"#f5b400","--surface-warning-strong":"#8a5a00","--surface-warning-subtle":"#fff6db"}};
+const MODES = [[{theme:'light'}, 0], [{theme:'dark'}, 1], [{theme:'light', contrast:'more'}, 2], [{theme:'dark', contrast:'more'}, 3], [{theme:'light', brand:'client-example'}, 'brand']];
+const de = document.documentElement;
+function apply(a) { for (const k of ['theme','contrast','brand']) { if (a[k]) de.setAttribute('data-' + k, a[k]); else de.removeAttribute('data-' + k); } }
+function norm(v) { v = v.trim().toLowerCase(); return v; }
+function run() {
+  const saved = { theme: de.getAttribute('data-theme'), contrast: de.getAttribute('data-contrast'), brand: de.getAttribute('data-brand') };
+  const fails = []; let checked = 0;
+  for (const [attrs, key] of MODES) {
+    apply(attrs); const cs = getComputedStyle(de);
+    for (const [name, exp] of Object.entries(EXPECTED[key])) { checked++; const got = norm(cs.getPropertyValue(name)); if (got !== exp.toLowerCase()) fails.push({ mode: key, name, exp, got }); }
+  }
+  apply(saved);
+  window.__tokenTest = { checked, fails };
+  const el = document.getElementById('test');
+  el.className = 'test ' + (fails.length ? 'bad' : 'ok');
+  el.innerHTML = (fails.length ? '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5M12 16v.01"/></svg>' : '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16 10"/></svg>') +
+    (fails.length ? 'Не совпало: ' + fails.length + ' из ' + checked : 'Совпадает с Figma: ' + checked + ' значений в 5 режимах');
+}
+document.querySelectorAll('.theme button').forEach(b => b.onclick = () => {
+  const t = b.dataset.t;
+  de.removeAttribute('data-contrast');
+  if (t === 'system') de.removeAttribute('data-theme');
+  else if (t === 'contrast') { de.setAttribute('data-theme', matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); de.setAttribute('data-contrast', 'more'); }
+  else de.setAttribute('data-theme', t);
+  document.querySelectorAll('.theme button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+});
+run();
+</script>

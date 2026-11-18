@@ -1,0 +1,1410 @@
+{
+ "note": "Отпечаток DS v2, с которым собран плагин. tokensHash — FNV-1a от tokens.json (scripts/export-tokens.figma.js должен дать тот же); icons — хэш SVG каждой иконки кита; sets — [страница, имя, хэш] каждого компонента (scripts/fingerprint.figma.js). Обновляет scripts/sync-check.cjs --save.",
+ "tokensHash": "93b77452",
+ "iconsFile": "Icons OneFlow 2hQBxCgrpDogWTTJJ4oP5C",
+ "icons": {
+  "activity-01/line-24": "bdf0d8b6",
+  "activity-01/solid-24": "3183980d",
+  "airplane-01/line-20": "a5a7f1f2",
+  "airplane-01/line-24": "45aa6678",
+  "alert-circle/line-24": "1b27c883",
+  "alert-circle/solid-20": "1eba37e3",
+  "alert-triangle/line-24": "c97b6490",
+  "alert-triangle/solid-20": "8162fee7",
+  "analytics-01/line-24": "b63dab22",
+  "analytics-01/solid-24": "873cbea0",
+  "arrow-down/line-16": "f41bd340",
+  "arrow-forward-up/line-16": "cbe54731",
+  "arrow-left/line-20": "4966234e",
+  "arrow-left/line-24": "4bb3e140",
+  "arrow-right/line-20": "296370ac",
+  "arrow-up/line-16": "31b37534",
+  "arrows-diagonal-2/line-16": "28d9ecc7",
+  "bell/line-16": "4f196e9e",
+  "bell/line-20": "cb23f792",
+  "bell/line-24": "cd1983fd",
+  "book-02/line-20": "7b50a531",
+  "book-02/line-24": "3b5fe940",
+  "book-02/solid-24": "7fa9db2a",
+  "bookmark-01/line-20": "71dede51",
+  "bookmark-01/line-24": "d3a8fba5",
+  "bookmark/solid-20": "12c79cd7",
+  "briefcase-01/line-20": "8bd8c91d",
+  "brightness-auto/line-24": "6833b0cd",
+  "bubble-chat/line-16": "22949543",
+  "bubble-chat/line-24": "fd42b399",
+  "building/line-20": "24d68db9",
+  "bulb/solid-16": "6a362fce",
+  "bulb/solid-20": "1e3c8b02",
+  "bulb/solid-24": "8276ba9e",
+  "calculator/line-20": "c06b87bc",
+  "calendar-01/line-20": "27ea30c",
+  "calendar-01/line-24": "e44b33e1",
+  "calendar-check/line-20": "4e2cca01",
+  "calendar/line-24": "6d4908a3",
+  "car-01/line-20": "2e33a180",
+  "chart-bar/line-24": "f03b6b5c",
+  "check/line-16": "988ae874",
+  "check/line-20": "16af2517",
+  "check/solid-20": "47ef1943",
+  "checks/line-16": "c10c192c",
+  "chevron-down/line-16": "51521c26",
+  "chevron-down/line-20": "7e84a82c",
+  "chevron-down/line-24": "bd806d97",
+  "chevron-left/line-20": "c1e15e97",
+  "chevron-right/line-16": "d7b46bd7",
+  "chevron-right/line-20": "77a5e52b",
+  "chevron-up/line-16": "28f98440",
+  "chevron-up/line-20": "a9c5039e",
+  "chevron-up/line-24": "3c32de90",
+  "circle-check/solid-16": "b7a4fa6a",
+  "circle-check/solid-20": "3e7f87e7",
+  "clipboard-list-hg/line-24": "d7339d1d",
+  "clipboard-list-hg/solid-24": "ac7b45c4",
+  "clock-01/line-20": "dfc86548",
+  "clock-01/line-24": "ba7874e",
+  "clock-01/solid-24": "c33097fa",
+  "clock/line-16": "a8ad46b4",
+  "clock/line-20": "a94b3746",
+  "clock/line-24": "e8a5f57b",
+  "clock/solid-16": "424f6308",
+  "cloud/line-20": "7080fc3b",
+  "coffee-01/line-20": "17fce110",
+  "coffee-01/line-24": "fd65156a",
+  "confetti/solid-16": "53da286b",
+  "confetti/solid-20": "60a0ff24",
+  "confetti/solid-24": "4d4c8bcc",
+  "contrast-2/line-24": "b27d3a1d",
+  "copy/line-20": "b1123d79",
+  "corner-down-right/line-16": "16ab7b07",
+  "database-01/line-20": "a837911f",
+  "dimensions/line-20": "2434b51b",
+  "dish-01/line-24": "6719784e",
+  "door-enter/line-24": "6746a3fe",
+  "dots/line-16": "a38ea453",
+  "dots/line-20": "7aacd74d",
+  "dots/line-24": "efee08ac",
+  "edit/line-24": "cbd9f8bb",
+  "exclamation-mark/line-16": "16d41fed",
+  "external-link/line-16": "71d907cb",
+  "eye/line-16": "65993478",
+  "eye/line-24": "8356e45",
+  "file-01/line-20": "f6e73f8b",
+  "file-text/line-20": "facb90e5",
+  "file-text/line-24": "8c13800e",
+  "filter/line-20": "8ddc7d1f",
+  "flame/solid-16": "538c0a3c",
+  "flame/solid-20": "8ecb79fc",
+  "flame/solid-24": "8180f475",
+  "folder-01/line-20": "abf7883a",
+  "folder-01/line-24": "ed661f6f",
+  "globe-02/line-20": "14eb6f32",
+  "globe-02/line-24": "719c8495",
+  "grip-vertical/line-16": "38a2f44a",
+  "headset-hg/line-20": "e57cc742",
+  "headset-hg/line-24": "dfa21406",
+  "heart/solid-16": "ae9a80d3",
+  "heart/solid-20": "a5004921",
+  "heart/solid-24": "6bf85658",
+  "help-circle/line-24": "fb01c124",
+  "hierarchy-square-02/line-24": "1ad67861",
+  "hierarchy-square-02/solid-24": "13e1345f",
+  "home-01/line-24": "c548fafb",
+  "home-01/solid-24": "507a8617",
+  "home/line-16": "6b985fb",
+  "id-card/line-24": "61a98dd2",
+  "id-card/solid-24": "7625a296",
+  "image-01/line-24": "d9c6bf6",
+  "info-circle/line-24": "64ae1d5a",
+  "info-circle/solid-16": "5058b652",
+  "info-circle/solid-20": "1efa9283",
+  "invoice-01/line-24": "4625e9e8",
+  "justice-scale-01/line-24": "2673e386",
+  "key-01/line-20": "ddad579c",
+  "layout-grid-add/line-24": "88d9ca92",
+  "layout-sidebar-left-collapse/line-24": "eb255ff9",
+  "link-01/line-20": "c90008a5",
+  "link/line-24": "60ed3770",
+  "loader-2/line-16": "7a287b24",
+  "loader-2/line-20": "6518c857",
+  "loader-2/line-24": "9a8c4a5d",
+  "location-01/line-20": "ba492c9c",
+  "location-01/line-24": "6c9b1b05",
+  "login/line-20": "a3901514",
+  "logout/line-24": "883b383",
+  "mail-01/line-20": "c31b09db",
+  "mail-01/line-24": "f9877579",
+  "meeting-room/line-24": "cd9fef6",
+  "meeting-room/solid-24": "da55098",
+  "minus/line-16": "983d4a50",
+  "minus/line-20": "7a52b39d",
+  "mood-angry/line-24": "be2ec892",
+  "mood-happy/line-24": "4e46d9fd",
+  "mood-sad/line-24": "47dfcb0c",
+  "mood-smile/line-24": "a9509674",
+  "moon/line-24": "57ec0d89",
+  "mortarboard-01/line-24": "d65e1233",
+  "note-01/line-24": "8256e91c",
+  "note-01/solid-24": "5d9c579e",
+  "paperclip/line-24": "7d29acc7",
+  "pencil/line-20": "f387dc",
+  "phone-call/line-24": "b7c2f9d2",
+  "photo/line-24": "70a2902a",
+  "pie-chart/line-20": "6cd65743",
+  "pin/line-16": "2659c1fa",
+  "pin/solid-16": "5a21ecaf",
+  "pinned/line-20": "2b1e6bf0",
+  "play/solid-24": "b421ee30",
+  "plus/line-16": "8d42c197",
+  "plus/line-20": "85f094ab",
+  "plus/line-24": "637e34cc",
+  "refresh/line-20": "d9f28c1e",
+  "search/line-20": "9543fe0d",
+  "search/line-24": "f0ce5bde",
+  "send/line-20": "92ce63de",
+  "send/line-24": "e8dca8e7",
+  "settings-02/line-24": "e539d2e9",
+  "settings-02/solid-24": "8d1b7b93",
+  "settings/line-24": "2a050a42",
+  "shield-01/line-20": "b1418ba9",
+  "shield-01/line-24": "24da981",
+  "shopping-cart-01/line-20": "1c35975b",
+  "source-code/line-20": "b234468",
+  "stack-2/line-20": "f0315ef8",
+  "star/line-16": "fd349494",
+  "sun/line-24": "5db2b08",
+  "table/line-24": "6b82a919",
+  "target-02/line-24": "1f2b604d",
+  "task-done-01/line-24": "21db7ba1",
+  "thumb-up/line-16": "e52e29db",
+  "thumb-up/solid-16": "cf4d9084",
+  "thumb-up/solid-20": "74959eeb",
+  "thumb-up/solid-24": "6b5105ab",
+  "trash/line-20": "dc40ca97",
+  "trash/line-24": "a177e557",
+  "upload/line-24": "b0105d43",
+  "user-group/line-20": "11bf1c22",
+  "user-group/line-24": "4b91e5d2",
+  "user-list/line-24": "be02a4df",
+  "user/line-20": "f02d267d",
+  "user/solid-16": "821c1ab",
+  "user/solid-20": "54837cf8",
+  "user/solid-24": "cfee7b5",
+  "users/line-20": "7095c57e",
+  "video-01/line-20": "ce40d2bd",
+  "video-01/line-24": "7a3d39d1",
+  "volume-off/line-16": "197117d1",
+  "wallet-01/line-20": "1dd32805",
+  "wallet-01/line-24": "4fb2917d",
+  "wifi-off/line-24": "abfa07c1",
+  "world/line-24": "cbbfe7a0",
+  "wrench-01/line-20": "c3821c76",
+  "wrench-01/line-24": "69d6abd4",
+  "x/line-16": "1646af90",
+  "x/line-20": "c57c5840",
+  "x/line-24": "34ae9a3c"
+ },
+ "sets": {
+  "1108:234": [
+   "logo",
+   "logo-symbol",
+   "d68863"
+  ],
+  "1108:1336": [
+   "logo",
+   "logo",
+   "9c11a03c"
+  ],
+  "1113:2947": [
+   "logo",
+   "logo-module",
+   "6353a4a2"
+  ],
+  "1110:3115": [
+   "logo",
+   "logo-favicon",
+   "e929252"
+  ],
+  "1110:3564": [
+   "logo",
+   "logo-app-icon",
+   "56c87347"
+  ],
+  "1115:23": [
+   "logo",
+   "logo rules (DS2)",
+   "ba7ac1ad"
+  ],
+  "212:1377": [
+   "inputs",
+   "caption-container",
+   "15c70320"
+  ],
+  "636:373": [
+   "inputs",
+   "input",
+   "184fea46"
+  ],
+  "636:385": [
+   "inputs",
+   "input-outline",
+   "4b385c34"
+  ],
+  "1280:3371": [
+   "inputs",
+   "input-field",
+   "612b7816"
+  ],
+  "1280:3554": [
+   "inputs",
+   "input-field-outline",
+   "8e1bef9c"
+  ],
+  "696:1331": [
+   "inputs",
+   "textarea",
+   "a5abcd68"
+  ],
+  "1282:4202": [
+   "inputs",
+   "textarea-field",
+   "5b6cc079"
+  ],
+  "696:1401": [
+   "inputs",
+   "textarea-outline",
+   "712b3f08"
+  ],
+  "1282:4305": [
+   "inputs",
+   "textarea-field-outline",
+   "5c2f3919"
+  ],
+  "696:1654": [
+   "inputs",
+   "search",
+   "2922a017"
+  ],
+  "697:1573": [
+   "inputs",
+   "search-outline",
+   "6dbff4dc"
+  ],
+  "696:1712": [
+   "inputs",
+   "select-option",
+   "cb2f764c"
+  ],
+  "696:1751": [
+   "inputs",
+   "select-menu",
+   "f05483a1"
+  ],
+  "724:2105": [
+   "inputs",
+   "number-input",
+   "fae36c55"
+  ],
+  "1282:4501": [
+   "inputs",
+   "number-field",
+   "d0af48c3"
+  ],
+  "724:2373": [
+   "inputs",
+   "number-input-outline",
+   "40d918c5"
+  ],
+  "1282:4699": [
+   "inputs",
+   "number-field-outline",
+   "8228149b"
+  ],
+  "734:2477": [
+   "inputs",
+   "multi-select",
+   "53cec0e4"
+  ],
+  "1282:4857": [
+   "inputs",
+   "multi-select-field",
+   "b77208c5"
+  ],
+  "734:2742": [
+   "inputs",
+   "multi-select-outline",
+   "1bca0470"
+  ],
+  "1282:5017": [
+   "inputs",
+   "multi-select-field-outline",
+   "b66b0b0"
+  ],
+  "765:2417": [
+   "inputs",
+   "phone-input",
+   "693630d"
+  ],
+  "1282:5171": [
+   "inputs",
+   "phone-field",
+   "71ddb380"
+  ],
+  "765:2598": [
+   "inputs",
+   "phone-input-outline",
+   "5acd3a8e"
+  ],
+  "1282:5327": [
+   "inputs",
+   "phone-field-outline",
+   "8469923a"
+  ],
+  "765:2609": [
+   "inputs",
+   "pin-cell",
+   "17f9ec4"
+  ],
+  "765:2632": [
+   "inputs",
+   "pin-input",
+   "42a34a25"
+  ],
+  "717:1773": [
+   "inputs",
+   "upload-area",
+   "44064cc1"
+  ],
+  "717:1842": [
+   "inputs",
+   "upload-item",
+   "3026285f"
+  ],
+  "1209:106": [
+   "inputs",
+   "inputs rules (DS2)",
+   "8fb1f421"
+  ],
+  "652:3960": [
+   "buttons",
+   "button",
+   "341f30ae"
+  ],
+  "698:7062": [
+   "buttons",
+   "icon-button",
+   "6e708ca6"
+  ],
+  "736:7551": [
+   "buttons",
+   "button-group",
+   "857d5702"
+  ],
+  "1209:176": [
+   "buttons",
+   "buttons rules (DS2)",
+   "304f6443"
+  ],
+  "186:758": [
+   "avatars",
+   "avatar",
+   "5080be54"
+  ],
+  "670:119": [
+   "avatars",
+   "avatar-group",
+   "ec73cc4"
+  ],
+  "1209:243": [
+   "avatars",
+   "avatars rules (DS2)",
+   "54ff59e3"
+  ],
+  "212:1632": [
+   "tooltips",
+   "tooltip",
+   "cf0d3c86"
+  ],
+  "328:1357": [
+   "tooltips",
+   "popconfirm",
+   "8ac3ded7"
+  ],
+  "704:550": [
+   "tooltips",
+   "popover",
+   "3f24ef2a"
+  ],
+  "1209:292": [
+   "tooltips",
+   "tooltips rules (DS2)",
+   "af0b463a"
+  ],
+  "698:8444": [
+   "link & divider",
+   "link",
+   "33c2e99f"
+  ],
+  "698:8453": [
+   "link & divider",
+   "divider",
+   "28ef59dc"
+  ],
+  "1211:106": [
+   "link & divider",
+   "link & divider rules (DS2)",
+   "19e484de"
+  ],
+  "701:315": [
+   "loading",
+   "spinner",
+   "e4661135"
+  ],
+  "701:341": [
+   "loading",
+   "skeleton",
+   "1eac40dc"
+  ],
+  "701:422": [
+   "loading",
+   "progress",
+   "36287264"
+  ],
+  "767:205": [
+   "loading",
+   "progress-circle",
+   "3c3bd6e3"
+  ],
+  "1211:137": [
+   "loading",
+   "loading rules (DS2)",
+   "33bb5214"
+  ],
+  "703:356": [
+   "feedback",
+   "alert",
+   "5951df28"
+  ],
+  "703:559": [
+   "feedback",
+   "toast",
+   "edf7fbb6"
+  ],
+  "762:1115": [
+   "feedback",
+   "undo-toast",
+   "58a219f4"
+  ],
+  "711:2540": [
+   "feedback",
+   "empty-state",
+   "1a4520cf"
+  ],
+  "1211:172": [
+   "feedback",
+   "feedback rules (DS2)",
+   "b81f5a77"
+  ],
+  "704:73": [
+   "navigation",
+   "breadcrumb-item",
+   "ce83082f"
+  ],
+  "704:74": [
+   "navigation",
+   "breadcrumb",
+   "6cc64001"
+  ],
+  "704:127": [
+   "navigation",
+   "pagination-item",
+   "db36dedb"
+  ],
+  "704:128": [
+   "navigation",
+   "pagination",
+   "69d9a39b"
+  ],
+  "727:416": [
+   "navigation",
+   "step",
+   "be9cbd77"
+  ],
+  "727:527": [
+   "navigation",
+   "stepper",
+   "2aac9f8c"
+  ],
+  "942:841": [
+   "navigation",
+   "page-header",
+   "f71ee010"
+  ],
+  "1211:212": [
+   "navigation",
+   "navigation rules (DS2)",
+   "966458e8"
+  ],
+  "710:1849": [
+   "date picker",
+   "calendar-day",
+   "a07194fd"
+  ],
+  "710:2266": [
+   "date picker",
+   "calendar",
+   "105d7e1e"
+  ],
+  "710:2725": [
+   "date picker",
+   "date-picker",
+   "92376a4f"
+  ],
+  "766:2595": [
+   "date picker",
+   "date-range-picker",
+   "e19739e4"
+  ],
+  "766:3158": [
+   "date picker",
+   "month-cell",
+   "b746cfc0"
+  ],
+  "766:3159": [
+   "date picker",
+   "month-picker",
+   "99041943"
+  ],
+  "950:4351": [
+   "date picker",
+   "time-cell",
+   "cf375c64"
+  ],
+  "950:4450": [
+   "date picker",
+   "time-picker",
+   "3f470bba"
+  ],
+  "1211:237": [
+   "date picker",
+   "date picker rules (DS2)",
+   "8fa984a"
+  ],
+  "714:128": [
+   "containers",
+   "drawer",
+   "74240328"
+  ],
+  "714:162": [
+   "containers",
+   "accordion-item",
+   "301bdaf1"
+  ],
+  "714:163": [
+   "containers",
+   "accordion",
+   "cea04c56"
+  ],
+  "1211:271": [
+   "containers",
+   "containers rules (DS2)",
+   "f64758e0"
+  ],
+  "674:369": [
+   "context menu",
+   "menu-item",
+   "59f7843e"
+  ],
+  "741:709": [
+   "context menu",
+   "menu-control",
+   "6462444"
+  ],
+  "674:370": [
+   "context menu",
+   "menu-divider",
+   "c80cf20f"
+  ],
+  "674:372": [
+   "context menu",
+   "menu",
+   "5a9bf377"
+  ],
+  "1211:292": [
+   "context menu",
+   "context menu rules (DS2)",
+   "c1761862"
+  ],
+  "742:219": [
+   "list",
+   "list-item",
+   "88ef819f"
+  ],
+  "742:241": [
+   "list",
+   "user",
+   "b3aaddef"
+  ],
+  "943:281": [
+   "list",
+   "definition-item",
+   "a9d347cd"
+  ],
+  "943:324": [
+   "list",
+   "definition-list",
+   "150bf4d7"
+  ],
+  "948:483": [
+   "list",
+   "notification-mark",
+   "9049e640"
+  ],
+  "948:649": [
+   "list",
+   "notification-item",
+   "bda46a2e"
+  ],
+  "948:650": [
+   "list",
+   "notification-group-title",
+   "dae06296"
+  ],
+  "949:824": [
+   "list",
+   "tree-item",
+   "a6121606"
+  ],
+  "949:921": [
+   "list",
+   "timeline-item",
+   "d6e89c1"
+  ],
+  "1211:317": [
+   "list",
+   "list rules (DS2)",
+   "8d10972e"
+  ],
+  "212:1553": [
+   "chips",
+   "chip",
+   "91e74205"
+  ],
+  "1211:358": [
+   "chips",
+   "chips rules (DS2)",
+   "68b7a038"
+  ],
+  "186:811": [
+   "badges",
+   "badge",
+   "3339a8e5"
+  ],
+  "687:254": [
+   "badges",
+   "counter",
+   "afe8c64"
+  ],
+  "743:246": [
+   "badges",
+   "status",
+   "daebcc0f"
+  ],
+  "1211:385": [
+   "badges",
+   "badges rules (DS2)",
+   "837f3b34"
+  ],
+  "212:1618": [
+   "tabs",
+   "tab",
+   "ff1fa892"
+  ],
+  "689:170": [
+   "tabs",
+   "tabs",
+   "1c036121"
+  ],
+  "711:225": [
+   "tabs",
+   "segmented-item",
+   "eed736cc"
+  ],
+  "711:397": [
+   "tabs",
+   "segmented",
+   "d444236e"
+  ],
+  "1211:416": [
+   "tabs",
+   "tabs rules (DS2)",
+   "de822bf0"
+  ],
+  "212:1586": [
+   "section controls",
+   "toggle",
+   "d5a1e5cb"
+  ],
+  "212:1591": [
+   "section controls",
+   "radio",
+   "340dda1b"
+  ],
+  "212:1599": [
+   "section controls",
+   "selection",
+   "3b7356af"
+  ],
+  "212:1605": [
+   "section controls",
+   "checkbox",
+   "f3393923"
+  ],
+  "725:242": [
+   "section controls",
+   "slider",
+   "cb6664db"
+  ],
+  "1211:444": [
+   "section controls",
+   "section controls rules (DS2)",
+   "489f4bb1"
+  ],
+  "744:360": [
+   "table",
+   "table-header-cell",
+   "d510663"
+  ],
+  "1175:5961": [
+   "table",
+   "table-resize-guide",
+   "d6c1d40"
+  ],
+  "744:438": [
+   "table",
+   "table-cell",
+   "4a859eac"
+  ],
+  "746:1337": [
+   "table",
+   "table-row",
+   "d01827de"
+  ],
+  "746:1338": [
+   "table",
+   "table-header-row",
+   "de546636"
+  ],
+  "746:1376": [
+   "table",
+   "table-toolbar",
+   "898f4993"
+  ],
+  "746:1400": [
+   "table",
+   "table-bulk-bar",
+   "7e5d7997"
+  ],
+  "755:2078": [
+   "table",
+   "table-footer",
+   "6e89ce49"
+  ],
+  "755:2107": [
+   "table",
+   "page-size-menu",
+   "eea02551"
+  ],
+  "769:3493": [
+   "table",
+   "table-group-row",
+   "a8f8cf7c"
+  ],
+  "772:4564": [
+   "table",
+   "table-more-row",
+   "8eecbdd6"
+  ],
+  "746:1421": [
+   "table",
+   "table",
+   "6051723"
+  ],
+  "772:4605": [
+   "table",
+   "table / grouped",
+   "e029f11f"
+  ],
+  "769:3414": [
+   "table",
+   "table-index-cell",
+   "33c4cbd5"
+  ],
+  "769:3431": [
+   "table",
+   "table-header-index",
+   "6787f150"
+  ],
+  "775:4716": [
+   "table",
+   "table-skeleton-row",
+   "2330bb79"
+  ],
+  "775:4743": [
+   "table",
+   "table / loading",
+   "f569a17f"
+  ],
+  "775:4961": [
+   "table",
+   "table / empty",
+   "82c6cdb9"
+  ],
+  "783:5263": [
+   "table",
+   "table / error",
+   "1c250cae"
+  ],
+  "1211:473": [
+   "table",
+   "table rules (DS2)",
+   "4ec43608"
+  ],
+  "757:84": [
+   "filters",
+   "filter-group-title",
+   "2b9dbe8a"
+  ],
+  "757:104": [
+   "filters",
+   "filter-category",
+   "40ae03b0"
+  ],
+  "757:218": [
+   "filters",
+   "filter-option",
+   "d192ee43"
+  ],
+  "757:227": [
+   "filters",
+   "filter-chip",
+   "663909d2"
+  ],
+  "759:1295": [
+   "filters",
+   "filter-values",
+   "9cfac8"
+  ],
+  "759:1647": [
+   "filters",
+   "filter-panel",
+   "36a22db"
+  ],
+  "759:1729": [
+   "filters",
+   "filter-bar",
+   "ed0dbbf7"
+  ],
+  "1211:520": [
+   "filters",
+   "filters rules (DS2)",
+   "a72bccc2"
+  ],
+  "41:1273": [
+   "nav-bar",
+   "nav-bar",
+   "a259b0e"
+  ],
+  "793:1152": [
+   "nav-bar",
+   "profile-menu",
+   "ae3bf270"
+  ],
+  "793:1263": [
+   "nav-bar",
+   "profile-submenu / language",
+   "212b4c80"
+  ],
+  "793:1317": [
+   "nav-bar",
+   "profile-submenu / theme",
+   "f23abad0"
+  ],
+  "793:1442": [
+   "nav-bar",
+   "search-results",
+   "894d8169"
+  ],
+  "964:1554": [
+   "nav-bar",
+   "support-chat",
+   "b6f6e3e3"
+  ],
+  "962:2732": [
+   "nav-bar",
+   "chat-header",
+   "a3723971"
+  ],
+  "962:2786": [
+   "nav-bar",
+   "chat-message",
+   "6ff5b248"
+  ],
+  "962:2787": [
+   "nav-bar",
+   "chat-system",
+   "7e5d8ae2"
+  ],
+  "962:2789": [
+   "nav-bar",
+   "chat-typing",
+   "2ecdcba"
+  ],
+  "962:2836": [
+   "nav-bar",
+   "chat-input",
+   "fee25266"
+  ],
+  "962:2865": [
+   "nav-bar",
+   "rate-option",
+   "b4fb5efe"
+  ],
+  "974:3524": [
+   "nav-bar",
+   "apps-menu",
+   "4681816d"
+  ],
+  "968:2698": [
+   "nav-bar",
+   "app-icon",
+   "b8d2d6da"
+  ],
+  "971:2714": [
+   "nav-bar",
+   "app-item",
+   "710d2556"
+  ],
+  "977:48930": [
+   "nav-bar",
+   "icon-cell",
+   "67dda201"
+  ],
+  "977:48941": [
+   "nav-bar",
+   "background-swatch",
+   "48a71813"
+  ],
+  "977:49655": [
+   "nav-bar",
+   "bookmark-form",
+   "fb26a223"
+  ],
+  "1211:550": [
+   "nav-bar",
+   "nav-bar rules (DS2)",
+   "5022ff40"
+  ],
+  "800:1935": [
+   "side-bar",
+   "side-bar-item",
+   "e2994a1c"
+  ],
+  "800:1944": [
+   "side-bar",
+   "side-bar-subitem",
+   "73c01542"
+  ],
+  "1338:1500": [
+   "side-bar",
+   "side-bar-group",
+   "765bcf60"
+  ],
+  "1338:1535": [
+   "side-bar",
+   "side-bar-flyout",
+   "1c742de7"
+  ],
+  "800:2025": [
+   "side-bar",
+   "role-switch",
+   "812a6da2"
+  ],
+  "802:2272": [
+   "side-bar",
+   "side-bar",
+   "e5b75b59"
+  ],
+  "1341:1666": [
+   "side-bar",
+   "side-bar rules (DS2)",
+   "6ed72d1f"
+  ],
+  "1060:115": [
+   "charts",
+   "chart-marker",
+   "c200c9f7"
+  ],
+  "1060:166": [
+   "charts",
+   "delta",
+   "cb3a7469"
+  ],
+  "1060:177": [
+   "charts",
+   "chart-legend-item",
+   "34a181da"
+  ],
+  "1060:178": [
+   "charts",
+   "chart-tooltip-row",
+   "ed976e22"
+  ],
+  "1060:183": [
+   "charts",
+   "chart-tooltip",
+   "41ed45e4"
+  ],
+  "1061:115": [
+   "charts",
+   "chart-bar",
+   "6d246096"
+  ],
+  "1061:156": [
+   "charts",
+   "chart-point",
+   "26ff1123"
+  ],
+  "1061:157": [
+   "charts",
+   "chart-breakdown-row",
+   "ce67c802"
+  ],
+  "1061:163": [
+   "charts",
+   "stat-mini",
+   "a550301c"
+  ],
+  "1061:266": [
+   "charts",
+   "stat-tile",
+   "4af98d27"
+  ],
+  "1063:86": [
+   "charts",
+   "chart-card-header",
+   "be43c24d"
+  ],
+  "1063:221": [
+   "charts",
+   "chart-card",
+   "558a9500"
+  ],
+  "1088:4758": [
+   "charts",
+   "chart-axis-label",
+   "5b973a23"
+  ],
+  "1088:4772": [
+   "charts",
+   "chart-rule",
+   "8d46401f"
+  ],
+  "1088:4775": [
+   "charts",
+   "chart-band",
+   "cee1bb98"
+  ],
+  "1088:4911": [
+   "charts",
+   "chart-plot",
+   "40d7cda5"
+  ],
+  "1089:4848": [
+   "charts",
+   "chart-line",
+   "c7cca537"
+  ],
+  "1089:4864": [
+   "charts",
+   "chart-area",
+   "cf0e77e3"
+  ],
+  "1089:4905": [
+   "charts",
+   "chart-sparkline",
+   "50df2615"
+  ],
+  "1089:5035": [
+   "charts",
+   "chart-ring",
+   "bdb04573"
+  ],
+  "1089:5144": [
+   "charts",
+   "chart-gauge",
+   "4698168"
+  ],
+  "1089:5200": [
+   "charts",
+   "chart-donut",
+   "75d686b7"
+  ],
+  "1090:4880": [
+   "charts",
+   "chart-meter",
+   "ba85eed"
+  ],
+  "1090:4881": [
+   "charts",
+   "chart-bar-row",
+   "32d7f4b3"
+  ],
+  "1090:4888": [
+   "charts",
+   "chart-rank-row",
+   "2aad724b"
+  ],
+  "1090:4950": [
+   "charts",
+   "chart-segmented-bar",
+   "1a0f07ec"
+  ],
+  "1090:4981": [
+   "charts",
+   "chart-heatmap-cell",
+   "b4f6493c"
+  ],
+  "1090:4982": [
+   "charts",
+   "chart-scale",
+   "17f5f6b2"
+  ],
+  "1091:4889": [
+   "charts",
+   "chart-legend",
+   "e3d97cd1"
+  ],
+  "1091:4890": [
+   "charts",
+   "chart-aside-panel",
+   "3e8da0ee"
+  ],
+  "1091:4965": [
+   "charts",
+   "chart-aside-tile",
+   "675df975"
+  ],
+  "1091:4998": [
+   "charts",
+   "chart-view-switch",
+   "6e3bc8e9"
+  ],
+  "1095:7102": [
+   "charts",
+   "chart-data-label",
+   "f33f5d2c"
+  ],
+  "1083:1847": [
+   "charts",
+   "chart rules (DS2)",
+   "72291765"
+  ],
+  "1159:43": [
+   "attendance",
+   "day-type",
+   "7102d91f"
+  ],
+  "1159:57": [
+   "attendance",
+   "work-time-bar",
+   "705326a1"
+  ],
+  "1159:58": [
+   "attendance",
+   "work-time-scale",
+   "a3de7d43"
+  ],
+  "1160:178": [
+   "attendance",
+   "attendance-day",
+   "5657411d"
+  ],
+  "1160:230": [
+   "attendance",
+   "entry",
+   "e7b424df"
+  ],
+  "1160:314": [
+   "attendance",
+   "attendance-entries",
+   "ee0d435c"
+  ],
+  "1211:607": [
+   "attendance",
+   "attendance rules (DS2)",
+   "e3c97ba2"
+  ],
+  "788:863": [
+   "modals",
+   "modal-slot",
+   "a1a3cdb2"
+  ],
+  "788:986": [
+   "modals",
+   "modal",
+   "24253789"
+  ],
+  "788:1031": [
+   "modals",
+   "dialog",
+   "9514e451"
+  ],
+  "1211:630": [
+   "modals",
+   "modals rules (DS2)",
+   "f9448e31"
+  ],
+  "817:426": [
+   "cards",
+   "room-card",
+   "8b4c0f20"
+  ],
+  "1211:673": [
+   "cards",
+   "cards rules (DS2)",
+   "f43ac53d"
+  ],
+  "865:218": [
+   "post",
+   "reaction",
+   "e2218409"
+  ],
+  "865:246": [
+   "post",
+   "reaction-summary",
+   "148a285f"
+  ],
+  "865:281": [
+   "post",
+   "reaction-picker",
+   "7cbabe14"
+  ],
+  "865:311": [
+   "post",
+   "reaction-button",
+   "517a1604"
+  ],
+  "866:228": [
+   "post",
+   "post-media",
+   "bc2cca3c"
+  ],
+  "866:248": [
+   "post",
+   "poll-option",
+   "c69f9911"
+  ],
+  "866:311": [
+   "post",
+   "poll",
+   "5ad61a59"
+  ],
+  "866:348": [
+   "post",
+   "comment",
+   "4699d49e"
+  ],
+  "1138:3363": [
+   "post",
+   "comment-input",
+   "d8cd20c9"
+  ],
+  "1138:3325": [
+   "post",
+   "comment-toggle",
+   "34494137"
+  ],
+  "1138:3326": [
+   "post",
+   "comments-empty",
+   "1451e2b4"
+  ],
+  "1138:3758": [
+   "post",
+   "comment-thread",
+   "6618874a"
+  ],
+  "868:628": [
+   "post",
+   "post",
+   "878aba93"
+  ],
+  "925:4515": [
+   "post",
+   "post-menu",
+   "82f286ac"
+  ],
+  "869:823": [
+   "post",
+   "post-opened",
+   "3853fce3"
+  ],
+  "1140:4147": [
+   "post",
+   "comment rules (DS2)",
+   "b401d47b"
+  ],
+  "1211:722": [
+   "post",
+   "post rules (DS2)",
+   "ad36bdd3"
+  ],
+  "943:1429": [
+   "widgets",
+   "banner",
+   "85c6f784"
+  ],
+  "870:183": [
+   "widgets",
+   "widget-attendance",
+   "c3f36793"
+  ],
+  "870:217": [
+   "widgets",
+   "widget-weather",
+   "33c0ed3f"
+  ],
+  "870:239": [
+   "widgets",
+   "widget-food",
+   "427e2109"
+  ],
+  "870:558": [
+   "widgets",
+   "widget-mood",
+   "1921f325"
+  ],
+  "870:591": [
+   "widgets",
+   "widget-birthdays",
+   "1912585"
+  ],
+  "882:523": [
+   "widgets",
+   "app-tile",
+   "5aafb4d"
+  ],
+  "882:593": [
+   "widgets",
+   "apps-card",
+   "2334be28"
+  ],
+  "1211:690": [
+   "widgets",
+   "widgets rules (DS2)",
+   "b70bb316"
+  ]
+ },
+ "at": "2026-11-18T06:29:52.395Z"
+}
