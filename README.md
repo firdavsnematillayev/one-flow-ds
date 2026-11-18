@@ -27,23 +27,19 @@
 
 ## Установка
 
-Плагин живёт в приватном репозитории **github.com/firdavsnematillayev/one-flow-ds** и обновляется у всех сам. Нужен аккаунт GitHub с доступом к репозиторию: владелец приглашает коллег (Settings → Collaborators).
+Плагин лежит в открытом репозитории **github.com/firdavsnematillayev/one-flow-ds** и у всех обновляется сам. Аккаунт GitHub и приглашение не нужны.
+
+**Приложение Claude и claude.ai** (дизайнеры, продакт-менеджеры): Customize → Plugins → Add → Add marketplace → `firdavsnematillayev/one-flow-ds` → включить **Sync automatically**.
 
 **Claude Code** (разработчики):
-1. Один раз войти в GitHub на своём компьютере:
-   ```bash
-   brew install gh && gh auth login && gh auth setup-git
-   ```
-2. Добавить маркетплейс и установить плагин:
+1. Установить:
    ```bash
    claude plugin marketplace add firdavsnematillayev/one-flow-ds && claude plugin install one-flow-ds@one-flow
    ```
-   В Claude Code 2.1.275 и новее то же самое делает одна команда: `/plugin install one-flow-ds --marketplace firdavsnematillayev/one-flow-ds`.
-3. Включить автообновление: `/plugin` → Marketplaces → one-flow → Enable auto-update. Новая версия придёт сама в течение 10 минут после начала сессии; применить — `/reload-plugins` или перезапуск.
+   В Claude Code 2.1.275 и новее — одной командой: `/plugin install one-flow-ds --marketplace firdavsnematillayev/one-flow-ds`.
+2. Включить автообновление: `/plugin` → Marketplaces → one-flow → Enable auto-update. Новая версия приходит сама в течение 10 минут после начала сессии; применить — `/reload-plugins` или перезапуск.
 
-**Приложение Claude и claude.ai** (дизайнеры, продакт-менеджеры): Customize → Plugins → Add → Add marketplace → `firdavsnematillayev/one-flow-ds`. Когда попросят — подключить GitHub. Затем включить **Sync automatically**.
-
-**Без доступа к репозиторию** (разово, без обновлений):
+**Без интернета или для разовой проверки** (без обновлений):
 - архив `one-flow-ds.zip` — `claude --plugin-dir one-flow-ds.zip`; файл `.plugin` этот флаг пропускает молча;
 - или `one-flow-ds.plugin` — загрузить в разделе плагинов.
 

@@ -6,7 +6,7 @@ description: >
   "dev handoff", "export tokens", "implement this One Flow component", or needs CSS variables,
   component specs or behaviour rules of One Flow DS v2 for code.
 metadata:
-  version: "0.3.1"
+  version: "0.3.2"
 ---
 
 # Передать DS v2 в код

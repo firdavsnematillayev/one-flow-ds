@@ -6,7 +6,7 @@ description: >
   or describes an idea of a screen, form, modal or flow that should be laid out in Figma from the
   One Flow design system (DS v2). Works for designers and for product managers making drafts.
 metadata:
-  version: "0.3.1"
+  version: "0.3.2"
 ---
 
 # Собрать экран из DS v2
