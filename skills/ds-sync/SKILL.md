@@ -7,7 +7,7 @@ description: >
   against the plugin's kit by fingerprint, carries every change into the plugin, verifies it and releases a new version.
   Needs Claude Code with the plugin source folder and edit access to the Figma files.
 metadata:
-  version: "0.3.0"
+  version: "0.3.1"
 ---
 
 # Обновить плагин по Figma
@@ -70,7 +70,12 @@ metadata:
    zip -qr -X ../one-flow-ds.zip . -x '.claude-plugin/marketplace.json' -x '*.DS_Store'
    ```
    Копия того же архива — `one-flow-ds.plugin`.
-4. Раздать по способу, который выбрал владелец (README, раздел «Обновление»):
-   - **Организация claude.ai**: Organization settings → Plugins & skills → плагин → Upload new version. Участники получают версию сами.
-   - **Репозиторий-маркетплейс**: закоммитить и отправить в основную ветку. Claude Code с `autoUpdate` и синхронизация организации подхватят изменения сами.
+4. **Отправить в репозиторий** `github.com/firdavsnematillayev/one-flow-ds` — это и есть раздача. Из папки плагина:
+   ```bash
+   git add -A && git commit -m "One Flow DS <версия>: <что изменилось>" && git push
+   ```
+   В конце сообщения коммита — строка `Co-Authored-By: Claude …`, если её требуют правила сессии.
+   - У коллег с автообновлением новая версия появится сама.
+   - Проверить: `claude plugin marketplace update one-flow`, затем `claude plugin update one-flow-ds@one-flow` — должно написать новую версию.
+   - Архив `.zip` / `.plugin` нужен только тем, у кого нет доступа к репозиторию.
 5. Коротко отчитаться владельцу: что изменилось, новая версия, результат сверки.

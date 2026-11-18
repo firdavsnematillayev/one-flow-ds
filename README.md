@@ -27,10 +27,27 @@
 
 ## Установка
 
-Плагин передаётся двумя одинаковыми архивами: `one-flow-ds.plugin` и `one-flow-ds.zip`.
-- **Claude Code** (на одну сессию): `claude --plugin-dir one-flow-ds.zip` — нужен именно `.zip` (или распакованная папка): файл `.plugin` этот флаг пропускает молча, и навыков не будет.
-- **Claude (приложение и claude.ai)**: загрузить `one-flow-ds.plugin` в разделе плагинов (свои загрузки).
-- Проверить, что загрузился: спросить «какие навыки one-flow-ds тебе доступны?» — должно быть пять: one-flow-ds, build-screen, review-design, dev-handoff, ds-sync.
+Плагин живёт в приватном репозитории **github.com/firdavsnematillayev/one-flow-ds** и обновляется у всех сам. Нужен аккаунт GitHub с доступом к репозиторию: владелец приглашает коллег (Settings → Collaborators).
+
+**Claude Code** (разработчики):
+1. Один раз войти в GitHub на своём компьютере:
+   ```bash
+   brew install gh && gh auth login && gh auth setup-git
+   ```
+2. Добавить маркетплейс и установить плагин:
+   ```bash
+   claude plugin marketplace add firdavsnematillayev/one-flow-ds && claude plugin install one-flow-ds@one-flow
+   ```
+   В Claude Code 2.1.275 и новее то же самое делает одна команда: `/plugin install one-flow-ds --marketplace firdavsnematillayev/one-flow-ds`.
+3. Включить автообновление: `/plugin` → Marketplaces → one-flow → Enable auto-update. Новая версия придёт сама в течение 10 минут после начала сессии; применить — `/reload-plugins` или перезапуск.
+
+**Приложение Claude и claude.ai** (дизайнеры, продакт-менеджеры): Customize → Plugins → Add → Add marketplace → `firdavsnematillayev/one-flow-ds`. Когда попросят — подключить GitHub. Затем включить **Sync automatically**.
+
+**Без доступа к репозиторию** (разово, без обновлений):
+- архив `one-flow-ds.zip` — `claude --plugin-dir one-flow-ds.zip`; файл `.plugin` этот флаг пропускает молча;
+- или `one-flow-ds.plugin` — загрузить в разделе плагинов.
+
+**Проверить, что плагин загрузился:** спросить «какие навыки one-flow-ds тебе доступны?». Должно быть пять: one-flow-ds, build-screen, review-design, dev-handoff, ds-sync.
 
 После установки:
 1. Войти в Figma, когда Claude попросит подключить коннектор.
@@ -60,9 +77,7 @@
   - сверяет отпечаток — показывает, какие токены, иконки, компоненты и доски правил изменились;
   - переносит изменения и проверяет доску сверки;
   - поднимает версию и собирает архив.
-- **Как новая версия доходит до команды** — один из двух способов, выбирает владелец:
-  - **Организация в claude.ai** (тариф Team или Enterprise, роль Owner). Organization settings → Plugins & skills → Upload plugin; доступ — Installed by default. Обновление — Upload new version. Участники получают версию сами: в чате, в Cowork и в Claude Code, вошедшем тем же аккаунтом.
-  - **Приватный репозиторий-маркетплейс** (GitHub или GitLab). Организация подключает его через Sync from GitHub с включённым Sync automatically. В Claude Code маркетплейс добавляют с `autoUpdate`. Новая версия расходится после отправки в основную ветку.
+- **Как новая версия доходит до команды**: `ds-sync` поднимает версию и отправляет изменения в репозиторий (`git push`). У коллег с автообновлением она появляется сама: в Claude Code — после начала сессии, в приложении — при включённом Sync automatically.
 - **Номер версии** — в `.claude-plugin/plugin.json`. Без новой версии участники обновление не получат.
 
 Владелец: дизайн-система One Flow, Telecom Soft.

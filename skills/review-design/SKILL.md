@@ -6,7 +6,7 @@ description: >
   or shares a Figma link of a One Flow screen and wants to know what breaks the DS v2 rules.
   It reviews a frame and returns a prioritised list of fixes; it does not change the file unless asked.
 metadata:
-  version: "0.3.0"
+  version: "0.3.1"
 ---
 
 # Проверить макет по DS v2

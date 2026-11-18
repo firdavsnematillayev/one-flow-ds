@@ -8,7 +8,7 @@ description: >
   tokens, white-label / бренд клиента, or works in Figma files of One Flow. It holds the rules of
   DS v2 and tells where to read the live library in Figma.
 metadata:
-  version: "0.3.0"
+  version: "0.3.1"
 ---
 
 # Дизайн-система One Flow (DS v2)
